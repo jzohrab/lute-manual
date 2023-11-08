@@ -4,10 +4,18 @@
 
 - [Background - background.md]()
 
-* [Lute alternatives Lute-alternatives]()
-* [When not to use Lute When-not-to-use-Lute]()
+- [System Requirements]()
+  - [Common requirements]()
+  - [Windows]()
+  - [macOS]()
+  - [Linux]()
 
-# Getting Started
+# Installation
+
+- [Installation]()
+  - [Using pip]()
+  - [Using Docker]()
+  - [From source]()
 
 * [Running Lute using Docker Getting-Started]()
   * [Setting up Docker Setting-up-Docker]()
@@ -22,32 +30,35 @@
   * [Podman Getting-started-with-podman]()
 * [Troubleshooting Troubleshooting-Installation]()
 
-# Configuration
 
-* [The .env file Lute-configuration-file]()
-* [Backup Backup]()
-* [Security Security]()
-* [Customizing styles Customizing-Styles]()
+# Add: basic terms (Term, Multi-word Term, Status)
 
 # Usage
 
 * [Starting and stopping Lute Starting-and-stopping]()
-* [Backups Creating-backups]()
-  * [Restoring a backup Restoring-a-backup]()
+* [Updating Lute Updating-Lute]()
+
 * [Defining a language Language-Setup]()
+* [Creating books Importing-Web-Pages]()
 * [Reading with Lute Reading]()
   * [Key bindings Keybindings]()
   * [Overlapping Terms Overlapping-Terms]()
   * [The demo tutorial Tutorial]()
-* [Listing terms Term-Listing]()
-* [Parent terms Parent-Terms]()
-* [Bulk mapping parent terms Bulk-Mapping-Parent-Terms]()
-* [Bulk term import Bulk-Term-Import]()
-* [Importing web pages Importing-Web-Pages]()
+* [Terms]()
+  * [Listing terms Term-Listing]()
+  * [Parent terms Parent-Terms]()
+  * [Bulk mapping parent terms Bulk-Mapping-Parent-Terms]()
+  * [Bulk term import Bulk-Term-Import]()
 
-# Updating
+# Settings
 
-* [Updating Lute Updating-Lute]()
+- [Settings]()
+* [Customizing styles Customizing-Styles]()
+
+# Backup and restore
+
+* [Backups Creating-backups]()
+* [Restoring a backup Restoring-a-backup]()
 
 # FAQs
 
@@ -57,10 +68,13 @@
 
 # Lute's future
 
-* [Project goal Project-goal]()
-* [Feature and Dev Backlog Backlog]()
-
 # Troubleshooting
 
 * [500 internal server error 500-Internal-Server-Error]()
-* [Error logs Error-logs]()
+
+# Misc
+
+* [Lute alternatives Lute-alternatives]()
+* [When not to use Lute When-not-to-use-Lute]()
+* [Project goal Project-goal]()
+* [Feature and Dev Backlog Backlog]()
