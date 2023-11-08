@@ -1,8 +1,9 @@
 # Summary
 
-# Introduction
+[Introduction](intro.md)
 
-* [Home https://github.com/jzohrab/lute/wiki]()
+- [Background - background.md]()
+
 * [Lute alternatives Lute-alternatives]()
 * [When not to use Lute When-not-to-use-Lute]()
 
