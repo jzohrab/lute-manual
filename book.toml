@@ -10,3 +10,4 @@ create-missing = true
 
 [output.html]
 default-theme = "rust"
+additional-css = ["css/custom.css"]

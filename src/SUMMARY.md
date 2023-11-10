@@ -5,24 +5,18 @@
 - [Background](background.md)
 - [Installation](install.md)
 
-# Add: basic terms (Term, Multi-word Term, Status)
-
 # Usage
 
-* [Starting and stopping Lute Starting-and-stopping]()
-* [Updating Lute Updating-Lute]()
-
-* [Defining a language Language-Setup]()
-* [Creating books Importing-Web-Pages]()
-* [Reading with Lute Reading]()
-  * [Key bindings Keybindings]()
-  * [Overlapping Terms Overlapping-Terms]()
-  * [The demo tutorial Tutorial]()
-* [Terms]()
-  * [Listing terms Term-Listing]()
-  * [Parent terms Parent-Terms]()
-  * [Bulk mapping parent terms Bulk-Mapping-Parent-Terms]()
-  * [Bulk term import Bulk-Term-Import]()
+- [Defining a language](./usage/language-setup.md)
+- [Creating books](./usage/books.md)
+- [Reading](./usage/reading.md)
+  - [Key bindings](./usage/keyboard-bindings.md)
+  - [Overlapping terms](./usage/overlapping-terms.md)
+  - [The demo tutorial](./usage/tutorial.md)
+- [Terms](./usage/terms.md)
+  - [Parent terms](./usage/parent-terms.md)
+  - [Bulk mapping parent terms](./usage/parent-terms-bulk-mapping.md)
+  - [Bulk term import](./usage/bulk-term-import.md)
 
 # Settings
 
@@ -33,6 +27,8 @@
 
 * [Backups Creating-backups]()
 * [Restoring a backup Restoring-a-backup]()
+
+* [Updating Lute Updating-Lute]()
 
 # FAQs
 
