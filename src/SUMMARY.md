@@ -3,33 +3,7 @@
 [Introduction](intro.md)
 
 - [Background](background.md)
-
-- [System Requirements]()
-  - [Common requirements]()
-  - [Windows]()
-  - [macOS]()
-  - [Linux]()
-
-# Installation
-
-- [Installation]()
-  - [Using pip]()
-  - [Using Docker]()
-  - [From source]()
-
-* [Running Lute using Docker Getting-Started]()
-  * [Setting up Docker Setting-up-Docker]()
-* [Running Lute without Docker Getting-started-without-Docker]()
-  * [Setting up the environment Installing-dependencies]()
-    * [Sqlite Install-Sqlite]()
-    * [PHP Install-PHP]()
-    * [MeCab Install-Mecab]()
-* [Getting started on other systems other-systems]()
-  * [Raspberry Pi Getting-started-raspberry-pi]()
-  * [MAMP on a Mac Getting-started-mac-mamp]()
-  * [Podman Getting-started-with-podman]()
-* [Troubleshooting Troubleshooting-Installation]()
-
+- [Installation](install.md)
 
 # Add: basic terms (Term, Multi-word Term, Status)
 
@@ -72,9 +46,3 @@
 
 * [500 internal server error 500-Internal-Server-Error]()
 
-# Misc
-
-* [Lute alternatives Lute-alternatives]()
-* [When not to use Lute When-not-to-use-Lute]()
-* [Project goal Project-goal]()
-* [Feature and Dev Backlog Backlog]()
