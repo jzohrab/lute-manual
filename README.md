@@ -10,6 +10,10 @@ On mac, `brew install mdbook`
 
 Start it: `mdbook serve --open`
 
+## Deployment
+
+Done with github actions.
+
 ## Creating gifs for docs
 
 Summary: record with Quicktime, import into Shotcut and edit, export a .mov, and generate a .gif.
