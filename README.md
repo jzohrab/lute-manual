@@ -1,5 +1,7 @@
 The Lute manual.
 
+Deployed to https://jzohrab.github.io/lute-manual/ with GitHub actions.
+
 Written using mdbook (https://rust-lang.github.io/mdBook).
 
 ## Development
@@ -13,6 +15,12 @@ Start it: `mdbook serve --open`
 ## Deployment
 
 Done with github actions.
+
+### Deployment config
+
+Ref https://github.com/peaceiris/actions-mdbook
+
+`GITHUB_TOKEN` configured in the repo Settings > Actions > General.
 
 ## Creating gifs for docs
 
