@@ -2,7 +2,7 @@
 
 [Introduction](intro.md)
 
-- [Background - background.md]()
+- [Background](background.md)
 
 - [System Requirements]()
   - [Common requirements]()
