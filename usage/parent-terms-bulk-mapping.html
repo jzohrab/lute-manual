@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bulk mapping parent terms - Lute manual</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="../css/custom.css">
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="../background.html"><strong aria-hidden="true">1.</strong> Background</a></li><li class="chapter-item expanded "><a href="../install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded affix "><li class="part-title">Usage</li><li class="chapter-item expanded "><a href="../usage/language-setup.html"><strong aria-hidden="true">3.</strong> Defining a language</a></li><li class="chapter-item expanded "><a href="../usage/books.html"><strong aria-hidden="true">4.</strong> Creating books</a></li><li class="chapter-item expanded "><a href="../usage/reading.html"><strong aria-hidden="true">5.</strong> Reading</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../usage/keyboard-bindings.html"><strong aria-hidden="true">5.1.</strong> Key bindings</a></li><li class="chapter-item expanded "><a href="../usage/overlapping-terms.html"><strong aria-hidden="true">5.2.</strong> Overlapping terms</a></li><li class="chapter-item expanded "><a href="../usage/tutorial.html"><strong aria-hidden="true">5.3.</strong> The demo tutorial</a></li></ol></li><li class="chapter-item expanded "><a href="../usage/terms.html"><strong aria-hidden="true">6.</strong> Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../usage/parent-terms.html"><strong aria-hidden="true">6.1.</strong> Parent terms</a></li><li class="chapter-item expanded "><a href="../usage/parent-terms-bulk-mapping.html" class="active"><strong aria-hidden="true">6.2.</strong> Bulk mapping parent terms</a></li><li class="chapter-item expanded "><a href="../usage/bulk-term-import.html"><strong aria-hidden="true">6.3.</strong> Bulk term import</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Settings</li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Settings</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Customizing styles Customizing-Styles</div></li><li class="chapter-item expanded affix "><li class="part-title">Backup and restore</li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Backups Creating-backups</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Restoring a backup Restoring-a-backup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Updating Lute Updating-Lute</div></li><li class="chapter-item expanded affix "><li class="part-title">FAQs</li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> The stats calculation Stats-calculation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Why can't I change a Term? Terms-cannot-be-changed-once-created</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Where are my new Term's sentences? Sentences-only-shown-when-page-is-read</div></li><li class="chapter-item expanded affix "><li class="part-title">Lute's future</li><li class="chapter-item expanded affix "><li class="part-title">Troubleshooting</li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> 500 internal server error 500-Internal-Server-Error</div></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Lute manual</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bulk-mapping-parent-terms"><a class="header" href="#bulk-mapping-parent-terms">Bulk mapping parent terms</a></h1>
+<blockquote>
+<p>NOTE: the UI and implementation has changed since this was written, but the idea is still the same.  TODO: update this section!</p>
+</blockquote>
+<p>Lute supports <a href="Parent-Terms">Parent Terms</a>, and also supports a bulk mapping of Parent Terms to Terms, using a mapping file that you create and import.</p>
+<blockquote>
+<p>Why would you want this?  In my experience reading extensively with Lute, I am usually familiar with words, but it is <em>very</em> nice having the previously-entered information for their Parent Terms.  As I read, I often find myself interrupting myself to just map terms to parent terms.  Of course, this mapping is completely optional, and sometimes I don't do it ... but having this automatically taken care of is pretty nice.</p>
+</blockquote>
+<p>On the Home page, the link &quot;Parent Term mapping&quot; takes you to a page with links to export a file that you can use to create your mapping file, and to import this mapping file.  You may want to run through this process for every large new text or book that you import, so that you can focus on the <strong>really new stuff</strong> in that text.</p>
+<h2 id="what-mapping-does"><a class="header" href="#what-mapping-does">What mapping does</a></h2>
+<p>When the file is imported, Terms and Parents are created and associated as needed, depending on the Terms currently in your Lute database.  For example, given a mapping file:</p>
+<pre><code>dog    dogs
+</code></pre>
+<p>We have the following scenarios:</p>
+<table><thead><tr><th>Child term &quot;dogs&quot; exists?</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
+<tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; exists</td><td>&quot;dog&quot; is assigned as the Parent Term for &quot;dogs&quot;</td></tr>
+<tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; doesn't exist</td><td>&quot;dog&quot; is <em>automatically created</em>, and assigned as the Parent Term for &quot;dogs&quot;</td></tr>
+<tr><td>Yes</td><td>If &quot;dogs&quot; already has a Parent Term</td><td>nothing happens</td></tr>
+<tr><td>No</td><td>If &quot;dog&quot; exists</td><td>&quot;dogs&quot; is <em>automatically created</em>, and &quot;dog&quot; is assigned as its Parent Term</td></tr>
+<tr><td>No</td><td>If &quot;dog&quot; does not exist</td><td>nothing happens</td></tr>
+</tbody></table>
+<p>If a term is automatically created, you'll see a small asterisk next to it when reading, and a small message will be included in its popup:</p>
+<p><img src="https://user-images.githubusercontent.com/1637133/236732831-94fc2209-4821-4580-8344-cb8615ac4586.png" alt="image" /></p>
+<p><img src="https://user-images.githubusercontent.com/1637133/236732902-3feed1cf-6f18-4463-9882-7142388a23c0.png" alt="image" /></p>
+<p>That message and asterisk will disappear when you click on the term and either click &quot;Save&quot; or refresh the page.  (The action of viewing the form seems to me like the easiest way of &quot;acknowledging&quot; the automatically created term).</p>
+<h2 id="the-import-mapping-file"><a class="header" href="#the-import-mapping-file">The import mapping file</a></h2>
+<p>A mapping file is a list of records, of format <code>parent-term &lt;TAB&gt; term</code>.  A sample import file for English would look like this:</p>
+<pre><code>cat      cats
+cat      kitten
+dog      dogs
+</code></pre>
+<h2 id="generating-an-import-file"><a class="header" href="#generating-an-import-file">Generating an import file</a></h2>
+<p>When you click on one of the &quot;export&quot; links from the &quot;Parent Term mapping&quot; page, a file is generated for you (e.g. <code>/data/parents/terms_3.txt</code>).  You can pull this into a spreadsheet and fill in the parent in a new column.</p>
+<p>Optionally, if you have Python 3.11 installed, and your language is one of the 60+ languages supported by the Stanford Stanza library (see https://stanfordnlp.github.io/stanza/available_models.html), you can use <a href="https://github.com/jzohrab/LuteLemma">LuteLemma</a> to convert this exported file to a mapping file.</p>
+<h2 id="exporting-books-vs-language"><a class="header" href="#exporting-books-vs-language">Exporting &quot;books&quot; vs &quot;language&quot;</a></h2>
+<p>The &quot;map Parent Terms&quot; page has two kinds of exports:</p>
+<ul>
+<li>&quot;book&quot;: export unknown terms in a book.</li>
+<li>&quot;language&quot;: only exports known terms without parents.</li>
+</ul>
+<p>My current usage recommendation is to only export new &quot;books&quot; to try to map unknown words to existing Terms that you've defined while reading prior books.  This clears up some terms during your reading and hopefully makes reading more productive.</p>
+<p>Full &quot;language&quot; exports, for setting up relationships in existing words, is useful, but it could also be a low-value-yield activity.  It's interesting, but I don't know if it will help you read more better faster.  Perhaps try exporting and see if there are any interesting word parent assignments that you really want.</p>
+<p>Use these exported files to create your import file.</p>
+<h2 id="why-isnt-this-automatically-built-in-to-lute"><a class="header" href="#why-isnt-this-automatically-built-in-to-lute">Why isn't this automatically built in to Lute?</a></h2>
+<p>Great question.  The process of mapping terms to a root form is non-trivial, and the current implementation in Lute is not seamless (though it works!).  The current implementation was driven by the following technical considerations:</p>
+<p>When coming up with the current process and implementation, I considered the following technical issues:</p>
+<ul>
+<li><strong>performance</strong> - Lemmatization is a potentially tricky operation, requiring either a lot of space or a lot of time.  My current thought is that keeping it out of Lute ensures that Lute is responsive during regular use, and that you can choose when you want to run this expensive operation.</li>
+<li><strong>availability</strong> - lemmatization tools available appear to depend on the language (I'm not completely sure about this).  I can't reliably code for what I don't understand. :-)</li>
+<li><strong>complexity</strong> - Mapping words to their parents is easy, but not trivial, if you get me.</li>
+</ul>
+<p>Beyond tech, there were a few other things I had in mind:</p>
+<ul>
+<li><strong>philosophy</strong> - Lute is as much for learning as it is for reading.  I believe that taking the time to look up words, find the best definition, and write it down, is part of the process of learning.  I'm not <em>certain</em>, but sometimes it feels like <em>not</em> having everything be automatic is useful.</li>
+<li><strong>necessity</strong>: mapping to root terms is perhaps only needed once you reach a certain level in reading.</li>
+</ul>
+<p>Of course, everything is in flux, and as I use this feature more myself, I may change my approach.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../usage/parent-terms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../usage/bulk-term-import.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../usage/parent-terms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../usage/bulk-term-import.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
