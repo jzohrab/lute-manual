@@ -1,9 +1,0 @@
-[book]
-authors = ["Jeff Zohrab"]
-language = "en"
-multilingual = false
-src = "src"
-title = "Lute manual"
-
-[build]
-create-missing = true
