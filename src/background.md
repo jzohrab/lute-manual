@@ -19,13 +19,13 @@ In addition, the spirit of Lute is full open-source software:
 
 ## Lute alternatives
 
-There are other projects out that are very similar to Lute (or, perhaps more rightly, that Lute is similar to):
+There are other projects out that Lute took inspiration from:
 
 * [LingQ](https://www.lingq.com/) - a commercial product
 * [LWT](https://github.com/HugoFara/lwt)
 * [Readlang](https://readlang.com/)
 
-> Lute started in late 2023 as a rewrite in PHP of [LWT (Learning With Texts)](https://github.com/HugoFara/lwt), a project with the same idea.  In my opinion, LWT was a great project with an extremely important idea, but its implementation made it hard to install and hard to fix problems.
+> Lute v1 and v2 started in late 2022 as a rewrite of [LWT (Learning With Texts)](https://github.com/HugoFara/lwt), overhauling the architecture, data structure, and algorithms, and adding critical features.  Lute v3 (this project) is a full Python rewrite to address installation and maintenance/sustainability issues.  Lute would never exist without LWT and Hugo's LWT fork, so **a big thanks to those projects.**
 
 ## Should I use Lute, LWT, Hugo's fork, or something else?
 
@@ -60,4 +60,4 @@ As good as Lute is, it might not be for you.  Below are some things that may lea
 | Flashcards/testing | Lute is designed for reading only, there is no testing. |
 | Automated or bulk translation | Lute isn't designed to automatically create bidirectional readers, or to auto-create translations.  You can use Lute's [Term import](https://github.com/jzohrab/lute/wiki/Bulk-Term-Import) feature, along with something like Google Sheets, to imitate that. |
 
-There are other smaller features that Lute doesn't have yet, but the above are the biggest ones that may be dealbreakers for you.
+There are other smaller features that Lute doesn't have yet, but the above are the biggest ones that may be dealbreakers for you at the moment.
