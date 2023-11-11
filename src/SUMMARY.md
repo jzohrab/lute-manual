@@ -4,6 +4,7 @@
 
 - [Background](background.md)
 - [Installation](install.md)
+- [Migrating from v2 to v3](v2-to-v3.md)
 
 # Usage
 
@@ -17,28 +18,16 @@
   - [Parent terms](./usage/parent-terms.md)
   - [Bulk mapping parent terms](./usage/parent-terms-bulk-mapping.md)
   - [Bulk term import](./usage/bulk-term-import.md)
-
-# Settings
-
-- [Settings]()
-* [Customizing styles Customizing-Styles]()
-
-# Backup and restore
-
-* [Backups Creating-backups]()
-* [Restoring a backup Restoring-a-backup]()
-
-* [Updating Lute Updating-Lute]()
+- [Custom styles](./settings/custom-styles.md)
+- [Backup](./backup/backup.md)
+  - [Restoring backups](./backup/restore.md)
+- [Updating Lute TBD]()
 
 # FAQs
 
-* [The stats calculation Stats-calculation]()
-* [Why can't I change a Term? Terms-cannot-be-changed-once-created]()
-* [Where are my new Term's sentences? Sentences-only-shown-when-page-is-read]()
-
-# Lute's future
-
-# Troubleshooting
-
-* [500 internal server error 500-Internal-Server-Error]()
-
+- [Where can I get help?](./faq/help.md)
+- [The stats calculation](./faq/stats.md)
+- [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
+- [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)
+- [Why is this free?](./faq/free.md)
+- [Is there an online version of Lute?](./faq/online-lute.md)

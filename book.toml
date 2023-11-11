@@ -9,5 +9,6 @@ title = "Lute manual"
 create-missing = true
 
 [output.html]
+no-section-label = true
 default-theme = "rust"
 additional-css = ["css/custom.css"]
