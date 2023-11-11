@@ -25,3 +25,11 @@ Examples:
 | at | **at**, **at**tack, c**at** |
 | ^at | **at**, **at**tack |
 | at$ | **at**, c**at** |
+
+## CSV Export
+
+At the bottom of the term table listing is an "Export CSV" button.
+
+This exports the Terms shown on the current page only.  Change the "Show <count> entries" if your search and filters return multiple pages of data.
+
+> The CSV export is a simple tool that doesn't include sample sentences or images for the terms ... see [this issue](https://github.com/jzohrab/lute-v3/issues/3) for a description of a better feature that would take more work.

@@ -31,3 +31,7 @@
 - [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)
 - [Why is this free?](./faq/free.md)
 - [Is there an online version of Lute?](./faq/online-lute.md)
+
+# Misc
+
+- [Backlog](./misc/backlog.md)
