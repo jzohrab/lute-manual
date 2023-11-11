@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="background.html">Background</a></li><li class="chapter-item expanded "><a href="install.html">Installation</a></li><li class="chapter-item expanded "><a href="v2-to-v3.html">Migrating from v2 to v3</a></li><li class="chapter-item expanded affix "><li class="part-title">Usage</li><li class="chapter-item expanded "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item expanded "><a href="usage/books.html">Creating books</a></li><li class="chapter-item expanded "><a href="usage/reading.html">Reading</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item expanded "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item expanded "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item expanded "><a href="usage/terms.html">Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item expanded "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item expanded "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item expanded "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item expanded "><a href="backup/backup.html">Backup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item expanded "><div>Updating Lute TBD</div></li><li class="chapter-item expanded affix "><li class="part-title">FAQs</li><li class="chapter-item expanded "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item expanded "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item expanded "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item expanded "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item expanded "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item expanded "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="background.html">Background</a></li><li class="chapter-item expanded "><a href="install.html">Installation</a></li><li class="chapter-item expanded "><a href="v2-to-v3.html">Migrating from v2 to v3</a></li><li class="chapter-item expanded affix "><li class="part-title">Usage</li><li class="chapter-item expanded "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item expanded "><a href="usage/books.html">Creating books</a></li><li class="chapter-item expanded "><a href="usage/reading.html">Reading</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item expanded "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item expanded "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item expanded "><a href="usage/terms.html">Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item expanded "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item expanded "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item expanded "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item expanded "><a href="backup/backup.html">Backup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item expanded "><div>Updating Lute TBD</div></li><li class="chapter-item expanded affix "><li class="part-title">FAQs</li><li class="chapter-item expanded "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item expanded "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item expanded "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item expanded "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item expanded "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item expanded "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li><li class="chapter-item expanded affix "><li class="part-title">Misc</li><li class="chapter-item expanded "><a href="misc/backlog.html">Backlog</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -471,6 +471,12 @@ span.overlapped:before {
 <tr><td>^at</td><td><strong>at</strong>, <strong>at</strong>tack</td></tr>
 <tr><td>at$</td><td><strong>at</strong>, c<strong>at</strong></td></tr>
 </tbody></table>
+<h2 id="csv-export"><a class="header" href="#csv-export">CSV Export</a></h2>
+<p>At the bottom of the term table listing is an &quot;Export CSV&quot; button.</p>
+<p>This exports the Terms shown on the current page only.  Change the &quot;Show <count> entries&quot; if your search and filters return multiple pages of data.</p>
+<blockquote>
+<p>The CSV export is a simple tool that doesn't include sample sentences or images for the terms ... see <a href="https://github.com/jzohrab/lute-v3/issues/3">this issue</a> for a description of a better feature that would take more work.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="parent-terms"><a class="header" href="#parent-terms">Parent terms</a></h1>
 <p>Lute lets you define &quot;Parent Terms&quot;, which is helpful for things like verb infinites, adjectives, etc.  For example, &quot;to have&quot; could be the parent term for &quot;has&quot;.  This is useful because you only need to define things like root term meanings at the root level.</p>
 <p>Here's the popup for a term with a parent term:</p>
@@ -831,6 +837,72 @@ drwxr-xr-x@ 1895 jeff  staff    59K 26 Sep 17:17 .
 <li>... etc.</li>
 </ul>
 <p>Rather than try to go online and compete with existing solutions, Lute opts to emulate the Anki desktop approach: individual user app installs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backlog"><a class="header" href="#backlog">Backlog</a></h1>
+<p>Below are features that would be nice to have.  Some of these are already listed in Lute's <a href="https://github.com/jzohrab/lute-v3/issues">GitHub issues</a>.  These are not listed in any particular order.</p>
+<blockquote>
+<p>The issue IDs shown aren't correct, as the issues were transferred from the original lute repo to lute-v3; however, the links should still work.</p>
+</blockquote>
+<h1 id="feature-backlog"><a class="header" href="#feature-backlog">Feature backlog</a></h1>
+<h2 id="improved-language-support"><a class="header" href="#improved-language-support">Improved language support</a></h2>
+<ul>
+<li>Support non-consecutive multi-word terms - <a href="https://github.com/jzohrab/lute/issues/58">issue 58</a></li>
+<li>Change how dictionaries are defined and used - <a href="https://github.com/jzohrab/lute/issues/39">issue 39</a>
+<ul>
+<li>Add Kobo dictionary support - <a href="https://github.com/jzohrab/lute/issues/41">issue 41</a></li>
+<li>Integrate Golden dict app with Lute - <a href="https://github.com/jzohrab/lute/issues/5">issue 5</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="reading-experience"><a class="header" href="#reading-experience">Reading experience</a></h2>
+<ul>
+<li>change book reading so that page content is ajaxed in, instead of moving to new URL.  This allows for audio player support.</li>
+<li>Add navigate to arbitrary page in book -- -- e.g. when on page 600 and want to go back to page 21.  maybe enter in a text box, dropdown, or vertical/horizontal slider.</li>
+<li>Hotkey status update should update the form if it's displayed - <a href="https://github.com/jzohrab/lute/issues/45">issue 45</a></li>
+<li>add &quot;chapters&quot; markings somehow to books, so I can build a table of contents, and see when a chapter ends</li>
+<li>add &quot;force page break&quot; markers to text imports, e.g. &quot;---&quot; forces a break.</li>
+<li>add book text search</li>
+<li>arrow up and down to increase/decrease status number</li>
+<li>add &quot;Autopopulate&quot; button for the parent term. In most languages, the parent is pretty visibly related to the child, but with a few letter changes. It´d be nice not to have to copy the whole word from below, but just press a button and then type the end of the word.</li>
+</ul>
+<h2 id="audio"><a class="header" href="#audio">Audio</a></h2>
+<ul>
+<li>Add Audio controls to play text mp3.  This requires page content to be ajaxed in, not URL-per-page.</li>
+<li>Add word pronunciation.  Audio files could be stored in user's <code>data</code> folder, and files could be found by md5 of term, e.g.</li>
+</ul>
+<h2 id="backup-1"><a class="header" href="#backup-1">Backup</a></h2>
+<ul>
+<li>if backup is automatic, when the backup completes, auto-redirect to home page</li>
+<li>show the file created and its size on the backup page</li>
+</ul>
+<h2 id="misc-features"><a class="header" href="#misc-features">Misc features</a></h2>
+<ul>
+<li>Add improved export to Anki - <a href="https://github.com/jzohrab/lute/issues/24">issue 24</a></li>
+<li>Possibly ignore word accents when saving terms in DB - <a href="https://github.com/jzohrab/lute/issues/17">issue 17</a></li>
+<li>add bulk term delete</li>
+<li>Add stats
+<ul>
+<li>words read today/cumulative</li>
+<li>terms created today/cumulative</li>
+<li>statuses by date/cumulative</li>
+<li>click on link to see filtered list in terms page - need more complex filtering</li>
+</ul>
+</li>
+<li>editing text/sentence doesn't change the book WordCount.  setWordCount is called when book is first created, on setFullText.  If text is edited, should first save the old count, then update the book count</li>
+</ul>
+<h1 id="devcode-backlog"><a class="header" href="#devcode-backlog">Dev/code backlog</a></h1>
+<p>Code maintenance/improvements.  Doing these help deliver features or a better experience.</p>
+<h2 id="misc"><a class="header" href="#misc">misc</a></h2>
+<ul>
+<li>Increase acceptance test coverage (master list) - <a href="https://github.com/jzohrab/lute/issues/35">issue 35</a></li>
+<li>Drop extra fields from texts table (sourceuri, mediauri, lgid, isarchived).  Started in branch hack_remove_texts_fields</li>
+<li>save SeTextLC in sentences, use SeTextLC when looking up references</li>
+<li>change statuses - null/0 unknown, 1-5, 6 = wellknown; 7 = ignored (currently 98 = ignored, good enough? or -1?)</li>
+<li>RenderableSentence.php: public static function getParagraphs should not parse, move parsing to the facade</li>
+<li>findTermsInText should use zws to join things, not null string.  Add tests for &quot;Tengo un gato&quot; - &quot;Tengo un&quot; &quot;tengo un gato&quot;, &quot;tengo un gat&quot;, &quot;un gato&quot;, &quot;un gat&quot;</li>
+<li>remove languages.islgremovespaces field</li>
+<li>change book &quot;is archived&quot; cycle? - active -&gt; completed -&gt; archived</li>
+<li>try not saving and retrieving entities, see if orm can get them</li>
+</ul>
 
                     </main>
 
