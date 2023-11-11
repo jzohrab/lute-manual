@@ -667,13 +667,8 @@ span.status99 { background-color: none; color: red; }
 </blockquote>
 <h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
 <p>Backup is configured in the Settings.</p>
-<p>Backup Enabled	
-Backup directory	
-Run backups automatically (daily)	
-Warn if backup hasn't run in a week	
-Retain backup count</p>
-<table><thead><tr><th>Configuration key</th><th>Values</th><th>Notes</th></tr></thead><tbody>
-<tr><td>Backup enabled</td><td>yes or no</td><td>This key is <em>required</em>.  Set to &quot;no&quot; if you're handling your own backups with scripts or whatever, and to &quot;yes&quot; if you want to run them through the Lute UI or have Lute do daily backups.</td></tr>
+<table><thead><tr><th>Setting</th><th>Values</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Backup enabled</td><td>yes or no</td><td>Set to &quot;yes&quot; if you want to run them through the Lute UI or have Lute do daily backups, and &quot;no&quot; if you're handling your own backups with scripts or whatever.</td></tr>
 <tr><td>Backup directory <strong>(Non-Docker users only)</strong></td><td>Full directory path</td><td>This is the <em>existing</em> directory where a gzipped database export, and copy of all of your images, will be sent.  Set this to something that is backed up, such as to a DropBox folder or similar.  This is disabled for Docker users, because the backup directory has to be mounted to a host folder.</td></tr>
 <tr><td>Run backups automatically (daily)</td><td>yes or no</td><td>If <code>yes</code>, Lute will run the backup <em>from the Home page</em> every day.  Note that this is only from the Home page, so if you have a book open for reading for 2 weeks, it won't be backed up. :-)</td></tr>
 <tr><td>Warn if backup hasn't run in a week</td><td>yes or no</td><td>If <code>yes</code>, Lute will print a warning <em>on the Home page</em> if the last backup was run more than one week ago.  Again, this is only from the home page.</td></tr>
