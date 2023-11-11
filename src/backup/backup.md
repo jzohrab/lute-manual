@@ -8,15 +8,9 @@ Lute provides a simple backup facility that creates copies your Sqlite database 
 
 Backup is configured in the Settings.
 
-Backup Enabled	
-Backup directory	
-Run backups automatically (daily)	
-Warn if backup hasn't run in a week	
-Retain backup count
-
-| Configuration key | Values | Notes |
+| Setting | Values | Notes |
 | --- | --- | --- |
-| Backup enabled | yes or no | This key is *required*.  Set to "no" if you're handling your own backups with scripts or whatever, and to "yes" if you want to run them through the Lute UI or have Lute do daily backups. |
+| Backup enabled | yes or no | Set to "yes" if you want to run them through the Lute UI or have Lute do daily backups, and "no" if you're handling your own backups with scripts or whatever. |
 | Backup directory **(Non-Docker users only)** | Full directory path | This is the *existing* directory where a gzipped database export, and copy of all of your images, will be sent.  Set this to something that is backed up, such as to a DropBox folder or similar.  This is disabled for Docker users, because the backup directory has to be mounted to a host folder. |
 | Run backups automatically (daily) | yes or no | If `yes`, Lute will run the backup *from the Home page* every day.  Note that this is only from the Home page, so if you have a book open for reading for 2 weeks, it won't be backed up. :-) |
 | Warn if backup hasn't run in a week | yes or no | If `yes`, Lute will print a warning *on the Home page* if the last backup was run more than one week ago.  Again, this is only from the home page. |
