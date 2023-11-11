@@ -279,11 +279,12 @@ services:
 <p>Developers and gearheads can install Lute from source: see the <a href="https://github.com/jzohrab/lute-v3/blob/master/docs/development.md">Lute repository</a>.</p>
 <p>If you want to develop Lute, you'll also need to <a href="./mecab.html">install MeCab</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="migrating-from-v2-to-v3"><a class="header" href="#migrating-from-v2-to-v3">Migrating from v2 to v3</a></h1>
+<h2 id="database-and-images"><a class="header" href="#database-and-images">Database and images</a></h2>
 <p>If you're already using Lute v2 (written in PHP), and want to migrate to v3, it's pretty straightforward: you just have to move some files around.  Lute v3 uses the same underlying database as v2 (Sqlite).</p>
 <ol>
 <li>After installing Lute v3, start it up.  Then:</li>
 </ol>
-<h2 id="for-non-docker-users"><a class="header" href="#for-non-docker-users">For non-Docker users</a></h2>
+<h3 id="for-non-docker-users"><a class="header" href="#for-non-docker-users">For non-Docker users</a></h3>
 <ol start="2">
 <li>In the top right corner of the home screen, click About &gt; Version and software info</li>
 <li>The &quot;Data path&quot; folder is where you should put your database and images, replacing the files that Lute v3 automatically put there.</li>
@@ -291,13 +292,17 @@ services:
 <li>Replace the files that Lute created in the &quot;Data path&quot; folder with your files.</li>
 <li>Start Lute up again.</li>
 </ol>
-<h2 id="for-docker-users"><a class="header" href="#for-docker-users">For Docker users</a></h2>
+<h3 id="for-docker-users"><a class="header" href="#for-docker-users">For Docker users</a></h3>
 <p>It's even easier: when you started Lute v3, you had to mount some directories to the container.</p>
 <ol start="2">
 <li>Shut down Lute v3!</li>
 <li>Put your database and image folder in the folder that you mounted to the <code>/lute_data</code> directory, replacing the files that Lute created there.</li>
 <li>Start Lute up again.</li>
 </ol>
+<h2 id="backup-settings"><a class="header" href="#backup-settings">Backup settings</a></h2>
+<p>Lute v2 has backup settings stored in the <code>.env</code> file.  v3 uses a Settings screen. The mapping of values from the <code>.env</code> file is obvious.</p>
+<h2 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h2>
+<p>Lute v2 uses a &quot;custom_styles.css&quot; file in the data folder.  v3 uses a Setting text box, so copy any content from your custom_styles.css file into Lute v3 Settings.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defining-a-language"><a class="header" href="#defining-a-language">Defining a language</a></h1>
 <p>When creating a new Language, you can use one of the existing languages as a template by selecting the dropdown at the top of the form and clicking &quot;go.&quot;  Sensible defaults are set.</p>
 <h2 id="dictionary-1-and-2"><a class="header" href="#dictionary-1-and-2">Dictionary 1 and 2</a></h2>
@@ -612,7 +617,7 @@ Spanish,gato,cat
 <h1 id="creating-csv-files"><a class="header" href="#creating-csv-files">Creating CSV files</a></h1>
 <p>The easiest way to create properly-formatted CSV files is probably through something like Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File &gt; Download &gt; Comma Separated Values.</p>
 <p>Using Google Sheets, you might also be able to get some <em>basic</em> translations.  For example, if I have &quot;colima&quot; in cell B2, the formula <code>=GOOGLETRANSLATE(B2,&quot;es&quot;, &quot;en&quot;)</code> in cell B3 would give &quot;hill&quot;.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="custom-styles-1"><a class="header" href="#custom-styles-1">Custom styles</a></h1>
 <p>Lute doesn't have &quot;theming&quot; support yet, but you <em>can</em> modify the styles in the Settings menu.</p>
 <p>Open Settings, and in the &quot;Custom styles&quot; text box in the settings, enter valid CSS.</p>
 <p>Below are some examples:</p>
