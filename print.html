@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="background.html">Background</a></li><li class="chapter-item expanded "><a href="install.html">Installation</a></li><li class="chapter-item expanded "><a href="v2-to-v3.html">Migrating from v2 to v3</a></li><li class="chapter-item expanded affix "><li class="part-title">Usage</li><li class="chapter-item expanded "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item expanded "><a href="usage/books.html">Creating books</a></li><li class="chapter-item expanded "><a href="usage/reading.html">Reading</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item expanded "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item expanded "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item expanded "><a href="usage/terms.html">Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item expanded "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item expanded "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item expanded "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item expanded "><a href="backup/backup.html">Backup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item expanded "><div>Updating Lute TBD</div></li><li class="chapter-item expanded affix "><li class="part-title">FAQs</li><li class="chapter-item expanded "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item expanded "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item expanded "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item expanded "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item expanded "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item expanded "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li><li class="chapter-item expanded affix "><li class="part-title">Misc</li><li class="chapter-item expanded "><a href="misc/backlog.html">Backlog</a></li><li class="chapter-item expanded "><a href="misc/doc-feedback.html">Documentation feedback</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="background.html">Background</a></li><li class="chapter-item expanded "><a href="install.html">Installation</a></li><li class="chapter-item expanded "><a href="v2-to-v3.html">Migrating from v2 to v3</a></li><li class="chapter-item expanded affix "><li class="part-title">Usage</li><li class="chapter-item expanded "><a href="usage/starting-and-stopping.html">Starting and stopping</a></li><li class="chapter-item expanded "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item expanded "><a href="usage/books.html">Creating books</a></li><li class="chapter-item expanded "><a href="usage/reading.html">Reading</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item expanded "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item expanded "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item expanded "><a href="usage/terms.html">Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item expanded "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item expanded "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item expanded "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item expanded "><a href="backup/backup.html">Backup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item expanded "><div>Updating Lute TBD</div></li><li class="chapter-item expanded affix "><li class="part-title">FAQs</li><li class="chapter-item expanded "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item expanded "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item expanded "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item expanded "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item expanded "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item expanded "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li><li class="chapter-item expanded affix "><li class="part-title">Misc</li><li class="chapter-item expanded "><a href="misc/backlog.html">Backlog</a></li><li class="chapter-item expanded "><a href="misc/doc-feedback.html">Documentation feedback</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -226,7 +226,12 @@
 <li>Japanese learners will also need to <a href="./mecab.html">install MeCab</a></li>
 </ul>
 <p>Lute can be installed from <a href="https://pypi.org/project/lute3/">https://pypi.org/project/lute3/</a>.  Here's a summary of the instructions on that pypi page (Linux/Mac, Windows will be similar).  Note my system has python3.8, your system may vary:</p>
-<pre><code>python3.8 -m venv myenv
+<pre><code># Create a Lute folder
+mkdir -p ~/my_lute
+cd ~/my_lute
+
+# Set up virtual environment
+python3.8 -m venv myenv
 source myenv/bin/activate
 
 # Install
@@ -235,7 +240,7 @@ pip install --upgrade lute3
 # Start
 python -m lute.main
 
-# Open your web browser to http://localhost:5000
+# ... Open your web browser to http://localhost:5000.
 # When done, hit Ctl-C
 
 deactivate
@@ -248,19 +253,18 @@ deactivate
 <blockquote>
 <p>Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the <a href="https://docs.docker.com/">Docker documentation</a>).  <strong>Docker is not available or is problematic on some systems, particularly Windows.</strong></p>
 </blockquote>
-<p>Lute has a pre-built docker image at <a href="https://hub.docker.com/r/jzohrab/lute3">https://hub.docker.com/r/jzohrab/lute3</a>.  There are notes on that page about the image.  Here's one way to get started using a <code>docker-compose.yml</code> file:</p>
-<ul>
-<li>create a folder on your system for your lute, with folders for the data and backups, e.g.:</li>
-</ul>
-<pre><code>- my_lute/
-    docker-compose.yml
-    - data/
-    - backups/
-</code></pre>
-<ul>
-<li>Put the following in the <code>docker-compose.yml</code>:</li>
-</ul>
-<pre><code>version: '3.9'
+<p>Lute has a pre-built docker image at <a href="https://hub.docker.com/r/jzohrab/lute3">https://hub.docker.com/r/jzohrab/lute3</a>.  There are notes on that page about the image.</p>
+<p>Here's one way to get started using a <code>docker-compose.yml</code> file (again a Linux/Mac script):</p>
+<pre><code># Create Lute folders
+mkdir -p ~/my_lute_docker
+cd ~/my_lute_docker
+# (These subfolders will be mounted to the container)
+mkdir data
+mkdir backups
+
+# Docker-compose.yml:
+cat &gt; docker-compose.yml &lt;&lt;EOF
+version: '3.9'
 services:
   lute:
     image: jzohrab/lute3:latest
@@ -269,11 +273,10 @@ services:
     volumes:
       - ./data:/lute_data
       - ./backups:/lute_backup
-</code></pre>
-<ul>
-<li>open a terminal/shell in the <code>my_lute</code> folder, and start Lute:</li>
-</ul>
-<pre><code>docker compose up
+EOF
+
+# Run it:
+docker compose up
 </code></pre>
 <h2 id="from-source"><a class="header" href="#from-source">From source</a></h2>
 <p>Developers and gearheads can install Lute from source: see the <a href="https://github.com/jzohrab/lute-v3/blob/master/docs/development.md">Lute repository</a>.</p>
@@ -303,6 +306,41 @@ services:
 <p>Lute v2 has backup settings stored in the <code>.env</code> file.  v3 uses a Settings screen. The mapping of values from the <code>.env</code> file is obvious.</p>
 <h2 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h2>
 <p>Lute v2 uses a &quot;custom_styles.css&quot; file in the data folder.  v3 uses a Setting text box, so copy any content from your custom_styles.css file into Lute v3 Settings.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="starting-and-stopping"><a class="header" href="#starting-and-stopping">Starting and stopping</a></h1>
+<p>These scripts are on a Mac; Linux will be the same, Windows slightly different.  They're rough guides only, your system may vary.</p>
+<h2 id="if-using-pip"><a class="header" href="#if-using-pip">If using pip</a></h2>
+<p>Assuming you're using venv:</p>
+<pre><code>cd ~/my_lute
+
+# Activate the virtual environment
+source myenv/bin/activate
+
+# Start
+python -m lute.main
+
+# ... Open your web browser to http://localhost:5000.
+# When done, hit Ctl-C to stop
+
+deactivate
+</code></pre>
+<h2 id="if-using-docker"><a class="header" href="#if-using-docker">If using Docker</a></h2>
+<p>Assuming you have your docker compose set up:</p>
+<pre><code>cd ~/my_lute_docker
+
+# Run it:
+docker compose up
+
+# ... Open your web browser to http://localhost:5000.
+# When done, hit Ctl-C to stop
+</code></pre>
+<h2 id="if-you-installed-from-source"><a class="header" href="#if-you-installed-from-source">If you installed from source</a></h2>
+<pre><code>cd ~/my_lute_source
+source .venv/bin/activate
+inv start
+# ... etc.
+# Ctl-C when done.
+deactivate
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defining-a-language"><a class="header" href="#defining-a-language">Defining a language</a></h1>
 <p>When creating a new Language, you can use one of the existing languages as a template by selecting the dropdown at the top of the form and clicking &quot;go.&quot;  Sensible defaults are set.</p>
 <h2 id="dictionary-1-and-2"><a class="header" href="#dictionary-1-and-2">Dictionary 1 and 2</a></h2>
