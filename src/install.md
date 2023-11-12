@@ -18,6 +18,11 @@ System requirements:
 Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/project/lute3/).  Here's a summary of the instructions on that pypi page (Linux/Mac, Windows will be similar).  Note my system has python3.8, your system may vary:
 
 ```
+# Create a Lute folder
+mkdir -p ~/my_lute
+cd ~/my_lute
+
+# Set up virtual environment
 python3.8 -m venv myenv
 source myenv/bin/activate
 
@@ -27,7 +32,7 @@ pip install --upgrade lute3
 # Start
 python -m lute.main
 
-# Open your web browser to http://localhost:5000
+# ... Open your web browser to http://localhost:5000.
 # When done, hit Ctl-C
 
 deactivate
@@ -41,20 +46,20 @@ System requirements:
 
 > Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the [Docker documentation](https://docs.docker.com/)).  **Docker is not available or is problematic on some systems, particularly Windows.**
 
-Lute has a pre-built docker image at [https://hub.docker.com/r/jzohrab/lute3](https://hub.docker.com/r/jzohrab/lute3).  There are notes on that page about the image.  Here's one way to get started using a `docker-compose.yml` file:
+Lute has a pre-built docker image at [https://hub.docker.com/r/jzohrab/lute3](https://hub.docker.com/r/jzohrab/lute3).  There are notes on that page about the image.
 
-* create a folder on your system for your lute, with folders for the data and backups, e.g.:
-
-```
-- my_lute/
-    docker-compose.yml
-    - data/
-    - backups/
-```
-
-* Put the following in the `docker-compose.yml`:
+Here's one way to get started using a `docker-compose.yml` file (again a Linux/Mac script):
 
 ```
+# Create Lute folders
+mkdir -p ~/my_lute_docker
+cd ~/my_lute_docker
+# (These subfolders will be mounted to the container)
+mkdir data
+mkdir backups
+
+# Docker-compose.yml:
+cat > docker-compose.yml <<EOF
 version: '3.9'
 services:
   lute:
@@ -64,11 +69,9 @@ services:
     volumes:
       - ./data:/lute_data
       - ./backups:/lute_backup
-```
+EOF
 
-* open a terminal/shell in the `my_lute` folder, and start Lute:
-
-```
+# Run it:
 docker compose up
 ```
 

@@ -8,6 +8,7 @@
 
 # Usage
 
+- [Starting and stopping](./usage/starting-and-stopping.md)
 - [Defining a language](./usage/language-setup.md)
 - [Creating books](./usage/books.md)
 - [Reading](./usage/reading.md)
