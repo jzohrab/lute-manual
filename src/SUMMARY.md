@@ -30,6 +30,7 @@
 - [The stats calculation](./faq/stats.md)
 - [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
 - [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)
+- [Can I make Lute secure?](./faq/adding-basic-auth.md)
 - [Why is this free?](./faq/free.md)
 - [Is there an online version of Lute?](./faq/online-lute.md)
 
