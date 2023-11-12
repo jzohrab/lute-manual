@@ -29,7 +29,7 @@ source myenv/bin/activate
 # Install
 pip install --upgrade lute3
 
-# Start
+# Start.
 python -m lute.main
 
 # ... Open your web browser to http://localhost:5000.
@@ -37,6 +37,13 @@ python -m lute.main
 
 deactivate
 ```
+
+You can start lute on a different port if needed:
+
+```
+python -m lute.main --port 9876
+```
+
 
 ## Using Docker
 
@@ -73,6 +80,15 @@ EOF
 
 # Run it:
 docker compose up
+```
+
+As with the `pip` installation, you can change the port if your machine is already using port 5000, e.g.:
+
+```
+...
+    ports:
+      - 9876:5000
+...
 ```
 
 ## From source
