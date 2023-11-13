@@ -4,6 +4,7 @@
 
 - [Background](background.md)
 - [Installation](install.md)
+  - [install MeCab](./mecab.md)
 - [Migrating from v2 to v3](v2-to-v3.md)
 
 # Usage
