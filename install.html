@@ -151,22 +151,25 @@
 <li><a href="install.html#using-docker">Docker</a></li>
 <li><a href="install.html#from-source">From source</a></li>
 </ul>
-<blockquote>
-<p>I can't recommend any particular installation method: they all have trade offs.  My personal preference is to install using pip.</p>
-</blockquote>
+<p>I can't recommend any particular installation method: they all have trade offs.  My personal preference is to install using pip.  If you're studying Japanese and your system supports Docker, I'd recommend using Docker as it the lute3 image includes some other needed dependencies.</p>
 <h2 id="using-pip"><a class="header" href="#using-pip">Using pip</a></h2>
 <p>System requirements:</p>
 <ul>
 <li>Python 3.8+ and pip</li>
 <li>Japanese learners will also need to <a href="./mecab.html">install MeCab</a></li>
 </ul>
-<p>Lute can be installed from <a href="https://pypi.org/project/lute3/">https://pypi.org/project/lute3/</a>.  Here's a summary of the instructions on that pypi page (Linux/Mac, Windows will be similar).  Note my system has python3.8, your system may vary:</p>
+<p>Lute can be installed from <a href="https://pypi.org/project/lute3/">https://pypi.org/project/lute3/</a>.  Here's a summary of the instructions on that pypi page (Linux/Mac, Windows will be similar).</p>
+<blockquote>
+<ul>
+<li>Before starting, make sure you have python 3.8+ installed!  Run <code>python3 --version</code> from the terminal to check.</li>
+</ul>
+</blockquote>
 <pre><code># Create a Lute folder
 mkdir -p ~/my_lute
 cd ~/my_lute
 
-# Set up virtual environment
-python3.8 -m venv myenv
+# Set up virtual environment.  If this line gives an error, see the notes above.
+python3 -m venv myenv
 source myenv/bin/activate
 
 # Install
@@ -176,6 +179,7 @@ pip install --upgrade lute3
 python -m lute.main
 
 # ... Open your web browser to http://localhost:5000.
+# Leave this terminal open while you're using Lute.
 # When done, hit Ctl-C
 
 deactivate
