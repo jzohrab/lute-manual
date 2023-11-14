@@ -305,6 +305,7 @@ docker compose up
 brew install mecab-ipadic
 </code></pre>
 <h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>The link <a href="https://taku910.github.io/mecab/">https://taku910.github.io/mecab/</a> has a link under Binary package for MS-Windows: mecab-0.996.exe: <a href="https://drive.google.com/uc?export=download&amp;id=0B4y35FiV1wh7WElGUGt6ejlpVXc">ダウンロード</a>.  Verify this link and download.</p>
 <blockquote>
 <p>instructions needed!</p>
 </blockquote>
@@ -325,6 +326,37 @@ sudo apt-get install -y mecab mecab-ipadic-utf8
 <h1 id="lute-configuration"><a class="header" href="#lute-configuration">Lute configuration</a></h1>
 <p>If everything is installed correctly, you will see a Japanese sample story when you start Lute.  If you <em>don't</em> see that story, then either your MeCab isn't set up correctly, or Lute can't find it.</p>
 <p>Lute uses a library called <a href="https://github.com/buruzaemon/natto-py">natto-py</a> that <em>usually</em> finds and uses MeCab automatically.  If it can't, you'll need to specify the path to your MeCab library in Lute's Settings (top right menu bar).  There is a box for you to enter your MeCab path and do a test parse.  If that test succeeds, you're good to go.  If not, jump into the Lute Discord.</p>
+<h2 id="sample-mecab_path-values"><a class="header" href="#sample-mecab_path-values">Sample <code>MECAB_PATH</code> values</a></h2>
+<blockquote>
+<p>The <a href="https://github.com/buruzaemon/natto-py">natto-py</a> gives a few possibilities for the path, which may just be examples and not really valid.</p>
+</blockquote>
+<table><thead><tr><th>System</th><th>MECAB_PATH</th></tr></thead><tbody>
+<tr><td>Mac OS</td><td><code>/usr/local/Cellar/mecab/0.996/lib/libmecab.dylib</code></td></tr>
+<tr><td>bash on UNIX/Linux</td><td><code>/usr/local/lib/libmecab.so</code></td></tr>
+<tr><td>Windows</td><td><code>C:\Program Files\MeCab\bin\libmecab.dll</code></td></tr>
+<tr><td>Lute's docker container</td><td><code>/lib/aarch64-linux-gnu/libmecab.so.2</code></td></tr>
+<tr><td>Linux Mint</td><td><code>/lib/x86_64-linux-gnu/libmecab.so.2</code></td></tr>
+</tbody></table>
+<h2 id="finding-the-mecab-library"><a class="header" href="#finding-the-mecab-library">Finding the mecab library</a></h2>
+<blockquote>
+<p>These are various notes about finding MeCab, hopefully it will help you find your MeCab library.</p>
+</blockquote>
+<p>When setting up MeCab in Docker and GitHub, I found the mecab library like this:</p>
+<pre><code>which mecab
+
+# make note of the path, then:
+ldd &lt;/path/returned/by/which/mecab&gt;
+</code></pre>
+<p>returned:</p>
+<pre><code>linux-vdso.so.1 (0x00007ffd280a8000)
+libmecab.so.2 =&gt; /lib/x86_64-linux-gnu/libmecab.so.2 (0x00007f9fe7cdf000)
+libc.so.6 =&gt; /lib/x86_64-linux-gnu/libc.so.6 (0x00007f9fe7a00000)
+libstdc++.so.6 =&gt; /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f9fe7600000)
+libm.so.6 =&gt; /lib/x86_64-linux-gnu/libm.so.6 (0x00007f9fe7919000)
+/lib64/ld-linux-x86-64.so.2 (0x00007f9fe7dc4000)
+libgcc_s.so.1 =&gt; /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f9fe7cbb000)
+</code></pre>
+<p>For this OS, the correct library was actually <code>libmecab.so.2</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="migrating-from-v2-to-v3"><a class="header" href="#migrating-from-v2-to-v3">Migrating from v2 to v3</a></h1>
 <h2 id="database-and-images"><a class="header" href="#database-and-images">Database and images</a></h2>
 <p>If you're already using Lute v2 (written in PHP), and want to migrate to v3, it's pretty straightforward: you just have to move some files around.  Lute v3 uses the same underlying database as v2 (Sqlite).</p>
