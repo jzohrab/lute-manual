@@ -23,7 +23,7 @@
 - [Custom styles](./settings/custom-styles.md)
 - [Backup](./backup/backup.md)
   - [Restoring backups](./backup/restore.md)
-- [Updating Lute TBD]()
+- [Updating Lute](./usage/updating.md)
 
 # FAQs
 

@@ -35,12 +35,20 @@ docker compose up
 # When done, hit Ctl-C to stop
 ```
 
+You can also run it as a background job:
+
+```
+docker compose up -d
+# ... use Lute, then to stop it:
+docker compose down
+```
+
 ## If you installed from source
 
 ```
 cd ~/my_lute_source
 source .venv/bin/activate
-inv start
+inv start   # or "python -m lute.main"
 # ... etc.
 # Ctl-C when done.
 deactivate
