@@ -2,6 +2,10 @@
 
 These scripts are on a Mac; Linux will be the same, Windows slightly different.  They're rough guides only, your system may vary.
 
+* [Python/pip](#if-using-pip)
+* [Docker](#if-using-docker)
+* [Source](#if-you-installed-from-source)
+
 ## If using pip
 
 Assuming you're using venv:
@@ -19,6 +23,34 @@ python -m lute.main
 # When done, hit Ctl-C to stop
 
 deactivate
+```
+
+### Python/pip startup options
+
+The python `lute.main` defaults for Lute startup will hopefully be
+fine for most people, but some things can be customized.
+
+```
+$ python -m lute.main --help
+usage: main.py [-h] [--port PORT] [--config CONFIG]
+
+Start lute.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --port PORT      Port number (default: 5000)
+  --config CONFIG  Path to override config file. Uses lute/config/config.yml if not set.
+```
+
+With the `--config` option, you can pass the path to a new config file
+to customize the folder where Lute stores data (and a few other
+things, if needed).  Copy the
+[config.yml.example](https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example)
+to a new file in your Lute folder, edit and save it, and pass its path
+when calling `lute.main`:
+
+```
+python -m lute.main --config ./my_personal_config.yml
 ```
 
 ## If using Docker
