@@ -146,6 +146,11 @@
                     <main>
                         <h1 id="starting-and-stopping"><a class="header" href="#starting-and-stopping">Starting and stopping</a></h1>
 <p>These scripts are on a Mac; Linux will be the same, Windows slightly different.  They're rough guides only, your system may vary.</p>
+<ul>
+<li><a href="#if-using-pip">Python/pip</a></li>
+<li><a href="#if-using-docker">Docker</a></li>
+<li><a href="#if-you-installed-from-source">Source</a></li>
+</ul>
 <h2 id="if-using-pip"><a class="header" href="#if-using-pip">If using pip</a></h2>
 <p>Assuming you're using venv:</p>
 <pre><code>cd ~/my_lute
@@ -160,6 +165,27 @@ python -m lute.main
 # When done, hit Ctl-C to stop
 
 deactivate
+</code></pre>
+<h3 id="pythonpip-startup-options"><a class="header" href="#pythonpip-startup-options">Python/pip startup options</a></h3>
+<p>The python <code>lute.main</code> defaults for Lute startup will hopefully be
+fine for most people, but some things can be customized.</p>
+<pre><code>$ python -m lute.main --help
+usage: main.py [-h] [--port PORT] [--config CONFIG]
+
+Start lute.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --port PORT      Port number (default: 5000)
+  --config CONFIG  Path to override config file. Uses lute/config/config.yml if not set.
+</code></pre>
+<p>With the <code>--config</code> option, you can pass the path to a new config file
+to customize the folder where Lute stores data (and a few other
+things, if needed).  Copy the
+<a href="https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example">config.yml.example</a>
+to a new file in your Lute folder, edit and save it, and pass its path
+when calling <code>lute.main</code>:</p>
+<pre><code>python -m lute.main --config ./my_personal_config.yml
 </code></pre>
 <h2 id="if-using-docker"><a class="header" href="#if-using-docker">If using Docker</a></h2>
 <p>Assuming you have your docker compose set up:</p>
