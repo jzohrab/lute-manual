@@ -3,9 +3,13 @@
 [Introduction](intro.md)
 
 - [Background](background.md)
-- [Installation](install.md)
-  - [install MeCab](./mecab.md)
-- [Migrating from v2 to v3](v2-to-v3.md)
+
+# Installation
+
+- [Installation](./install/install.md)
+- [MeCab for Japanese](./install/mecab.md)
+- [More details, if needed!](./install/more-details/index.md)
+  - [Windows using Docker](./install/more-details/windows-using-docker.md)
 
 # Usage
 
@@ -28,6 +32,7 @@
 # FAQs
 
 - [Where can I get help?](./faq/help.md)
+- [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
 - [The stats calculation](./faq/stats.md)
 - [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
 - [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)

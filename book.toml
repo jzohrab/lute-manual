@@ -12,3 +12,6 @@ create-missing = true
 no-section-label = true
 default-theme = "rust"
 additional-css = ["css/custom.css"]
+
+[output.html.fold]
+enable = true
