@@ -11,6 +11,7 @@ extra-watch-dirs = [ "css" ]
 
 [output.html]
 no-section-label = true
+git-repository-url = "https://github.com/jzohrab/lute-manual/"
 default-theme = "rust"
 additional-css = ["css/custom.css"]
 
