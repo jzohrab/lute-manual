@@ -10,7 +10,7 @@ I can't recommend any particular installation method: they all have trade offs. 
 
 ## Using pip
 
-System requirements:
+### System requirements:
 
 * Python 3.8+ and pip
 * Japanese learners will also need to [install MeCab](./mecab.md)
@@ -19,29 +19,33 @@ Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/pr
 
 > * Before starting, make sure you have python 3.8+ installed!  Run `python3 --version` from the terminal to check.
 
+* Create a Lute folder
 ```
-# Create a Lute folder
 mkdir -p ~/my_lute
 cd ~/my_lute
-
-# Set up virtual environment.  If this line gives an error, see the notes above.
-python3 -m venv myenv
-source myenv/bin/activate
-
-# Install
-pip install --upgrade lute3
-
-# Start.
-python -m lute.main
-
-# ... Open your web browser to http://localhost:5000.
-# Leave this terminal open while you're using Lute.
-# When done, hit Ctl-C
-
-deactivate
 ```
 
-You can start lute on a different port if needed:
+* Set up virtual environment.  If this line gives an error, see the notes above.
+```
+python3 -m venv myenv
+source myenv/bin/activate
+```
+
+* Install
+```
+pip install --upgrade lute3
+```
+
+* Start.
+```
+python -m lute.main
+```
+
+> ... Open your web browser to http://localhost:5000.
+> Leave this terminal open while you're using Lute.
+> When done, hit Ctl-C to deactivate
+
+* You can start lute on a different port if needed:
 
 ```
 python -m lute.main --port 9876
@@ -50,7 +54,7 @@ python -m lute.main --port 9876
 
 ## Using Docker
 
-System requirements:
+### System requirements:
 
 * Docker
 
@@ -58,17 +62,21 @@ System requirements:
 
 Lute has a pre-built docker image at [https://hub.docker.com/r/jzohrab/lute3](https://hub.docker.com/r/jzohrab/lute3).  There are notes on that page about the image.
 
-Here's one way to get started using a `docker-compose.yml` file (again a Linux/Mac script):
+#### Here's one way to get started using a `docker-compose.yml` file (again a Linux/Mac script):
 
+* Create Lute folders
 ```
-# Create Lute folders
 mkdir -p ~/my_lute_docker
 cd ~/my_lute_docker
-# (These subfolders will be mounted to the container)
+```
+* create some subfolders (These subfolders will be mounted to the container)
+```
 mkdir data
 mkdir backups
+```
 
-# Docker-compose.yml:
+* create a file and name it `docker-compose.yml`, then copy this into it:
+```
 cat > docker-compose.yml <<EOF
 version: '3.9'
 services:
@@ -80,8 +88,10 @@ services:
       - ./data:/lute_data
       - ./backups:/lute_backup
 EOF
+```
 
-# Run it:
+* Run it:
+```
 docker compose up
 ```
 
