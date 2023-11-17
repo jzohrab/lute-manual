@@ -10,42 +10,89 @@ I can't recommend any particular installation method: they all have trade offs. 
 
 ## Using pip
 
-### System requirements:
+System requirements:
 
-* Python 3.8+ and pip
+* Python 3.8+ and pip.  Run `python3 --version` from the terminal to check.
 * Japanese learners will also need to [install MeCab](./mecab.md)
 
-Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/project/lute3/).  Here's a summary of the instructions on that pypi page (Linux/Mac, Windows will be similar).
+Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/project/lute3/).  Here's a summary of the instructions from that page for Linux and Mac, Windows will be similar.  All of these commands are run from the Terminal (or from Cmd if Windows).
 
-> * Before starting, make sure you have python 3.8+ installed!  Run `python3 --version` from the terminal to check.
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'piptab', 'PipSteps')">Steps</button>
+  <button class="tablinks" onclick="openTab(event, 'piptab', 'PipScriptNix')">... as script (Linux/Mac)</button>
+  <button class="tablinks" onclick="openTab(event, 'piptab', 'PipScriptWin')">... as script (Windows)</button>
+</div>
 
-* Create a Lute folder
+<!-- Tab content -->
+<div id="PipSteps" class="tabcontent piptab">
+
+Create a Lute folder.  This can be anywhere on your system.
+
 ```
 mkdir -p ~/my_lute
 cd ~/my_lute
 ```
 
-* Set up virtual environment.  If this line gives an error, see the notes above.
+Set up the virtual environment.  If this gives an error, check your Python installation (see "system requirements").
+
 ```
 python3 -m venv myenv
 source myenv/bin/activate
 ```
 
-* Install
+Install Lute.
+
 ```
 pip install --upgrade lute3
 ```
 
-* Start.
+Start Lute.
+
 ```
 python -m lute.main
 ```
+</div>
 
-> ... Open your web browser to http://localhost:5000.
-> Leave this terminal open while you're using Lute.
-> When done, hit Ctl-C to deactivate
+<!-- Tab content -->
+<div id="PipScriptNix" class="tabcontent piptab">
 
-* You can start lute on a different port if needed:
+```
+# Create a Lute folder
+mkdir -p ~/my_lute
+cd ~/my_lute
+
+# Set up virtual environment.  If this line gives an error, see "system reqs" above.
+python3 -m venv myenv
+source myenv/bin/activate
+
+# Install
+pip install --upgrade lute3
+
+# Start
+python -m lute.main
+```
+</div>
+
+<!-- Tab content -->
+<div id="PipScriptWin" class="tabcontent piptab">
+
+```
+cd "C:\My Documents"
+mkdir my_lute
+cd my_lute
+
+python3 -m venv myenv
+.\myenv\Scripts\activate.bat
+
+pip install --upgrade lute3
+python -m lute.main
+```
+</div>
+
+Now open your web browser to `http://localhost:5000`.  Leave the terminal window open while you're using Lute. When you're done, hit `Ctl-C` to stop Lute.
+
+You can start lute on a different port if needed:
 
 ```
 python -m lute.main --port 9876
@@ -54,29 +101,68 @@ python -m lute.main --port 9876
 
 ## Using Docker
 
-### System requirements:
-
-* Docker
-
-> Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the [Docker documentation](https://docs.docker.com/)).  **Docker is not available or is problematic on some systems, particularly Windows.**
+System requirements: Docker[^what-is-docker]
 
 Lute has a pre-built docker image at [https://hub.docker.com/r/jzohrab/lute3](https://hub.docker.com/r/jzohrab/lute3).  There are notes on that page about the image.
 
-#### Here's one way to get started using a `docker-compose.yml` file (again a Linux/Mac script):
+Using a `docker-compose.yml` file:
 
-* Create Lute folders
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'dockertab', 'DockerSteps')">Steps</button>
+  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerScriptNix')">... as script (Linux/Mac)</button>
+</div>
+
+<!-- Tab content -->
+<div id="DockerSteps" class="tabcontent dockertab">
+
+Create a Lute folder.  This can be anywhere on your system.
+
 ```
 mkdir -p ~/my_lute_docker
 cd ~/my_lute_docker
 ```
-* create some subfolders (These subfolders will be mounted to the container)
+
+Create some subfolders (These subfolders will be mounted to the container)
+
 ```
 mkdir data
 mkdir backups
 ```
 
-* create a file and name it `docker-compose.yml`, then copy this into it:
+Create a file named `docker-compose.yml` in the `my_lute` folder with the following content:
+
 ```
+version: '3.9'
+services:
+  lute:
+    image: jzohrab/lute3:latest
+    ports:
+      - 5000:5000
+    volumes:
+      - ./data:/lute_data
+      - ./backups:/lute_backup
+```
+
+Run it:
+
+```
+docker compose up
+```
+</div>
+
+<!-- Tab content -->
+<div id="DockerScriptNix" class="tabcontent dockertab">
+
+```
+# Create Lute folders
+mkdir -p ~/my_lute_docker
+cd ~/my_lute_docker
+# (These subfolders will be mounted to the container)
+mkdir data
+mkdir backups
+
+# Docker-compose.yml:
 cat > docker-compose.yml <<EOF
 version: '3.9'
 services:
@@ -88,12 +174,12 @@ services:
       - ./data:/lute_data
       - ./backups:/lute_backup
 EOF
-```
 
-* Run it:
-```
+# Run it:
 docker compose up
 ```
+</div>
+
 
 As with the `pip` installation, you can change the port if your machine is already using port 5000, e.g.:
 
@@ -110,3 +196,40 @@ As with the `pip` installation, you can change the port if your machine is alrea
 Developers and gearheads can install Lute from source: see the [Lute repository](https://github.com/jzohrab/lute-v3/blob/master/docs/development.md).
 
 If you want to develop Lute, you'll also need to [install MeCab](./mecab.md).
+
+---
+
+[^what-is-docker]: Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the [Docker documentation](https://docs.docker.com/)).  **Docker is not available or is problematic on some systems, particularly Windows.**
+
+
+
+<script>
+function openTab(evt, tabclass, tabName) {
+  // Hide all tabs.
+  var tabcontent = document.getElementsByClassName(tabclass);
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Show the specified tab.
+  document.getElementById(tabName).style.display = "block";
+
+  if (evt == null) {
+    // First time running this, there is no
+    // "clicked link", so leave all styles as-is.
+    return;
+  }
+  
+  // Remove "active" from all tablinks.
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Add "active" to clicked tab.
+  evt.currentTarget.className += " active";
+}
+
+openTab(null, 'piptab', 'PipSteps');
+openTab(null, 'dockertab', 'DockerSteps');
+</script>
