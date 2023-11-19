@@ -30,7 +30,7 @@ jobs:
           popd
 
       - run: |
-          export PATH=$PWD/mdbook-linkcheck:$PATH
+          # export PATH=$PWD/mdbook-linkcheck:$PATH
           mdbook build
 
       - name: Deploy
