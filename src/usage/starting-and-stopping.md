@@ -42,22 +42,16 @@ optional arguments:
   --config CONFIG  Path to override config file. Uses lute/config/config.yml if not set.
 ```
 
-With the `--config` option, you can pass the path to a new config file
-to customize the folder where Lute stores data (and a few other
-things, if needed).  Copy the
+If you need to customize lute, for example to change the data path where the Lute db is stored,
+you can create a custom `config.yml` file and store it in the same folder where you run `lute.main`.
+Copy the
 [config.yml.example](https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example)
-to a new file in your Lute folder, edit and save it, and pass its path
-when calling `lute.main`:
+to a new file in your Lute folder, edit and save it, and Lute will automatically use it when you run `python -m lute.main`.
+
+You can also use the `--config` option if your custom config is stored somewhere else, e.g.
 
 ```
 python -m lute.main --config ./my_personal_config.yml
-```
-
-If your custom config file is named `config.yml` and it's in the same folder where you call `lute.main`, Lute will use that by default; i.e., the following are equivalent
-
-```
-python -m lute.main --config ./config.yml
-python -m lute.main
 ```
 
 
