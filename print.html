@@ -602,17 +602,13 @@ optional arguments:
   --port PORT      Port number (default: 5000)
   --config CONFIG  Path to override config file. Uses lute/config/config.yml if not set.
 </code></pre>
-<p>With the <code>--config</code> option, you can pass the path to a new config file
-to customize the folder where Lute stores data (and a few other
-things, if needed).  Copy the
+<p>If you need to customize lute, for example to change the data path where the Lute db is stored,
+you can create a custom <code>config.yml</code> file and store it in the same folder where you run <code>lute.main</code>.
+Copy the
 <a href="https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example">config.yml.example</a>
-to a new file in your Lute folder, edit and save it, and pass its path
-when calling <code>lute.main</code>:</p>
+to a new file in your Lute folder, edit and save it, and Lute will automatically use it when you run <code>python -m lute.main</code>.</p>
+<p>You can also use the <code>--config</code> option if your custom config is stored somewhere else, e.g.</p>
 <pre><code>python -m lute.main --config ./my_personal_config.yml
-</code></pre>
-<p>If your custom config file is named <code>config.yml</code> and it's in the same folder where you call <code>lute.main</code>, Lute will use that by default; i.e., the following are equivalent</p>
-<pre><code>python -m lute.main --config ./config.yml
-python -m lute.main
 </code></pre>
 <h2 id="if-using-docker"><a class="header" href="#if-using-docker">If using Docker</a></h2>
 <p>Assuming you have your docker compose set up:</p>
