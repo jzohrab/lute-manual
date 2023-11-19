@@ -1,49 +1,48 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js rust">
+<html lang="en" class="rust" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Lute manual</title>
-                <meta name="robots" content="noindex" />
-                
+        <meta name="robots" content="noindex">
+
 
         <!-- Custom HTML head -->
         
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
-                <link rel="icon" href="favicon.svg">
-                        <link rel="shortcut icon" href="favicon.png">
-                <link rel="stylesheet" href="css/variables.css">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-                <link rel="stylesheet" href="css/print.css" media="print">
-        
+        <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="fonts/fonts.css">
-        
+        <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-                <link rel="stylesheet" href="css/custom.css">
-        
-            </head>
-    <body>
+        <link rel="stylesheet" href="css/custom.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,74 +58,103 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('rust')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">Introduction</a></li><li class="chapter-item "><a href="background.html">Background</a></li><li class="chapter-item affix "><li class="part-title">Installation</li><li class="chapter-item "><a href="install/install.html">Installation</a></li><li class="chapter-item "><a href="install/mecab.html">MeCab for Japanese</a></li><li class="chapter-item "><a href="install/more-details/index.html">More details, if needed!</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="install/more-details/windows-using-docker.html">Windows using Docker</a></li></ol></li><li class="chapter-item "><li class="part-title">Usage</li><li class="chapter-item "><a href="usage/starting-and-stopping.html">Starting and stopping</a></li><li class="chapter-item "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item "><a href="usage/books.html">Creating books</a></li><li class="chapter-item "><a href="usage/reading.html">Reading</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item "><a href="usage/terms.html">Terms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item "><a href="backup/backup.html">Backup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item "><a href="usage/updating.html">Updating Lute</a></li><li class="chapter-item affix "><li class="part-title">FAQs</li><li class="chapter-item "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item "><a href="faq/v2-to-v3.html">How can I migrate from Lute v2 to v3?</a></li><li class="chapter-item "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item "><a href="faq/adding-basic-auth.html">Can I make Lute secure?</a></li><li class="chapter-item "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li><li class="chapter-item affix "><li class="part-title">Misc</li><li class="chapter-item "><a href="misc/backlog.html">Backlog</a></li><li class="chapter-item "><a href="misc/doc-feedback.html">Documentation feedback</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">Introduction</a></li><li class="chapter-item "><a href="background.html">Background</a></li><li class="chapter-item affix "><li class="part-title">Installation</li><li class="chapter-item "><a href="install/install.html">Installation</a></li><li class="chapter-item "><a href="install/mecab.html">MeCab for Japanese</a></li><li class="chapter-item "><a href="install/more-details/index.html">More details, if needed!</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="install/more-details/windows-using-docker.html">Windows using Docker</a></li></ol></li><li class="chapter-item "><li class="part-title">Usage</li><li class="chapter-item "><a href="usage/starting-and-stopping.html">Starting and stopping</a></li><li class="chapter-item "><a href="usage/language-setup.html">Defining a language</a></li><li class="chapter-item "><a href="usage/books.html">Creating books</a></li><li class="chapter-item "><a href="usage/reading.html">Reading</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="usage/keyboard-bindings.html">Key bindings</a></li><li class="chapter-item "><a href="usage/overlapping-terms.html">Overlapping terms</a></li><li class="chapter-item "><a href="usage/tutorial.html">The demo tutorial</a></li></ol></li><li class="chapter-item "><a href="usage/terms.html">Terms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="usage/parent-terms.html">Parent terms</a></li><li class="chapter-item "><a href="usage/parent-terms-bulk-mapping.html">Bulk mapping parent terms</a></li><li class="chapter-item "><a href="usage/bulk-term-import.html">Bulk term import</a></li></ol></li><li class="chapter-item "><a href="settings/custom-styles.html">Custom styles</a></li><li class="chapter-item "><a href="backup/backup.html">Backup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="backup/restore.html">Restoring backups</a></li></ol></li><li class="chapter-item "><a href="usage/updating.html">Updating Lute</a></li><li class="chapter-item affix "><li class="part-title">FAQs</li><li class="chapter-item "><a href="faq/help.html">Where can I get help?</a></li><li class="chapter-item "><a href="faq/v2-to-v3.html">How can I migrate from Lute v2 to v3?</a></li><li class="chapter-item "><a href="faq/stats.html">The stats calculation</a></li><li class="chapter-item "><a href="faq/terms-cannot-be-changed-once-created.html">Why can't I change a Term?</a></li><li class="chapter-item "><a href="faq/sentences-only-shown-when-page-is-read.html">Where are my new Term's sentences?</a></li><li class="chapter-item "><a href="faq/adding-basic-auth.html">Can I make Lute secure?</a></li><li class="chapter-item "><a href="faq/free.html">Why is this free?</a></li><li class="chapter-item "><a href="faq/online-lute.html">Is there an online version of Lute?</a></li><li class="chapter-item affix "><li class="part-title">Misc</li><li class="chapter-item "><a href="misc/backlog.html">Backlog</a></li><li class="chapter-item "><a href="misc/doc-feedback.html">Documentation feedback</a></li></ol>
+            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                                            </div>
+                    </div>
 
                     <h1 class="menu-title">Lute manual</h1>
 
                     <div class="right-buttons">
-                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                                                                        <a href="https://github.com/jzohrab/lute-manual/" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/jzohrab/lute-manual/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                
+
                     </div>
                 </div>
 
-                                <div id="search-wrapper" class="hidden">
+                <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
@@ -136,9 +164,9 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -205,12 +233,13 @@
 <p>(Also, if you are into software, like the idea of LWT, and want to contribute to an open-source project, I believe that Lute is a compelling place to start.  It uses Python and Flask, which are good things to know, and has good test coverage so you can hack at things without fear.)</p>
 <h2 id="why-might-you-not-use-lute"><a class="header" href="#why-might-you-not-use-lute">Why might you NOT use Lute?</a></h2>
 <p>As good as Lute is, it might not be for you.  Below are some things that may lead you to decide to postpone using Lute for now:</p>
-<table><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Notes</th></tr></thead><tbody>
 <tr><td>Audio</td><td>Lute doesn't have an audio player.</td></tr>
 <tr><td>Support &quot;non-consecutive multiword terms&quot;</td><td>Some languages, like German and Dutch, have terms that that split apart.  For example, in German, the verb &quot;einladen&quot; can be split into &quot;laden ... ein&quot;: &quot;Ich lade dich zu meiner Party ein.&quot;  I don't think any tool currently solves this well.  See the notes at on <a href="https://github.com/jzohrab/lute/issues/58">this GitHub issue</a>.</td></tr>
 <tr><td>Flashcards/testing</td><td>Lute is designed for reading only, there is no testing.</td></tr>
 <tr><td>Automated or bulk translation</td><td>Lute isn't designed to automatically create bidirectional readers, or to auto-create translations.  You can use Lute's <a href="https://github.com/jzohrab/lute/wiki/Bulk-Term-Import">Term import</a> feature, along with something like Google Sheets, to imitate that.</td></tr>
 </tbody></table>
+</div>
 <p>There are other smaller features that Lute doesn't have yet, but the above are the biggest ones that may be dealbreakers for you at the moment.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <p>There are currently three different methods to install Lute v3 on your system, with different system requirements:</p>
@@ -423,13 +452,14 @@ sudo apt-get install -y mecab mecab-ipadic-utf8
 <blockquote>
 <p>The <a href="https://github.com/buruzaemon/natto-py">natto-py</a> gives a few possibilities for the path, which may just be examples and not really valid.</p>
 </blockquote>
-<table><thead><tr><th>System</th><th>MECAB_PATH</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>System</th><th>MECAB_PATH</th></tr></thead><tbody>
 <tr><td>Mac OS</td><td><code>/usr/local/Cellar/mecab/0.996/lib/libmecab.dylib</code></td></tr>
 <tr><td>bash on UNIX/Linux</td><td><code>/usr/local/lib/libmecab.so</code></td></tr>
 <tr><td>Windows</td><td><code>C:\Program Files\MeCab\bin\libmecab.dll</code></td></tr>
 <tr><td>Lute's docker container</td><td><code>/lib/aarch64-linux-gnu/libmecab.so.2</code></td></tr>
 <tr><td>Linux Mint</td><td><code>/lib/x86_64-linux-gnu/libmecab.so.2</code></td></tr>
 </tbody></table>
+</div>
 <h2 id="finding-the-mecab-library"><a class="header" href="#finding-the-mecab-library">Finding the mecab library</a></h2>
 <blockquote>
 <p>These are various notes about finding MeCab, hopefully it will help you find your MeCab library.</p>
@@ -657,7 +687,7 @@ deactivate
 </blockquote>
 <p>Some of these actions refer to the &quot;current word&quot; - that's either the word you're hovering over, or have clicked.</p>
 <h2 id="navigation"><a class="header" href="#navigation">Navigation</a></h2>
-<table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
 <tr><td><code>Right</code></td><td>Move to next word</td></tr>
 <tr><td><code>Shift</code> + <code>Right</code></td><td>Move to next unknown or learning word (skip known and ignored)</td></tr>
 <tr><td><code>Left</code></td><td>Move to previous word</td></tr>
@@ -666,20 +696,23 @@ deactivate
 <tr><td><code>End</code></td><td>Move to last word</td></tr>
 <tr><td><code>Esc</code></td><td>Reset marked term(s)</td></tr>
 </tbody></table>
+</div>
 <h2 id="misc-actions"><a class="header" href="#misc-actions">Misc actions</a></h2>
-<table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
 <tr><td><code>t</code></td><td>Translate the sentence of the current word</td></tr>
 <tr><td><code>Shift</code> + <code>t</code></td><td>Translate the paragraph of the current word</td></tr>
 <tr><td><code>c</code></td><td>Copy the sentence of the current word to the clipboard</td></tr>
 <tr><td><code>Shift</code> + <code>c</code></td><td>Copy the paragraph of the current word to the clipboard</td></tr>
 </tbody></table>
+</div>
 <h2 id="updating-status"><a class="header" href="#updating-status">Updating status</a></h2>
 <p>You can edit the status of the current word with a keystroke:</p>
-<table><thead><tr><th>Key</th><th>Set status of marked term(s) to</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Key</th><th>Set status of marked term(s) to</th></tr></thead><tbody>
 <tr><td><code>1</code> - <code>5</code></td><td>1 (Learning) to 5 (Learned)</td></tr>
 <tr><td><code>i</code></td><td>&quot;Ignored&quot;</td></tr>
 <tr><td><code>w</code></td><td>&quot;Well Known&quot;</td></tr>
 </tbody></table>
+</div>
 <p>You can also &quot;bulk update&quot; statuses by holding down Shift and clicking with the mouse.  All of the underlined terms will then be affected when you hit 1, 2, etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="overlapping-terms"><a class="header" href="#overlapping-terms">Overlapping terms</a></h1>
 <p>Sometimes Terms you define may &quot;overlap&quot;, so Lute displays those with an extra indicator.</p>
@@ -766,11 +799,12 @@ span.overlapped:before {
 <h2 id="searching"><a class="header" href="#searching">Searching</a></h2>
 <p>You can search for terms using the &quot;Search&quot; text box.  You can use the special characters &quot;^&quot; and &quot;$&quot; to mark the start and end of strings, respectively.  This is useful when searching for terms with similar root forms.</p>
 <p>Examples:</p>
-<table><thead><tr><th>Search</th><th>Returns</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Search</th><th>Returns</th></tr></thead><tbody>
 <tr><td>at</td><td><strong>at</strong>, <strong>at</strong>tack, c<strong>at</strong></td></tr>
 <tr><td>^at</td><td><strong>at</strong>, <strong>at</strong>tack</td></tr>
 <tr><td>at$</td><td><strong>at</strong>, c<strong>at</strong></td></tr>
 </tbody></table>
+</div>
 <h2 id="csv-export"><a class="header" href="#csv-export">CSV Export</a></h2>
 <p>At the bottom of the term table listing is an &quot;Export CSV&quot; button.</p>
 <p>This exports the Terms shown on the current page only.  Change the &quot;Show <count> entries&quot; if your search and filters return multiple pages of data.</p>
@@ -795,10 +829,11 @@ span.overlapped:before {
 <p>And for &quot;dog&quot;:</p>
 <p><img src="https://user-images.githubusercontent.com/1637133/229641104-d9d2fd2a-ff32-4b86-a365-d14884fdc565.png" alt="image" /></p>
 <p>Note that the new parent term (&quot;dog&quot;) gets the exact same information as the new term (&quot;dogs&quot;):</p>
-<table><thead><tr><th>term</th><th>details</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>term</th><th>details</th></tr></thead><tbody>
 <tr><td>dogs</td><td><img src="https://user-images.githubusercontent.com/1637133/229641279-d9a619a2-cc93-4853-a211-adb78abd57d4.png" alt="image" /></td></tr>
 <tr><td>dog</td><td><img src="https://user-images.githubusercontent.com/1637133/229641457-426a3d65-efe1-42dd-83d7-eac42689b66c.png" alt="image" /></td></tr>
 </tbody></table>
+</div>
 <p>While this might feel counter-intuitive, I've found that it provides the fastest input and term definition for Lute as I'm reading.  If I need, I can go back to the parent term later and clean things up.</p>
 <h1 id="click-a-parent-tag-to-edit-the-parent-term"><a class="header" href="#click-a-parent-tag-to-edit-the-parent-term">Click a Parent tag to edit the parent Term</a></h1>
 <p>When you click on a Term with parents, the parent tags are clickable, so you can quickly move to the parent Term.</p>
@@ -835,13 +870,14 @@ span.overlapped:before {
 <pre><code>dog    dogs
 </code></pre>
 <p>We have the following scenarios:</p>
-<table><thead><tr><th>Child term &quot;dogs&quot; exists?</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Child term &quot;dogs&quot; exists?</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
 <tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; exists</td><td>&quot;dog&quot; is assigned as the Parent Term for &quot;dogs&quot;</td></tr>
 <tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; doesn't exist</td><td>&quot;dog&quot; is <em>automatically created</em>, and assigned as the Parent Term for &quot;dogs&quot;</td></tr>
 <tr><td>Yes</td><td>If &quot;dogs&quot; already has a Parent Term</td><td>nothing happens</td></tr>
 <tr><td>No</td><td>If &quot;dog&quot; exists</td><td>&quot;dogs&quot; is <em>automatically created</em>, and &quot;dog&quot; is assigned as its Parent Term</td></tr>
 <tr><td>No</td><td>If &quot;dog&quot; does not exist</td><td>nothing happens</td></tr>
 </tbody></table>
+</div>
 <p>If a term is automatically created, you'll see a small asterisk next to it when reading, and a small message will be included in its popup:</p>
 <p><img src="https://user-images.githubusercontent.com/1637133/236732831-94fc2209-4821-4580-8344-cb8615ac4586.png" alt="image" /></p>
 <p><img src="https://user-images.githubusercontent.com/1637133/236732902-3feed1cf-6f18-4463-9882-7142388a23c0.png" alt="image" /></p>
@@ -889,7 +925,7 @@ dog      dogs
 <li>An error is raised if the file contains other headings.</li>
 </ul>
 <h2 id="field-notes"><a class="header" href="#field-notes">Field notes</a></h2>
-<table><thead><tr><th>Field</th><th>Required</th><th>Notes</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Field</th><th>Required</th><th>Notes</th></tr></thead><tbody>
 <tr><td>language</td><td>Yes</td><td>Must be the name of one of the languages you have saved in Lute</td></tr>
 <tr><td>term</td><td>Yes</td><td>The new Term</td></tr>
 <tr><td>translation</td><td></td><td></td></tr>
@@ -898,6 +934,7 @@ dog      dogs
 <tr><td>tags</td><td></td><td>A comma-delimited list of tags to add to the Term</td></tr>
 <tr><td>pronunciation</td><td></td><td></td></tr>
 </tbody></table>
+</div>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="ex-1---single-record"><a class="header" href="#ex-1---single-record">ex. 1 - single record</a></h3>
 <p>The simplest example.  Note that the tags <code>animal, noun</code> must be enclosed in quotes.</p>
@@ -968,13 +1005,14 @@ span.status99 { background-color: none; color: red; }
 </blockquote>
 <h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
 <p>Backup is configured in the Settings.</p>
-<table><thead><tr><th>Setting</th><th>Values</th><th>Notes</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Values</th><th>Notes</th></tr></thead><tbody>
 <tr><td>Backup enabled</td><td>yes or no</td><td>Set to &quot;yes&quot; if you want to run them through the Lute UI or have Lute do daily backups, and &quot;no&quot; if you're handling your own backups with scripts or whatever.</td></tr>
 <tr><td>Backup directory <strong>(Non-Docker users only)</strong></td><td>Full directory path</td><td>This is the <em>existing</em> directory where a gzipped database export, and copy of all of your images, will be sent.  Set this to something that is backed up, such as to a DropBox folder or similar.  This is disabled for Docker users, because the backup directory has to be mounted to a host folder.</td></tr>
 <tr><td>Run backups automatically (daily)</td><td>yes or no</td><td>If <code>yes</code>, Lute will run the backup <em>from the Home page</em> every day.  Note that this is only from the Home page, so if you have a book open for reading for 2 weeks, it won't be backed up. :-)</td></tr>
 <tr><td>Warn if backup hasn't run in a week</td><td>yes or no</td><td>If <code>yes</code>, Lute will print a warning <em>on the Home page</em> if the last backup was run more than one week ago.  Again, this is only from the home page.</td></tr>
 <tr><td>Retain backup count</td><td>Number</td><td>The number of automatic backup files to keep.  Backups are created with date-time stamp added (e.g. <code>lute_backup_2023-04-19_204452.db.gz</code>), and Lute only keeps the specified count of most recent backups.  Note that this number is only used for automatic backups.  For &quot;manual&quot; backups (where you click the link to create a backup from the Home page), you have to delete old files.</td></tr>
 </tbody></table>
+</div>
 <h2 id="manual-and-automatic-backups"><a class="header" href="#manual-and-automatic-backups">Manual and automatic backups</a></h2>
 <p>There are two kinds of backups, &quot;manual&quot; and &quot;automatic&quot;.  Both are placed in the folder you specify in your settings.</p>
 <ul>
@@ -1329,42 +1367,43 @@ http {
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
-                        
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                            </nav>
+
+            </nav>
 
         </div>
 
-        
-        
-        
-                <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        
-        
-                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        
-                        <script type="text/javascript">
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
-                
+
+    </div>
     </body>
 </html>
