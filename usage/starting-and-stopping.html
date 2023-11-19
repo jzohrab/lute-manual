@@ -218,6 +218,10 @@ to a new file in your Lute folder, edit and save it, and pass its path
 when calling <code>lute.main</code>:</p>
 <pre><code>python -m lute.main --config ./my_personal_config.yml
 </code></pre>
+<p>If your custom config file is named <code>config.yml</code> and it's in the same folder where you call <code>lute.main</code>, Lute will use that by default; i.e., the following are equivalent</p>
+<pre><code>python -m lute.main --config ./config.yml
+python -m lute.main
+</code></pre>
 <h2 id="if-using-docker"><a class="header" href="#if-using-docker">If using Docker</a></h2>
 <p>Assuming you have your docker compose set up:</p>
 <pre><code>cd ~/my_lute_docker
