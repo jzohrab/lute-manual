@@ -53,6 +53,14 @@ when calling `lute.main`:
 python -m lute.main --config ./my_personal_config.yml
 ```
 
+If your custom config file is named `config.yml` and it's in the same folder where you call `lute.main`, Lute will use that by default; i.e., the following are equivalent
+
+```
+python -m lute.main --config ./config.yml
+python -m lute.main
+```
+
+
 ## If using Docker
 
 Assuming you have your docker compose set up:
