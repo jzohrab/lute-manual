@@ -20,7 +20,18 @@ jobs:
           mdbook-version: '0.4.10'
           # mdbook-version: 'latest'
 
-      - run: mdbook build
+      - name: Add link checker
+        run: |
+          mkdir -p mdbook-linkcheck
+          pushd mdbook-linkcheck
+          curl -L https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/latest/download/mdbook-linkcheck.x86_64-unknown-linux-gnu.zip -o mdbook-linkcheck.zip
+          unzip mdbook-linkcheck.zip
+          chmod +x mdbook-linkcheck
+          popd
+
+      - run: |
+          export PATH=$PWD/mdbook-linkcheck:$PATH
+          mdbook build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

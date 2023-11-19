@@ -1,6 +1,6 @@
 # Updating Lute
 
-First, you **must [stop Lute](./usage/starting-and-stopping.md)**.
+First, you **must [stop Lute](./starting-and-stopping.md)**.
 
 (Lute or Python may lock certain files while running, shutting down ensures that things will update safely.)
 

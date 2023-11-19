@@ -4,11 +4,28 @@ Deployed to https://jzohrab.github.io/lute-manual/ with GitHub actions.
 
 Written using mdbook (https://rust-lang.github.io/mdBook).
 
-## Development
+## Development prereqs
 
-install mdbook
+* `mdbook`
 
 On mac, `brew install mdbook`
+
+* `mdbook-linkcheck`
+
+Ref https://github.com/Michael-F-Bryan/mdbook-linkcheck#getting-started
+
+Get the binary release from https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases, and add it to a
+
+
+RELEASE=https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/download/v0.7.7/mdbook-linkcheck.x86_64-apple-darwin.zip
+mkdir -p mdbook-linkcheck && cd "$_" && \
+  curl -L $RELEASE -o mdbook-linkcheck.zip && \
+  unzip "$_" && \
+  chmod +x mdbook-linkcheck && \
+  export PATH=$PWD:$PATH && \
+  cd ..
+
+## Run locally
 
 Start it: `mdbook serve --open`
 

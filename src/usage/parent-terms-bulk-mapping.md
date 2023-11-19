@@ -2,7 +2,7 @@
 
 > NOTE: the UI and implementation has changed since this was written, but the idea is still the same.  TODO: update this section!
 
-Lute supports [Parent Terms](Parent-Terms), and also supports a bulk mapping of Parent Terms to Terms, using a mapping file that you create and import.
+Lute supports [Parent Terms](./parent-terms.md), and also supports a bulk mapping of Parent Terms to Terms, using a mapping file that you create and import.
 
 > Why would you want this?  In my experience reading extensively with Lute, I am usually familiar with words, but it is _very_ nice having the previously-entered information for their Parent Terms.  As I read, I often find myself interrupting myself to just map terms to parent terms.  Of course, this mapping is completely optional, and sometimes I don't do it ... but having this automatically taken care of is pretty nice.
 
