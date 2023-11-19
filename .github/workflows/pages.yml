@@ -17,8 +17,8 @@ jobs:
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: '0.4.10'
-          # mdbook-version: 'latest'
+          # mdbook-version: '0.4.10'
+          mdbook-version: 'latest'
 
       - name: Add link checker
         run: |
@@ -30,6 +30,8 @@ jobs:
           popd
 
       - run: |
+          # I was _unable_ to get mdbook-linkcheck to work ...
+          # it would check the book, but would generate an empty site.
           # export PATH=$PWD/mdbook-linkcheck:$PATH
           mdbook build
 

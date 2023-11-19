@@ -16,7 +16,6 @@ Ref https://github.com/Michael-F-Bryan/mdbook-linkcheck#getting-started
 
 Get the binary release from https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases, and add it to a
 
-
 RELEASE=https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/download/v0.7.7/mdbook-linkcheck.x86_64-apple-darwin.zip
 mkdir -p mdbook-linkcheck && cd "$_" && \
   curl -L $RELEASE -o mdbook-linkcheck.zip && \
@@ -28,6 +27,16 @@ mkdir -p mdbook-linkcheck && cd "$_" && \
 ## Run locally
 
 Start it: `mdbook serve --open`
+
+## Checking links
+
+Unfortunately, I couldn't get the linkcheck to run in GitHub CI, it would generate an empty site!  No idea why.
+
+To manually check broken links:
+
+```
+mdbook-linkcheck -s
+```
 
 ## Deployment
 
