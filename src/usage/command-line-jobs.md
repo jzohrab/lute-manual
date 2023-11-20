@@ -55,7 +55,40 @@ Good question, here are some reasons:
 
 ## Docker users
 
-I'm sure there is a way to run the commands even if you're using Docker, but you may have to jump through some hoops.  It's janky, I know, but if you're technical perhaps you can do some jumping and let me know how you did it.  Otherwise, I can't guarantee that jobs will be used by _anybody_, other than a select few, so I'll leave it as it is for now!
+You have a few ways to run command-line jobs, if your Lute runs in Docker.  Both are a bit janky, so pick your poison.  My preference would be the first one, just because you don't have to install anything new.
+
+### 1. ssh into the running Docker instance
+
+If your container is running, you can jump into it and run commands.  For example:
+
+```
+$ docker ps
+
+CONTAINER ID   IMAGE                           COMMAND            CREATED          STATUS          PORTS                    NAMES
+4a01240e5678   jzohrab/lute3:latest            "/lute/start.sh"   52 seconds ago   Up 52 seconds   0.0.0.0:5000->5000/tcp   lute_test_docker-lute-1
+
+# Connect to the running container
+$ docker exec -it lute_test_docker-lute-1 /bin/bash
+
+# Run the export.  Put the file in the lute_data folder so it's available back on the host.
+root@4a01240e5678:/# flask --app lute.app_factory cli language_export English ./lute_data/MY_DATA.csv
+Loading data for book Tutorial ...
+... etc ...
+
+# Leave the container
+root@4a01240e5678:/# exit
+
+# Back on the host system!
+$ ls data
+README.md	MY_DATA.csv	lute.db		userimages
+```
+
+### 2. With pip
+
+* Install Lute into a virtual environment using pip
+* Create a config.yml file with the data folder pointing to where your lute.db is stored
+* Run the commands as above.
+
 
 ---
 
