@@ -929,7 +929,7 @@ dog      dogs
 <tr><td>language</td><td>Yes</td><td>Must be the name of one of the languages you have saved in Lute</td></tr>
 <tr><td>term</td><td>Yes</td><td>The new Term</td></tr>
 <tr><td>translation</td><td></td><td></td></tr>
-<tr><td>parent</td><td></td><td>The &quot;parent&quot; of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.</td></tr>
+<tr><td>parent</td><td></td><td>The &quot;parent&quot; of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.  If a term has multiple parents, you can enclose the list in quotes, and comma-separate the parents (e.g., the term <code>se sienta</code> could have parents <code>&quot;sentirse, sentarse&quot;</code>.</td></tr>
 <tr><td>status</td><td></td><td>One of 1, 2, 3, 4, 5, W (for Well-Known), or I (for Ignored).  If missing, it's set to 1</td></tr>
 <tr><td>tags</td><td></td><td>A comma-delimited list of tags to add to the Term</td></tr>
 <tr><td>pronunciation</td><td></td><td></td></tr>
@@ -957,8 +957,12 @@ Spanish,gatos,cat,gato,W,,
 <pre><code>language,term,translation
 Spanish,gato,cat
 </code></pre>
+<h3 id="ex-5---multiple-parents"><a class="header" href="#ex-5---multiple-parents">ex. 5 - multiple parents</a></h3>
+<pre><code>language,term,translation
+Spanish,se sienta,&quot;sentirse, sentarse&quot;
+</code></pre>
 <h1 id="creating-csv-files"><a class="header" href="#creating-csv-files">Creating CSV files</a></h1>
-<p>The easiest way to create properly-formatted CSV files is probably through something like Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File &gt; Download &gt; Comma Separated Values.</p>
+<p>The easiest way to create <strong>properly-formatted</strong> CSV files is probably through something like Excel or Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File &gt; Download &gt; Comma Separated Values.</p>
 <p>Using Google Sheets, you might also be able to get some <em>basic</em> translations.  For example, if I have &quot;colima&quot; in cell B2, the formula <code>=GOOGLETRANSLATE(B2,&quot;es&quot;, &quot;en&quot;)</code> in cell B3 would give &quot;hill&quot;.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h1>
 <p>Lute doesn't have &quot;theming&quot; support yet, but you <em>can</em> modify the styles in the Settings menu.</p>
