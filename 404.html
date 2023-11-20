@@ -4,7 +4,7 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Page not found - Lute manual</title>
-        <base href="/">
+        <base href="/lute-manual/">
 
 
         <!-- Custom HTML head -->
@@ -176,9 +176,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
-
+                        <h1 id="page-not-found"><a class="header" href="#page-not-found">Page not found</a></h1>
+<p>Please check the sidebar.</p>
+<p>Redirecting to the <a href="/">home page</a> in 5 seconds.</p>
+<script>
+setTimeout(go_home, 5000);
+function go_home() {
+document.location.href = "/";
+}
+</script>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
