@@ -27,6 +27,7 @@
 - [Custom styles](./settings/custom-styles.md)
 - [Backup](./backup/backup.md)
   - [Restoring backups](./backup/restore.md)
+- [Command line jobs](./usage/command-line-jobs.md)
 - [Updating Lute](./usage/updating.md)
 
 # FAQs

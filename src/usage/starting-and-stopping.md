@@ -25,10 +25,22 @@ python -m lute.main
 deactivate
 ```
 
+### Custom config.yml
+
+By default, Lute stores your data in the appropriate "user data" directory, as determined by the [PlatformDirs](https://pypi.org/project/platformdirs/) library.
+
+If you want to change that or a few other basic settings, you can create a custom `config.yml` file and store it in the same folder where you run `lute.main`:
+
+* Copy the
+[config.yml.example](https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example)
+to a new file named `config.yml` in your Lute folder
+* edit and save it
+
+Lute will automatically use that `config.yml` file when you run `python -m lute.main`.
+
 ### Python/pip startup options
 
-The python `lute.main` defaults for Lute startup will hopefully be
-fine for most people, but some things can be customized.
+The python `lute.main` defaults for Lute startup should be fine for most people, but some things can be customized.
 
 ```
 $ python -m lute.main --help
@@ -39,19 +51,13 @@ Start lute.
 optional arguments:
   -h, --help       show this help message and exit
   --port PORT      Port number (default: 5000)
-  --config CONFIG  Path to override config file. Uses lute/config/config.yml if not set.
+  --config CONFIG  Custom path to override config file, if it's not named config.yml
 ```
 
-If you need to customize lute, for example to change the data path where the Lute db is stored,
-you can create a custom `config.yml` file and store it in the same folder where you run `lute.main`.
-Copy the
-[config.yml.example](https://raw.githubusercontent.com/jzohrab/lute-v3/master/lute/config/config.yml.example)
-to a new file in your Lute folder, edit and save it, and Lute will automatically use it when you run `python -m lute.main`.
-
-You can also use the `--config` option if your custom config is stored somewhere else, e.g.
+e.g.
 
 ```
-python -m lute.main --config ./my_personal_config.yml
+python -m lute.main --port 9876 --config ./my_personal_config.yml
 ```
 
 
