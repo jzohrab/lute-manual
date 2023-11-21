@@ -2,41 +2,68 @@
 
 Lute doesn't have "theming" support yet, but you _can_ modify the styles in the Settings menu.
 
-Open Settings, and in the "Custom styles" text box in the settings, enter valid CSS.
-
-Below are some examples:
+Open Settings, and in the "Custom styles" text box in the settings, enter valid CSS.  For example, this:
 
 ```
-/* Change reading text font. */
 span.textitem { font-size: 16px; }
-
-/* Change background color etc for statuses: */
-span.status1 { background-color: pink; }   /* status2-5 for the rest */
-
-/* Ignored is 98 */
-span.status98 { background-color: lightgrey; }
-
-/* Well-known is 99 */
-span.status99 { background-color: none; color: red; }
+span.status1 { background-color: pink; }               /* status2-5 for the rest */
+span.status98 { background-color: lightgrey; }         /* Ignored terms */
+span.status99 { background-color: none; color: red; }  /* Well-known terms */
 ```
 
-With those rather ugly styles, some text might look like this:
+yields this:
 
 <img width="194" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/8b088df2-35fd-486c-8694-8bd580afe974">
 
-It's also possible to get a bit more fancy with CSS.  For example, you might want to _remove_ all background colors, except when you hover over a term:
+## Styling examples for your inspiration
+
+fyi the CSS selectors for the statuses are `span.status1` through `span.status5`, with `.status98` for ignored and `.status99` for well-known.
+
+### Larger reading font
+
+```
+span.textitem { font-size: 16px; }
+```
+
+### Change colors
+
+```
+ span.status0  { background-color: #ADD8E6; }  /* Unknown. */
+ span.status1  { background-color: red; }
+ span.status2  { background-color: red; }
+ span.status3  { background-color: orange; }
+ span.status4  { background-color: orange; }
+ span.status5  { background-color: green; }
+ span.status98 { background-color: white; }    /* Ignored. */
+ span.status99 { background-color: white; }    /* Well known. */
+```
+
+### Remove all term highlights, only show on hover
 
 ```
  span[class*="status"] { background-color: transparent; }
+ 
  span.status0 { background-color: #D5FFFF; }
  span.status1:hover { background-color: #F5B8A9; }
  span.status2:hover { background-color: #F5B8A9; }
  span.status3:hover { background-color: #F5E1A9; }
  span.status4:hover { background-color: #F5E1A9; }
  span.status5:hover { background-color: #DDFFDD; }
+ span.status98:hover { background-color: #DDFFDD; }
+ span.status99:hover { background-color: #DDFFDD; }
 ```
 
-Or, you know:
+### Hide the green checkmarks at the bottom of the reading pane
+
+Clicking the green checks sets unknown to well-known, which you might not like.
+
+
+```
+#footerMarkRestAsKnown { display: none; }
+#footerMarkRestAsKnownNextPage { display: none; }
+```
+
+### Why would you ever do this?
 
 ```
 body { font-family: "Comic Sans MS"; }
