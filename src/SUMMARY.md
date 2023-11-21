@@ -33,6 +33,8 @@
 # FAQs
 
 - [Where can I get help?](./faq/help.md)
+- [How can I figure out my language's "word characters"?](./faq/defining-language.md)
+- [Can you add language X?](./faq/add-a-language.md)
 - [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
 - [The stats calculation](./faq/stats.md)
 - [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
