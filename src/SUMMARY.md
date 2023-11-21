@@ -43,5 +43,6 @@
 
 # Misc
 
+- [Changelog](./misc/changelog.md)
 - [Backlog](./misc/backlog.md)
 - [Documentation feedback](./misc/doc-feedback.md)
