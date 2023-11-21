@@ -176,32 +176,47 @@
                     <main>
                         <h1 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h1>
 <p>Lute doesn't have &quot;theming&quot; support yet, but you <em>can</em> modify the styles in the Settings menu.</p>
-<p>Open Settings, and in the &quot;Custom styles&quot; text box in the settings, enter valid CSS.</p>
-<p>Below are some examples:</p>
-<pre><code>/* Change reading text font. */
-span.textitem { font-size: 16px; }
-
-/* Change background color etc for statuses: */
-span.status1 { background-color: pink; }   /* status2-5 for the rest */
-
-/* Ignored is 98 */
-span.status98 { background-color: lightgrey; }
-
-/* Well-known is 99 */
-span.status99 { background-color: none; color: red; }
+<p>Open Settings, and in the &quot;Custom styles&quot; text box in the settings, enter valid CSS.  For example, this:</p>
+<pre><code>span.textitem { font-size: 16px; }
+span.status1 { background-color: pink; }               /* status2-5 for the rest */
+span.status98 { background-color: lightgrey; }         /* Ignored terms */
+span.status99 { background-color: none; color: red; }  /* Well-known terms */
 </code></pre>
-<p>With those rather ugly styles, some text might look like this:</p>
+<p>yields this:</p>
 <img width="194" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/8b088df2-35fd-486c-8694-8bd580afe974">
-<p>It's also possible to get a bit more fancy with CSS.  For example, you might want to <em>remove</em> all background colors, except when you hover over a term:</p>
+<h2 id="styling-examples-for-your-inspiration"><a class="header" href="#styling-examples-for-your-inspiration">Styling examples for your inspiration</a></h2>
+<p>fyi the CSS selectors for the statuses are <code>span.status1</code> through <code>span.status5</code>, with <code>.status98</code> for ignored and <code>.status99</code> for well-known.</p>
+<h3 id="larger-reading-font"><a class="header" href="#larger-reading-font">Larger reading font</a></h3>
+<pre><code>span.textitem { font-size: 16px; }
+</code></pre>
+<h3 id="change-colors"><a class="header" href="#change-colors">Change colors</a></h3>
+<pre><code> span.status0  { background-color: #ADD8E6; }  /* Unknown. */
+ span.status1  { background-color: red; }
+ span.status2  { background-color: red; }
+ span.status3  { background-color: orange; }
+ span.status4  { background-color: orange; }
+ span.status5  { background-color: green; }
+ span.status98 { background-color: white; }    /* Ignored. */
+ span.status99 { background-color: white; }    /* Well known. */
+</code></pre>
+<h3 id="remove-all-term-highlights-only-show-on-hover"><a class="header" href="#remove-all-term-highlights-only-show-on-hover">Remove all term highlights, only show on hover</a></h3>
 <pre><code> span[class*=&quot;status&quot;] { background-color: transparent; }
+ 
  span.status0 { background-color: #D5FFFF; }
  span.status1:hover { background-color: #F5B8A9; }
  span.status2:hover { background-color: #F5B8A9; }
  span.status3:hover { background-color: #F5E1A9; }
  span.status4:hover { background-color: #F5E1A9; }
  span.status5:hover { background-color: #DDFFDD; }
+ span.status98:hover { background-color: #DDFFDD; }
+ span.status99:hover { background-color: #DDFFDD; }
 </code></pre>
-<p>Or, you know:</p>
+<h3 id="hide-the-green-checkmarks-at-the-bottom-of-the-reading-pane"><a class="header" href="#hide-the-green-checkmarks-at-the-bottom-of-the-reading-pane">Hide the green checkmarks at the bottom of the reading pane</a></h3>
+<p>Clicking the green checks sets unknown to well-known, which you might not like.</p>
+<pre><code>#footerMarkRestAsKnown { display: none; }
+#footerMarkRestAsKnownNextPage { display: none; }
+</code></pre>
+<h3 id="why-would-you-ever-do-this"><a class="header" href="#why-would-you-ever-do-this">Why would you ever do this?</a></h3>
 <pre><code>body { font-family: &quot;Comic Sans MS&quot;; }
 </code></pre>
 <p>Yuck.</p>
