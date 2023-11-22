@@ -991,11 +991,8 @@ span.status99 { background-color: none; color: red; }  /* Well-known terms */
 <p>yields this:</p>
 <img width="194" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/8b088df2-35fd-486c-8694-8bd580afe974">
 <h2 id="styling-examples-for-your-inspiration"><a class="header" href="#styling-examples-for-your-inspiration">Styling examples for your inspiration</a></h2>
-<p>fyi the CSS selectors for the statuses are <code>span.status1</code> through <code>span.status5</code>, with <code>.status98</code> for ignored and <code>.status99</code> for well-known.</p>
-<h3 id="larger-reading-font"><a class="header" href="#larger-reading-font">Larger reading font</a></h3>
-<pre><code>span.textitem { font-size: 16px; }
-</code></pre>
 <h3 id="change-colors"><a class="header" href="#change-colors">Change colors</a></h3>
+<p>fyi the CSS selectors for the statuses are <code>span.status1</code> through <code>span.status5</code>, with <code>.status98</code> for ignored and <code>.status99</code> for well-known.</p>
 <pre><code> span.status0  { background-color: #ADD8E6; }  /* Unknown. */
  span.status1  { background-color: red; }
  span.status2  { background-color: red; }
@@ -1021,6 +1018,10 @@ span.status0[lid=&quot;4&quot;] { background-color: blue; }
  span.status5:hover { background-color: #DDFFDD; }
  span.status98:hover { background-color: #DDFFDD; }
  span.status99:hover { background-color: #DDFFDD; }
+</code></pre>
+<h3 id="larger-text-with-more-space-between-each-line"><a class="header" href="#larger-text-with-more-space-between-each-line">Larger text with more space between each line</a></h3>
+<pre><code>div#thetext p { line-height: 2; }
+span.textitem { font-size: 18px; }
 </code></pre>
 <h3 id="hide-the-green-checkmarks-at-the-bottom-of-the-reading-pane"><a class="header" href="#hide-the-green-checkmarks-at-the-bottom-of-the-reading-pane">Hide the green checkmarks at the bottom of the reading pane</a></h3>
 <p>Clicking the green checks sets unknown to well-known, which you might not like.</p>
