@@ -181,6 +181,7 @@
 <li><a href="#if-using-docker">Docker</a></li>
 <li><a href="#if-you-installed-from-source">Source</a></li>
 </ul>
+<p>You can usually <a href="#startup-scripts">write a script</a> to make your life easier.</p>
 <h2 id="if-using-pip"><a class="header" href="#if-using-pip">If using pip</a></h2>
 <p>Assuming you're using venv:</p>
 <pre><code>cd ~/my_lute
@@ -244,6 +245,39 @@ inv start   # or &quot;python -m lute.main&quot;
 # Ctl-C when done.
 deactivate
 </code></pre>
+<h1 id="startup-scripts"><a class="header" href="#startup-scripts">Startup scripts</a></h1>
+<p>Scripting is for everyone!  Well, sort of.  But for tedious commands like the above, it's perfect.  Some ideas below:</p>
+<h2 id="on-a-mac-with-pip"><a class="header" href="#on-a-mac-with-pip">On a Mac, with pip:</a></h2>
+<p>I start Lute with a small <code>start.sh</code> bash script containing the following:</p>
+<pre><code>#!/bin/bash
+
+# Start venv, pull a version from pypi if specified, and start lute with this config.
+
+source .venv/bin/activate
+
+VERSION=&quot;$1&quot;
+if [[ -z &quot;$VERSION&quot; ]]; then
+    echo &quot;Using existing install.&quot;
+else
+    echo &quot;Pulling version $VERSION&quot;
+    pip install --upgrade lute3==${VERSION}
+fi
+
+open http://localhost:9876
+python -m lute.main --port 9876
+</code></pre>
+<p>With this, I just <code>cd ~/lute; ./start.sh 3.0.0</code>.  The script fetches that version from Pypi, installs it, and starts a browser.  Magic.</p>
+<h2 id="on-windows-with-pip"><a class="header" href="#on-windows-with-pip">On Windows, with pip:</a></h2>
+<p>Open Notepad, and paste the following into a new file:</p>
+<pre><code>@echo
+:: edit the file path below!!
+cd **LUTE-FOLDER-FILE-PATH**
+call myenv\Scripts\activate
+
+:: Start a new Command Prompt instance with the activated virtual environment
+start cmd /k python -m lute.main
+</code></pre>
+<p>Save that file as, say, <code>lute.bat</code>.  Create a shortcut to this .bat file, and put it anywhere, pin it, etc as needed.  Then you can start Lute with by double-clicking this file.</p>
 
                     </main>
 
