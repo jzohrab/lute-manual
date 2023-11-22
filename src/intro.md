@@ -15,6 +15,13 @@ In addition, Lute has features missing from other tools, which I consider absolu
 
 ![Lute v3 demo](https://github.com/jzohrab/lute-manual/assets/1637133/7e7f5f66-20bb-4e94-a11c-7b7ffc43255a)
 
+This 5-minute video gives a very brief demonstration and shows how easy it is to install Lute:
+
+<iframe width="720" height="615"
+src="https://www.youtube.com/embed/7X3OkcljoCk">
+</iframe>
+
 Lute has many other features, see the sidebar and browse around.
 
 Lute is a work in progress, as is all software, but it works.  I've been using it to learn Spanish, and it's super.
+
