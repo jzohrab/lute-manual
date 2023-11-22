@@ -6,6 +6,8 @@ These scripts are on a Mac; Linux will be the same, Windows slightly different. 
 * [Docker](#if-using-docker)
 * [Source](#if-you-installed-from-source)
 
+You can usually [write a script](#startup-scripts) to make your life easier.
+
 ## If using pip
 
 Assuming you're using venv:
@@ -93,3 +95,48 @@ inv start   # or "python -m lute.main"
 # Ctl-C when done.
 deactivate
 ```
+
+# Startup scripts
+
+Scripting is for everyone!  Well, sort of.  But for tedious commands like the above, it's perfect.  Some ideas below:
+
+## On a Mac, with pip:
+
+I start Lute with a small `start.sh` bash script containing the following:
+
+```
+#!/bin/bash
+
+# Start venv, pull a version from pypi if specified, and start lute with this config.
+
+source .venv/bin/activate
+
+VERSION="$1"
+if [[ -z "$VERSION" ]]; then
+    echo "Using existing install."
+else
+    echo "Pulling version $VERSION"
+    pip install --upgrade lute3==${VERSION}
+fi
+
+open http://localhost:9876
+python -m lute.main --port 9876
+```
+
+With this, I just `cd ~/lute; ./start.sh 3.0.0`.  The script fetches that version from Pypi, installs it, and starts a browser.  Magic.
+
+## On Windows, with pip:
+
+Open Notepad, and paste the following into a new file:
+
+```
+@echo
+:: edit the file path below!!
+cd **LUTE-FOLDER-FILE-PATH**
+call myenv\Scripts\activate
+
+:: Start a new Command Prompt instance with the activated virtual environment
+start cmd /k python -m lute.main
+```
+
+Save that file as, say, `lute.bat`.  Create a shortcut to this .bat file, and put it anywhere, pin it, etc as needed.  Then you can start Lute with by double-clicking this file.
