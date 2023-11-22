@@ -17,15 +17,9 @@ yields this:
 
 ## Styling examples for your inspiration
 
-fyi the CSS selectors for the statuses are `span.status1` through `span.status5`, with `.status98` for ignored and `.status99` for well-known.
-
-### Larger reading font
-
-```
-span.textitem { font-size: 16px; }
-```
-
 ### Change colors
+
+fyi the CSS selectors for the statuses are `span.status1` through `span.status5`, with `.status98` for ignored and `.status99` for well-known.
 
 ```
  span.status0  { background-color: #ADD8E6; }  /* Unknown. */
@@ -60,6 +54,13 @@ span.status0[lid="4"] { background-color: blue; }
  span.status5:hover { background-color: #DDFFDD; }
  span.status98:hover { background-color: #DDFFDD; }
  span.status99:hover { background-color: #DDFFDD; }
+```
+
+### Larger text with more space between each line
+
+```
+div#thetext p { line-height: 2; }
+span.textitem { font-size: 18px; }
 ```
 
 ### Hide the green checkmarks at the bottom of the reading pane
