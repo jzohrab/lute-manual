@@ -25,4 +25,36 @@ docker compose up -d --remove-orphans
 
 ## ... if using source
 
-`git fetch` etc etc.  (I assume you know what you're doing here.)
+I assume you already know what you're doing, but here's a rough outline anyway:
+
+Stop Lute.
+
+```
+git remote add upstream git@github.com:jzohrab/lute-v3.git
+git fetch upstream
+git merge upstream/master
+```
+
+There are other ways to do this, like PR master into your own fork, etc.
+
+### Keeping up-to-date when installing from source
+
+All Lute development happens on the `develop` branch in the main repo, and when launched that code is merged into `master`.
+
+If you install from source and make any modifications to Lute -- which _of course_ you're welcome to do -- then you may want to periodically check the `develop` branch in the main Lute repo to ensure that you can merge in `master` when it is released.  Here's roughly what you'd do:
+
+```
+# Commit your local changes
+git add [your files]
+git commit -m "[changes]"
+
+git remote add upstream git@github.com:jzohrab/lute-v3.git
+git fetch upstream
+
+# Check commits, if you want
+git log HEAD..upstream/develop --oneline
+
+git merge upstream/develop
+```
+
+Lute source code could change at any time, and I **almost certainly will not** be able to help you resolve code conflicts.  With that said, I'm certainly interested in any changes that would be beneficial to the health/clarity of the code or would be useful for others, so if you make changes that you think would be good, let me know!

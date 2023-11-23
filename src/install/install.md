@@ -197,6 +197,8 @@ Developers and gearheads can install Lute from source: see the [Lute repository]
 
 If you want to develop Lute, you'll also need to [install MeCab](./mecab.md).
 
+If you install from source and tinker with the code, make sure you can update later!  See [Keeping up-to-date when installing from source](/usage/updating.md#keeping-up-to-date-when-installing-from-source).
+
 ---
 
 [^what-is-docker]: Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the [Docker documentation](https://docs.docker.com/)).  **Docker is not available or is problematic on some systems, particularly Windows.**
