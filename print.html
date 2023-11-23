@@ -385,6 +385,7 @@ docker compose up
 <h2 id="from-source"><a class="header" href="#from-source">From source</a></h2>
 <p>Developers and gearheads can install Lute from source: see the <a href="https://github.com/jzohrab/lute-v3/blob/master/docs/development.md">Lute repository</a>.</p>
 <p>If you want to develop Lute, you'll also need to <a href="install/./mecab.html">install MeCab</a>.</p>
+<p>If you install from source and tinker with the code, make sure you can update later!  See <a href="install//usage/updating.html#keeping-up-to-date-when-installing-from-source">Keeping up-to-date when installing from source</a>.</p>
 <hr />
 <div class="footnote-definition" id="what-is-docker"><sup class="footnote-definition-label">1</sup>
 <p>Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the <a href="https://docs.docker.com/">Docker documentation</a>).  <strong>Docker is not available or is problematic on some systems, particularly Windows.</strong></p>
@@ -1256,7 +1257,29 @@ docker compose pull
 docker compose up -d --remove-orphans
 </code></pre>
 <h2 id="-if-using-source"><a class="header" href="#-if-using-source">... if using source</a></h2>
-<p><code>git fetch</code> etc etc.  (I assume you know what you're doing here.)</p>
+<p>I assume you already know what you're doing, but here's a rough outline anyway:</p>
+<p>Stop Lute.</p>
+<pre><code>git remote add upstream git@github.com:jzohrab/lute-v3.git
+git fetch upstream
+git merge upstream/master
+</code></pre>
+<p>There are other ways to do this, like PR master into your own fork, etc.</p>
+<h3 id="keeping-up-to-date-when-installing-from-source"><a class="header" href="#keeping-up-to-date-when-installing-from-source">Keeping up-to-date when installing from source</a></h3>
+<p>All Lute development happens on the <code>develop</code> branch in the main repo, and when launched that code is merged into <code>master</code>.</p>
+<p>If you install from source and make any modifications to Lute -- which <em>of course</em> you're welcome to do -- then you may want to periodically check the <code>develop</code> branch in the main Lute repo to ensure that you can merge in <code>master</code> when it is released.  Here's roughly what you'd do:</p>
+<pre><code># Commit your local changes
+git add [your files]
+git commit -m &quot;[changes]&quot;
+
+git remote add upstream git@github.com:jzohrab/lute-v3.git
+git fetch upstream
+
+# Check commits, if you want
+git log HEAD..upstream/develop --oneline
+
+git merge upstream/develop
+</code></pre>
+<p>Lute source code could change at any time, and I <strong>almost certainly will not</strong> be able to help you resolve code conflicts.  With that said, I'm certainly interested in any changes that would be beneficial to the health/clarity of the code or would be useful for others, so if you make changes that you think would be good, let me know!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="where-can-i-get-help"><a class="header" href="#where-can-i-get-help">Where can I get help?</a></h1>
 <p>If you need help with Python, pip, or Docker, the first and best place to look is Google!</p>
 <p>But if it's a Lute issue or question, the best places to ask for help are:</p>
