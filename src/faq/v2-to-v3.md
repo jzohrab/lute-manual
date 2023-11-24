@@ -2,9 +2,9 @@
 
 ## Database and images
 
-If you're already using Lute v2 (written in PHP), and want to migrate to v3, it's pretty straightforward: you just have to move some files around.  Lute v3 uses the same underlying database as v2 (Sqlite).
+If you're already using Lute v2 (written in PHP), and want to migrate to v3, it's pretty straightforward: you just have to move some files around.
 
-1. After installing Lute v3, start it up.  Then:
+Step 1. [install Lute v3](/install/install.md), and start it up.  Then:
 
 ### For non-Docker users
 
