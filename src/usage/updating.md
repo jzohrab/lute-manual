@@ -23,6 +23,8 @@ docker compose pull
 docker compose up -d --remove-orphans
 ```
 
+(Note: if you're using Lute v2, you'll first have to [migrate to v3](/faq/v2-to-v3.md).)
+
 ## ... if using source
 
 I assume you already know what you're doing, but here's a rough outline anyway:
