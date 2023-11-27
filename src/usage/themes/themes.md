@@ -1,6 +1,6 @@
 # Themes
 
-> To be added in Lute 3.0.2
+_Added in Lute 3.0.2_
 
 You can apply one of the predefined themes in the Settings.  Select the theme from the dropdown.
 
