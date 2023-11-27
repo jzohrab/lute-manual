@@ -1259,8 +1259,12 @@ README.md	MY_DATA.csv	lute.db		userimages
 <p>(Lute or Python may lock certain files while running, shutting down ensures that things will update safely.)</p>
 <p>Then:</p>
 <h2 id="-if-using-pip"><a class="header" href="#-if-using-pip">... if using pip</a></h2>
-<pre><code>cd /path/to/your/lute    # change this line. :-)
+<pre><code>cd /path/to/your/lute         # change this line. :-)
+source myenv/bin/activate     # Activate your virtual environment. See below for Windows
 pip install --upgrade lute3
+</code></pre>
+<p>For Windows, instead of <code>source myenv/bin/activate</code>, do</p>
+<pre><code>.\myenv\Scripts\activate.bat
 </code></pre>
 <h2 id="-if-using-docker"><a class="header" href="#-if-using-docker">... if using Docker</a></h2>
 <p>This assumes you're using a <code>docker-compose.yml</code> file.</p>
