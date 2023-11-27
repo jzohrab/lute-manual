@@ -6,7 +6,9 @@ Lute users who are studying Japanese will need to install MeCab and an appropria
 
 ## Mac
 
-You can install MeCab and a dictionary using `homebrew`:
+You can install MeCab and a dictionary using `homebrew`.
+
+If you don't have homebrew installed, then first [get homebrew](https://brew.sh/).  Then:
 
 ```
 brew install mecab
