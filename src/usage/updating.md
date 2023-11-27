@@ -9,8 +9,15 @@ Then:
 ## ... if using pip
 
 ```
-cd /path/to/your/lute    # change this line. :-)
+cd /path/to/your/lute         # change this line. :-)
+source myenv/bin/activate     # Activate your virtual environment. See below for Windows
 pip install --upgrade lute3
+```
+
+For Windows, instead of `source myenv/bin/activate`, do
+
+```
+.\myenv\Scripts\activate.bat
 ```
 
 ## ... if using Docker
