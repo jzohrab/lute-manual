@@ -10,6 +10,7 @@
 - [MeCab for Japanese](./install/mecab.md)
 - [More details, if needed!](./install/more-details/index.md)
   - [Windows using Docker](./install/more-details/windows-using-docker.md)
+- [Troubleshooting](./install/troubleshooting.md)
 - [Beta releases](./install/beta-releases.md)
 
 # Usage
