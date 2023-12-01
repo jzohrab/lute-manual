@@ -32,10 +32,10 @@ Start it: `mdbook serve --open`
 
 Unfortunately, I couldn't get the linkcheck to run in GitHub CI, it would generate an empty site!  No idea why.
 
-To manually check broken links:
+To manually check broken links, run this from root directory:
 
 ```
-mdbook-linkcheck -s
+mdbook-linkcheck/mdbook-linkcheck -s
 ```
 
 ## Deployment

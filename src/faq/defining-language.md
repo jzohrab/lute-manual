@@ -6,8 +6,8 @@ The default value, "a-zA-ZÀ-ÖØ-öø-ȳáéíóúÁÉÍÓÚñÑ", covers most 
 
 For other languages, like Russian (word characters = "А-Яа-яЁё"), you have to find the characters.  This can be tricky, so here are some thoughts:
 
-* search Google for "[your language] character python regex".  E.g. "russian character python regex" gives a few hits.
-* search "[your language] unicode range"
+* search Google for "<your language> character python regex".  E.g. "russian character python regex" gives a few hits.
+* search "<your language> unicode range"
 * if you've _already_ searched and can't figure it out, that's what Discord is for!
 
 ## Understanding the "Word characters" field
