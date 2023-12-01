@@ -177,71 +177,8 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="backlog"><a class="header" href="#backlog">Backlog</a></h1>
-<p>Below are features that would be nice to have.  Some of these are already listed in Lute's <a href="https://github.com/jzohrab/lute-v3/issues">GitHub issues</a>.  These are not listed in any particular order.</p>
-<blockquote>
-<p>The issue IDs shown aren't correct, as the issues were transferred from the original lute repo to lute-v3; however, the links should still work.</p>
-</blockquote>
-<h1 id="feature-backlog"><a class="header" href="#feature-backlog">Feature backlog</a></h1>
-<h2 id="improved-language-support"><a class="header" href="#improved-language-support">Improved language support</a></h2>
-<ul>
-<li>Support non-consecutive multi-word terms - <a href="https://github.com/jzohrab/lute/issues/58">issue 58</a></li>
-<li>Change how dictionaries are defined and used - <a href="https://github.com/jzohrab/lute/issues/39">issue 39</a>
-<ul>
-<li>Add Kobo dictionary support - <a href="https://github.com/jzohrab/lute/issues/41">issue 41</a></li>
-<li>Integrate Golden dict app with Lute - <a href="https://github.com/jzohrab/lute/issues/5">issue 5</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="reading-experience"><a class="header" href="#reading-experience">Reading experience</a></h2>
-<ul>
-<li>change book reading so that page content is ajaxed in, instead of moving to new URL.  This allows for audio player support.</li>
-<li>Add navigate to arbitrary page in book -- -- e.g. when on page 600 and want to go back to page 21.  maybe enter in a text box, dropdown, or vertical/horizontal slider.</li>
-<li>Hotkey status update should update the form if it's displayed - <a href="https://github.com/jzohrab/lute/issues/45">issue 45</a></li>
-<li>add &quot;chapters&quot; markings somehow to books, so I can build a table of contents, and see when a chapter ends</li>
-<li>add &quot;force page break&quot; markers to text imports, e.g. &quot;---&quot; forces a break.</li>
-<li>add book text search</li>
-<li>arrow up and down to increase/decrease status number</li>
-<li>add &quot;Autopopulate&quot; button for the parent term. In most languages, the parent is pretty visibly related to the child, but with a few letter changes. It´d be nice not to have to copy the whole word from below, but just press a button and then type the end of the word.</li>
-</ul>
-<h2 id="audio"><a class="header" href="#audio">Audio</a></h2>
-<ul>
-<li>Add Audio controls to play text mp3.  This requires page content to be ajaxed in, not URL-per-page.</li>
-<li>Add word pronunciation.  Audio files could be stored in user's <code>data</code> folder, and files could be found by md5 of term, e.g.</li>
-</ul>
-<h2 id="backup"><a class="header" href="#backup">Backup</a></h2>
-<ul>
-<li>if backup is automatic, when the backup completes, auto-redirect to home page</li>
-<li>show the file created and its size on the backup page</li>
-</ul>
-<h2 id="misc-features"><a class="header" href="#misc-features">Misc features</a></h2>
-<ul>
-<li>Add improved export to Anki - <a href="https://github.com/jzohrab/lute/issues/24">issue 24</a></li>
-<li>Possibly ignore word accents when saving terms in DB - <a href="https://github.com/jzohrab/lute/issues/17">issue 17</a></li>
-<li>add bulk term delete</li>
-<li>Add stats
-<ul>
-<li>words read today/cumulative</li>
-<li>terms created today/cumulative</li>
-<li>statuses by date/cumulative</li>
-<li>click on link to see filtered list in terms page - need more complex filtering</li>
-</ul>
-</li>
-<li>editing text/sentence doesn't change the book WordCount.  setWordCount is called when book is first created, on setFullText.  If text is edited, should first save the old count, then update the book count</li>
-</ul>
-<h1 id="devcode-backlog"><a class="header" href="#devcode-backlog">Dev/code backlog</a></h1>
-<p>Code maintenance/improvements.  Doing these help deliver features or a better experience.</p>
-<h2 id="misc"><a class="header" href="#misc">misc</a></h2>
-<ul>
-<li>Increase acceptance test coverage (master list) - <a href="https://github.com/jzohrab/lute/issues/35">issue 35</a></li>
-<li>Drop extra fields from texts table (sourceuri, mediauri, lgid, isarchived).  Started in branch hack_remove_texts_fields</li>
-<li>save SeTextLC in sentences, use SeTextLC when looking up references</li>
-<li>change statuses - null/0 unknown, 1-5, 6 = wellknown; 7 = ignored (currently 98 = ignored, good enough? or -1?)</li>
-<li>RenderableSentence.php: public static function getParagraphs should not parse, move parsing to the facade</li>
-<li>findTermsInText should use zws to join things, not null string.  Add tests for &quot;Tengo un gato&quot; - &quot;Tengo un&quot; &quot;tengo un gato&quot;, &quot;tengo un gat&quot;, &quot;un gato&quot;, &quot;un gat&quot;</li>
-<li>remove languages.islgremovespaces field</li>
-<li>change book &quot;is archived&quot; cycle? - active -&gt; completed -&gt; archived</li>
-<li>try not saving and retrieving entities, see if orm can get them</li>
-</ul>
+<p>Lute's backlog is tracked in <a href="https://github.com/jzohrab/lute-v3/issues">GitHub issues</a>.</p>
+<p>There's also a <a href="https://github.com/users/jzohrab/projects/1">GitHub Lute-v3 project</a>, where I track some other items for the issues like category, priority, and size, but at present (Dec 2023) I'm not sure how much utility that has.</p>
 
                     </main>
 
