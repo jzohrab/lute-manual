@@ -387,7 +387,7 @@ docker compose up
 <h2 id="from-source"><a class="header" href="#from-source">From source</a></h2>
 <p>Developers and gearheads can install Lute from source: see the <a href="https://github.com/jzohrab/lute-v3/blob/master/docs/development.md">Lute repository</a>.</p>
 <p>If you want to develop Lute, you'll also need to <a href="install/./mecab.html">install MeCab</a>.</p>
-<p>If you install from source and tinker with the code, make sure you can update later!  See <a href="install//usage/updating.html#keeping-up-to-date-when-installing-from-source">Keeping up-to-date when installing from source</a>.</p>
+<p>If you install from source and tinker with the code, make sure you can update later!  See <a href="install/../usage/updating.html#keeping-up-to-date-when-installing-from-source">Keeping up-to-date when installing from source</a>.</p>
 <hr />
 <div class="footnote-definition" id="what-is-docker"><sup class="footnote-definition-label">1</sup>
 <p>Docker is a containerization platform that allows you to run applications in a sandboxed environment (ref the <a href="https://docs.docker.com/">Docker documentation</a>).  <strong>Docker is not available or is problematic on some systems, particularly Windows.</strong></p>
@@ -1278,7 +1278,7 @@ pip install --upgrade lute3
 docker compose pull
 docker compose up -d --remove-orphans
 </code></pre>
-<p>(Note: if you're using Lute v2, you'll first have to <a href="usage//faq/v2-to-v3.html">migrate to v3</a>.)</p>
+<p>(Note: if you're using Lute v2, you'll first have to <a href="usage/../faq/v2-to-v3.html">migrate to v3</a>.)</p>
 <h2 id="-if-using-source"><a class="header" href="#-if-using-source">... if using source</a></h2>
 <p>I assume you already know what you're doing, but here's a rough outline anyway:</p>
 <p>Stop Lute.</p>
@@ -1317,8 +1317,8 @@ git merge upstream/develop
 <p>The default value, &quot;a-zA-ZÀ-ÖØ-öø-ȳáéíóúÁÉÍÓÚñÑ&quot;, covers most romance languages such as English, French, Spanish, etc.</p>
 <p>For other languages, like Russian (word characters = &quot;А-Яа-яЁё&quot;), you have to find the characters.  This can be tricky, so here are some thoughts:</p>
 <ul>
-<li>search Google for &quot;[your language] character python regex&quot;.  E.g. &quot;russian character python regex&quot; gives a few hits.</li>
-<li>search &quot;[your language] unicode range&quot;</li>
+<li>search Google for &quot;<your language> character python regex&quot;.  E.g. &quot;russian character python regex&quot; gives a few hits.</li>
+<li>search &quot;<your language> unicode range&quot;</li>
 <li>if you've <em>already</em> searched and can't figure it out, that's what Discord is for!</li>
 </ul>
 <h2 id="understanding-the-word-characters-field"><a class="header" href="#understanding-the-word-characters-field">Understanding the &quot;Word characters&quot; field</a></h2>
