@@ -4,7 +4,7 @@
 
 If you're already using Lute v2 (written in PHP), and want to migrate to v3, it's pretty straightforward: you just have to move some files around.
 
-Step 1. [install Lute v3](install/install.md), and start it up.  Then:
+Step 1. [install Lute v3](../install/install.md), and start it up.  Then:
 
 ### For non-Docker users
 
