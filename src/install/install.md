@@ -90,7 +90,7 @@ python -m lute.main
 ```
 </div>
 
-Now open your web browser to `http://localhost:5000`.  Leave the terminal window open while you're using Lute. When you're done, hit `Ctl-C` to stop Lute.
+Now open your web browser to `http://localhost:5000`.  **Leave the terminal window open while you're using Lute.** When you're done, hit `Ctl-C` to stop Lute.
 
 You can start lute on a different port if needed:
 

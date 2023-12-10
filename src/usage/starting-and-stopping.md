@@ -22,6 +22,9 @@ source myenv/bin/activate
 python -m lute.main
 
 # ... Open your web browser to http://localhost:5000.
+
+# Leave the terminal window open while you're using Lute!
+
 # When done, hit Ctl-C to stop
 
 deactivate
