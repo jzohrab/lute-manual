@@ -29,6 +29,7 @@
 - [Themes](./usage/themes/themes.md)
   - [Toggling highlights](./usage/themes/toggling-highlights.md)
   - [Custom styles](./usage/themes/custom-styles.md)
+- [Adding audio](./usage/audio.md)
 - [Backup](./backup/backup.md)
   - [Restoring backups](./backup/restore.md)
 - [Command line jobs](./usage/command-line-jobs.md)
