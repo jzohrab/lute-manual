@@ -2,7 +2,7 @@
 
 _Feature added in Lute 3.0.5_
 
-Lute lets you add an .mp3 file to any book so you can listen to your book as you read.
+Lute lets you add an audio file (.mp3, .wav, .ogg) to any book so you can listen to your book as you read.
 
 ## Adding audio
 
