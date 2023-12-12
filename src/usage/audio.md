@@ -16,17 +16,15 @@ Lute stores a copy of the added audio in your `data` folder, in the same folder 
 
 If your book has an audio file, a player is included on the reading page:
 
-**TODO image here**
+![image](https://github.com/jzohrab/lute-manual/assets/1637133/53221a28-def1-4790-99c7-5266e23ff3fe)
 
-You can do the usual things: start and pause the player, fast-forward and rewind, and increase/decrease the playback speed.
+You can do the usual things: start and pause the player, fast-forward and rewind, and increase/decrease the playback speed.  The "sticky player" toggle sticks the player to the bottom of the screen.
 
 When you start the player, it plays until you stop it, or until you open the Term form by clicking on a word or defining a new multi-word Term.  Once you've defined a term, click Play to restart the player from where it stopped.
 
 ## Bookmarks
 
-You can add and remove bookmarks to your book's audio, and jump back and forth along the timeline to your bookmarks:
-
-**TODO image here**
+You can add and remove bookmarks to your book's audio, and jump back and forth along the timeline to your bookmarks.
 
 Lute's audio playback is **not** syncronized with the text or pages in any way, so for multi-page books with audio, you'll likely want to use bookmarks to note the start of each page.  If you move back and forth between pages, the player doesn't follow you.
 
@@ -40,9 +38,11 @@ _A suggestion only, do how you see fit!_
 
 ### Why isn't the player synced with the pages?
 
-Good question.  There are a few reasons, none of which may satisfy you:
+Good question.  There are a few reasons, none of which may satisfy you!
 
 * Currently, Lute lets you add an arbitrary number of bookmarks to each book audio.  There is no simple way to differentiate between an arbitrary bookmark vs. a special bookmark indicating the start of a page.
 * I believe that audio books are vital for the beginning and intermediate phases of learning, for which the reading materials are likely going to be short.  Syncing is not as critical here, as you will be able to find the accompanying portion of the audio track easily using simple bookmarks.
 
-Syncing audio to page turns is possible, and perhaps will be delivered at some point in the future if developers feel it's necessary.  Lute's still open source software, so we do the best we can in the time we have available to work on it!
+Syncing audio to page turns is possible, and perhaps will be delivered at some point in the future (if a developer really wants it!).  Having used this feature myself, I find the current implementation completely satisfactory -- I rarely jump around to random pages in lengthy texts.
+
+Lute's still open source software, so we do the best we can in the time we have available to work on it!
