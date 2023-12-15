@@ -36,7 +36,7 @@ flask --app lute.app_factory cli <command_name> --help
 
 ```
 flask --app lute.app_factory cli hello
-flask --app lute.app_factory cli language_export Spanish sp_terms.cs
+flask --app lute.app_factory cli language_export Spanish sp_terms.csv
 ```
 
 You can do things like [export environment variables](https://flask.palletsprojects.com/en/2.3.x/cli/#environment-variables-from-dotenv) to simplify your calls if you wish.
