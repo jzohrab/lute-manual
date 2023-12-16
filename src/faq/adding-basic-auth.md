@@ -51,6 +51,9 @@ http {
     keepalive_timeout 65;
     types_hash_max_size 2048;
 
+    # Allow large audio files.  Increase this if your files are large.
+    client_max_body_size 100M;
+
     include /etc/nginx/mime.types;
     default_type application/octet-stream;
 
