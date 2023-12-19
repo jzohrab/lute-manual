@@ -19,8 +19,13 @@ brew install mecab-ipadic
 
 The link [https://taku910.github.io/mecab/](https://taku910.github.io/mecab/) has a link under Binary package for MS-Windows: mecab-0.996.exe: [ダウンロード](https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7WElGUGt6ejlpVXc).  Verify this link and download.
 
-> instructions needed!
+If your system is 64bit or above MeCab is not working, you should use this link to download [MeCab 64bit](https://github.com/ikegami-yukino/mecab/releases/download/v0.996.2/mecab-64-0.996.2.exe)
 
+When installing the Mecab, choose **UTF-8** charset(not sure other charset can work properly).
+
+After Installation add the MeCab bin path(Usually it's `C:\Program Files\MeCab\bin`) to the `Path` environment variable.
+If you don't know how to Edit the Environment Variable, you can check this video [How to Set Environment Variables in Windows 11
+](https://www.youtube.com/watch?v=ow2jROvxyH4)
 ## Linux
 
 Use apt-get:
