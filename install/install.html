@@ -234,6 +234,9 @@ python -m lute.main
 </div>
 <!-- Tab content -->
 <div id="PipScriptWin" class="tabcontent piptab">
+<blockquote>
+<p><strong>Note:</strong> The below instructions are a rough guide only.  Your system may have different folders or a different python, so don't just copy-paste these commands blindly.  If you need it, you can take a look at some <a href="./more-details/index.html">more detailed instructions</a>.</p>
+</blockquote>
 <pre><code>cd &quot;C:\My Documents&quot;
 mkdir my_lute
 cd my_lute
@@ -257,6 +260,7 @@ python -m lute.main
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'dockertab', 'DockerSteps')">Steps</button>
   <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerScriptNix')">... as script (Linux/Mac)</button>
+  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerWindows')">... Windows</button>
 </div>
 <!-- Tab content -->
 <div id="DockerSteps" class="tabcontent dockertab">
@@ -308,6 +312,11 @@ EOF
 # Run it:
 docker compose up
 </code></pre>
+</div>
+<!-- Tab content -->
+<div id="DockerWindows" class="tabcontent dockertab">
+<p>Docker on Windows is challenging.  My recommendation (at the moment) is for you to <em>not</em> use Docker on Windows, unless you're studying Japanese (because installing MeCab on Windows is also challenging), <em>or</em> you're reasonably technically savvy.</p>
+<p>With that said, there are some notes on running Docker in Windows <a href="./more-details/windows-using-docker.html">here</a>.</p>
 </div>
 <p>As with the <code>pip</code> installation, you can change the port if your machine is already using port 5000, e.g.:</p>
 <pre><code>...
