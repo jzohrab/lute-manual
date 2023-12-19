@@ -77,6 +77,8 @@ python -m lute.main
 <!-- Tab content -->
 <div id="PipScriptWin" class="tabcontent piptab">
 
+> **Note:** The below instructions are a rough guide only.  Your system may have different folders or a different python, so don't just copy-paste these commands blindly.  If you need it, you can take a look at some [more detailed instructions](./more-details/index.html).
+
 ```
 cd "C:\My Documents"
 mkdir my_lute
@@ -111,6 +113,7 @@ Using a `docker-compose.yml` file:
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'dockertab', 'DockerSteps')">Steps</button>
   <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerScriptNix')">... as script (Linux/Mac)</button>
+  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerWindows')">... Windows</button>
 </div>
 
 <!-- Tab content -->
@@ -178,6 +181,15 @@ EOF
 # Run it:
 docker compose up
 ```
+</div>
+
+
+<!-- Tab content -->
+<div id="DockerWindows" class="tabcontent dockertab">
+
+Docker on Windows is challenging.  My recommendation (at the moment) is for you to *not* use Docker on Windows, unless you're studying Japanese (because installing MeCab on Windows is also challenging), _or_ you're reasonably technically savvy.
+
+With that said, there are some notes on running Docker in Windows [here](./more-details/windows-using-docker.md).
 </div>
 
 
