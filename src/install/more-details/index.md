@@ -7,3 +7,4 @@ This section of the manual contains more detailed instructions collected via int
 ## Windows
 
 * [Windows using Docker](./windows-using-docker.md)
+* [Windows 10 using Python](./windows-10-using-python.md)
