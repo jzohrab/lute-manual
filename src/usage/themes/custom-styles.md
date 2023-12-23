@@ -58,6 +58,15 @@ Clicking the green checks sets unknown to well-known, which you might not like.
 #footerMarkRestAsKnownNextPage { display: none; }
 ```
 
+### Text justification
+
+```
+div#thetext {
+  text-align: justify;
+  text-justify: inter-word;
+}
+```
+
 ### Why would you ever do this?
 
 ```
