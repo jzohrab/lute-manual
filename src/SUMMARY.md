@@ -8,9 +8,9 @@
 
 - [Installation](./install/install.md)
 - [MeCab for Japanese](./install/mecab.md)
-- [Installing on Windows](./install/more-details/index.md)
-  - [Windows using Docker](./install/more-details/windows-using-docker.md)
-  - [Windows 10 (32 bit) using Python](./install/more-details/windows-10-32-bit-using-python.md)
+- [Installing on Windows](./install/windows/index.md)
+  - [Windows using Docker](./install/windows/windows-using-docker.md)
+  - [Windows 10 (32 bit) using Python](./install/windows/windows-10-32-bit-using-python.md)
 - [Troubleshooting](./install/troubleshooting.md)
 - [Beta releases](./install/beta-releases.md)
 
