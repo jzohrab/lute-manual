@@ -67,6 +67,14 @@ div#thetext {
 }
 ```
 
+### Paragraph spacing
+
+#thetext p:after {
+  content: "\00a0"; /* Adds a non-breaking space */
+  display: block;
+  margin-bottom: 10px; /* Adjust the value for the desired space */
+}
+
 ### Why would you ever do this?
 
 ```

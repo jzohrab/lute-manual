@@ -40,3 +40,9 @@ img {
   border: 1px solid darkgrey;
   border-top: none;
 }
+
+
+li.chapter-item div {
+  font-style: italic;
+  color: rgb(200, 201, 219);
+}
