@@ -10,7 +10,7 @@ I can't recommend any particular installation method: they all have trade offs. 
 
 ---
 
-**Windows users:** The instructions below are for Unix/Mac users.  Windows installations are _similar_, but have some challenges, so see [Installing on Windows](./install/windows/index.md).
+**Windows users:** The instructions below are for Unix/Mac users.  Windows installations are _similar_, but have some challenges, so see [Installing on Windows](./windows/index.md).
 
 ---
 
