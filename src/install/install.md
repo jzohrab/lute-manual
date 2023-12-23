@@ -8,6 +8,12 @@ There are currently three different methods to install Lute v3 on your system, w
 
 I can't recommend any particular installation method: they all have trade offs.  My personal preference is to install using pip.  If you're studying Japanese and your system supports Docker, I'd recommend using Docker as it the lute3 image includes some other needed dependencies.
 
+---
+
+**Windows users:** The instructions below are for Unix/Mac users.  Windows installations are _similar_, but have some challenges, so see [Installing on Windows](./install/windows/index.md).
+
+---
+
 ## Using pip
 
 System requirements:
@@ -15,13 +21,12 @@ System requirements:
 * Python 3.8+ and pip.  Run `python3 --version` from the terminal to check.
 * Japanese learners will also need to [install MeCab](./mecab.md)
 
-Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/project/lute3/).  Here's a summary of the instructions from that page for Linux and Mac, Windows will be similar.  All of these commands are run from the Terminal (or from Cmd if Windows).
+Lute can be installed from [https://pypi.org/project/lute3/](https://pypi.org/project/lute3/).  Here's a summary of the instructions from that page for Linux and Mac, Windows will be similar.  All of these commands are run from the Terminal.
 
 <!-- Tab links -->
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'piptab', 'PipSteps')">Steps</button>
-  <button class="tablinks" onclick="openTab(event, 'piptab', 'PipScriptNix')">... as script (Linux/Mac)</button>
-  <button class="tablinks" onclick="openTab(event, 'piptab', 'PipScriptWin')">... as script (Windows)</button>
+  <button class="tablinks" onclick="openTab(event, 'piptab', 'PipScriptNix')">Steps as a copy-paste script</button>
 </div>
 
 <!-- Tab content -->
@@ -74,24 +79,6 @@ python -m lute.main
 ```
 </div>
 
-<!-- Tab content -->
-<div id="PipScriptWin" class="tabcontent piptab">
-
-> **Note:** The below instructions are a rough guide only.  Your system may have different folders or a different python, so don't just copy-paste these commands blindly.  If you need it, you can take a look at some [more detailed instructions](./more-details/index.html).  The YouTube channel is4ndroide made a *great* video on [installing Lute for Windows](https://www.youtube.com/watch?v=qtClbRqBiEM).
-
-```
-cd "C:\My Documents"
-mkdir my_lute
-cd my_lute
-
-python3 -m venv myenv
-.\myenv\Scripts\activate.bat
-
-pip install --upgrade lute3
-python -m lute.main
-```
-</div>
-
 Now open your web browser to `http://localhost:5000`.  **Leave the terminal window open while you're using Lute.** When you're done, hit `Ctl-C` to stop Lute.
 
 You can start lute on a different port if needed:
@@ -112,8 +99,7 @@ Using a `docker-compose.yml` file:
 <!-- Tab links -->
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'dockertab', 'DockerSteps')">Steps</button>
-  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerScriptNix')">... as script (Linux/Mac)</button>
-  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerWindows')">... Windows</button>
+  <button class="tablinks" onclick="openTab(event, 'dockertab', 'DockerScriptNix')">Steps as copy-paste script</button>
 </div>
 
 <!-- Tab content -->
@@ -182,16 +168,6 @@ EOF
 docker compose up
 ```
 </div>
-
-
-<!-- Tab content -->
-<div id="DockerWindows" class="tabcontent dockertab">
-
-Docker on Windows is challenging.  My recommendation (at the moment) is for you to *not* use Docker on Windows, unless you're studying Japanese (because installing MeCab on Windows is also challenging), _or_ you're reasonably technically savvy.
-
-With that said, there are some notes on running Docker in Windows [here](./more-details/windows-using-docker.md).
-</div>
-
 
 As with the `pip` installation, you can change the port if your machine is already using port 5000, e.g.:
 
