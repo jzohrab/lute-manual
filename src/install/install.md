@@ -77,7 +77,7 @@ python -m lute.main
 <!-- Tab content -->
 <div id="PipScriptWin" class="tabcontent piptab">
 
-> **Note:** The below instructions are a rough guide only.  Your system may have different folders or a different python, so don't just copy-paste these commands blindly.  If you need it, you can take a look at some [more detailed instructions](./more-details/index.html).
+> **Note:** The below instructions are a rough guide only.  Your system may have different folders or a different python, so don't just copy-paste these commands blindly.  If you need it, you can take a look at some [more detailed instructions](./more-details/index.html).  The YouTube channel is4ndroide made a *great* video on [installing Lute for Windows](https://www.youtube.com/watch?v=qtClbRqBiEM).
 
 ```
 cd "C:\My Documents"
