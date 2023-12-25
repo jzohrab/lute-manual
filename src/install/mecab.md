@@ -25,7 +25,7 @@ When installing MeCab, choose the **UTF-8** charset (I'm not sure if another cha
 
 After installation, add the MeCab bin path to the `PATH` environment variable.  If you don't know how to edit the Environment Variables, see this video: [How to Set Environment Variables in Windows 11](https://www.youtube.com/watch?v=ow2jROvxyH4).  Usually the MeCab bin path as `C:\Program Files\MeCab\bin`, but it might be `C:\Program Files (x86)\MeCab\bin` ... **make sure you use the right one!!**
 
-## Verifing
+### Verifying on Windows
 
 To check that your installation and `PATH` are correct, open up a new command window, and type `mecab` at the prompt.
 
