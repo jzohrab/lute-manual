@@ -605,7 +605,15 @@ brew install mecab-ipadic
 <p>The link <a href="https://taku910.github.io/mecab/">https://taku910.github.io/mecab/</a> has a link under Binary package for MS-Windows: mecab-0.996.exe: <a href="https://drive.google.com/uc?export=download&amp;id=0B4y35FiV1wh7WElGUGt6ejlpVXc">ダウンロード</a>.  Verify this link and download.</p>
 <p>If your system is 64 bit, or the above MeCab is not working, try downloading from this link instead: <a href="https://github.com/ikegami-yukino/mecab/releases/download/v0.996.2/mecab-64-0.996.2.exe">MeCab 64bit</a></p>
 <p>When installing MeCab, choose the <strong>UTF-8</strong> charset (I'm not sure if another charset will work).</p>
-<p>After installation, add the MeCab bin path -- usually it's <code>C:\Program Files\MeCab\bin</code> -- to the <code>PATH</code> environment variable.  If you don't know how to edit the Environment Variables, see this video: <a href="https://www.youtube.com/watch?v=ow2jROvxyH4">How to Set Environment Variables in Windows 11</a>.</p>
+<p>After installation, add the MeCab bin path to the <code>PATH</code> environment variable.  If you don't know how to edit the Environment Variables, see this video: <a href="https://www.youtube.com/watch?v=ow2jROvxyH4">How to Set Environment Variables in Windows 11</a>.  Usually the MeCab bin path as <code>C:\Program Files\MeCab\bin</code>, but it might be <code>C:\Program Files (x86)\MeCab\bin</code> ... <strong>make sure you use the right one!!</strong></p>
+<h2 id="verifing"><a class="header" href="#verifing">Verifing</a></h2>
+<p>To check that your installation and <code>PATH</code> are correct, open up a new command window, and type <code>mecab</code> at the prompt.</p>
+<ul>
+<li>If anything is wrong, you'll get an error like <code>The term 'mecab' is not recognized</code> or similar.  Fix your PATH and try again.</li>
+<li>If you type &quot;mecab&quot; and hit return and nothing happens, then your mecab is actually installed correctly, as mecab is waiting to parse your input.  Hit return, and you should get an &quot;EOS&quot; message -- that's mecab responding with &quot;end of sentence&quot;.  Hit Control-C to quit mecab.</li>
+</ul>
+<h3 id="continuing-on"><a class="header" href="#continuing-on">Continuing on</a></h3>
+<p>After installing MeCab, you <em>may</em> need to shut down Lute if it's running, open a new Terminal (command window), and restart Lute, for the PATH changes to take effect.</p>
 <h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
 <p>Use apt-get:</p>
 <pre><code>sudo apt-get update -y
@@ -619,7 +627,6 @@ sudo apt-get install -y mecab mecab-ipadic-utf8
 も    助詞,係助詞,*,*,*,*,も,モ,モ
 もも    名詞,一般,*,*,*,*,もも,モモ,モモ
 </code></pre>
-<p>Windows users may need to type the full path.</p>
 <h1 id="lute-configuration"><a class="header" href="#lute-configuration">Lute configuration</a></h1>
 <p>If everything is installed correctly, you will see a Japanese sample story when you start Lute.  If you <em>don't</em> see that story, then either your MeCab isn't set up correctly, or Lute can't find it.</p>
 <p>Lute uses a library called <a href="https://github.com/buruzaemon/natto-py">natto-py</a> that <em>usually</em> finds and uses MeCab automatically.  If it can't, you'll need to specify the path to your MeCab library in Lute's Settings (top right menu bar).  There is a box for you to enter your MeCab path and do a test parse.  If that test succeeds, you're good to go.  If not, jump into the Lute Discord.</p>
