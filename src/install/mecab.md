@@ -23,7 +23,18 @@ If your system is 64 bit, or the above MeCab is not working, try downloading fro
 
 When installing MeCab, choose the **UTF-8** charset (I'm not sure if another charset will work).
 
-After installation, add the MeCab bin path -- usually it's `C:\Program Files\MeCab\bin` -- to the `PATH` environment variable.  If you don't know how to edit the Environment Variables, see this video: [How to Set Environment Variables in Windows 11](https://www.youtube.com/watch?v=ow2jROvxyH4).
+After installation, add the MeCab bin path to the `PATH` environment variable.  If you don't know how to edit the Environment Variables, see this video: [How to Set Environment Variables in Windows 11](https://www.youtube.com/watch?v=ow2jROvxyH4).  Usually the MeCab bin path as `C:\Program Files\MeCab\bin`, but it might be `C:\Program Files (x86)\MeCab\bin` ... **make sure you use the right one!!**
+
+## Verifing
+
+To check that your installation and `PATH` are correct, open up a new command window, and type `mecab` at the prompt.
+
+* If anything is wrong, you'll get an error like `The term 'mecab' is not recognized` or similar.  Fix your PATH and try again.
+* If you type "mecab" and hit return and nothing happens, then your mecab is actually installed correctly, as mecab is waiting to parse your input.  Hit return, and you should get an "EOS" message -- that's mecab responding with "end of sentence".  Hit Control-C to quit mecab.
+
+### Continuing on
+
+After installing MeCab, you *may* need to shut down Lute if it's running, open a new Terminal (command window), and restart Lute, for the PATH changes to take effect.
 
 ## Linux
 
@@ -45,8 +56,6 @@ $ mecab
 も    助詞,係助詞,*,*,*,*,も,モ,モ
 もも    名詞,一般,*,*,*,*,もも,モモ,モモ
 ```
-
-Windows users may need to type the full path.
 
 # Lute configuration
 
