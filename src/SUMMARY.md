@@ -51,6 +51,7 @@
   - [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
   - [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)
 - [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
+- [Can I import data from other systems?](./faq/import-from-other-systems.md)
 - [The stats calculation](./faq/stats.md)
 - [Why is this free?](./faq/free.md)
 
