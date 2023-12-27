@@ -69,11 +69,27 @@ div#thetext {
 
 ### Paragraph spacing
 
+```
 #thetext p:after {
   content: "\00a0"; /* Adds a non-breaking space */
   display: block;
   margin-bottom: 10px; /* Adjust the value for the desired space */
 }
+```
+
+### Hide the frame borders
+
+```
+#read_pane_right::after {
+    background-color: transparent;
+    width: 4px;
+}
+
+.dictframecontainer::after {
+    background-color: transparent;
+    height: 4px;
+}
+```
 
 ### Why would you ever do this?
 
