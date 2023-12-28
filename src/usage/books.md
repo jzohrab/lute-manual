@@ -1,8 +1,8 @@
 # Creating books
 
-## From input or text files
+## From input or files
 
-You can create books by import plain text files (.txt) or just entering text into a text box.
+You can create books by importing files (.txt or .epub) or just entering text into a text box.
 
 ## Importing web pages
 
