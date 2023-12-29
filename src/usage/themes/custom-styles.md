@@ -79,6 +79,8 @@ div#thetext {
 
 ### Hide the frame borders
 
+The reading page has frames for the content and the form and dictionaries.  Hide the borders with this:
+
 ```
 #read_pane_right::after {
     background-color: transparent;
@@ -89,6 +91,12 @@ div#thetext {
     background-color: transparent;
     height: 4px;
 }
+```
+
+### Vertical text for Japanese
+
+```
+div#thetext {writing-mode: vertical-rl;}
 ```
 
 ### Why would you ever do this?
