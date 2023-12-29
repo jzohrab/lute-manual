@@ -227,6 +227,7 @@ span.textitem { font-size: 18px; }
 }
 </code></pre>
 <h3 id="hide-the-frame-borders"><a class="header" href="#hide-the-frame-borders">Hide the frame borders</a></h3>
+<p>The reading page has frames for the content and the form and dictionaries.  Hide the borders with this:</p>
 <pre><code>#read_pane_right::after {
     background-color: transparent;
     width: 4px;
@@ -236,6 +237,9 @@ span.textitem { font-size: 18px; }
     background-color: transparent;
     height: 4px;
 }
+</code></pre>
+<h3 id="vertical-text-for-japanese"><a class="header" href="#vertical-text-for-japanese">Vertical text for Japanese</a></h3>
+<pre><code>div#thetext {writing-mode: vertical-rl;}
 </code></pre>
 <h3 id="why-would-you-ever-do-this"><a class="header" href="#why-would-you-ever-do-this">Why would you ever do this?</a></h3>
 <pre><code>body { font-family: &quot;Comic Sans MS&quot;; }
