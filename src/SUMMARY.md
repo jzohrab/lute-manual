@@ -50,6 +50,7 @@
 - [Books]()
   - [Where can I find books to import?](./faq/books/finding-stuff.md)
   - [Why won't my epub import correctly?](./faq/books/epub-import.md)
+  - [My text file import is givinga "utf-8 encoding" error message](./faq/books/utf-8.md)
 - [Terms]()
   - [Why can't I change a Term?](./faq/terms-cannot-be-changed-once-created.md)
   - [Where are my new Term's sentences?](./faq/sentences-only-shown-when-page-is-read.md)
