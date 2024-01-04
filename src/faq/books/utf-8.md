@@ -1,4 +1,4 @@
-# My text file import is givinga "utf-8 encoding" error message
+# My text file import is giving a "utf-8 encoding" error message
 
 Lute can only import utf-8 encoded text files.[^1]
 
