@@ -22,9 +22,8 @@ The link [https://taku910.github.io/mecab/](https://taku910.github.io/mecab/) ha
 If your system is 64 bit, or the above MeCab is not working, try downloading from this link instead: [MeCab 64bit](https://github.com/ikegami-yukino/mecab/releases/download/v0.996.2/mecab-64-0.996.2.exe)
 
 Here's a video on installing MeCab for Lute, kindly put together by a Lute user:
-
 <iframe width="720" height="480"
-src="https://www.youtube.com/embed/9F53ztn0rB8">
+src="https://www.youtube.com/embed/w8r51mn0ewQ?si=Z6SaV5TvBnKcKPx9">
 </iframe>
 
 When installing MeCab, choose the **UTF-8** charset (I'm not sure if another charset will work).
