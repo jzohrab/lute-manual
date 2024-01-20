@@ -1,6 +1,8 @@
 # Bulk term import
 
-If you have existing vocabulary lists, you can bulk import new Terms into Lute with a properly-formatted CSV file.  This is only for importing new Terms into Lute, existing Terms are not changed.
+If you have existing vocabulary lists, you can bulk import new Terms, or update existing Terms, with a properly-formatted CSV file.
+
+From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if you want to import new Terms, update existing ones, or both.
 
 # CSV File Format
 
