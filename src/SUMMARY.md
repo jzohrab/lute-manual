@@ -25,6 +25,7 @@
   - [The demo tutorial](./usage/tutorial.md)
 - [Terms](./usage/terms.md)
   - [Parent terms](./usage/parent-terms.md)
+  - [Linking parent-child statuses](./usage/terms/link-parent-child-statuses.md)
   - [Bulk mapping parent terms](./usage/parent-terms-bulk-mapping.md)
   - [Bulk term import](./usage/bulk-term-import.md)
 - [Themes](./usage/themes/themes.md)
