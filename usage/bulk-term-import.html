@@ -184,7 +184,7 @@
 <ul>
 <li>The CSV file should be properly formatted; i.e., carriage returns in fields are allowed, but the field should be enclosed in quotes.</li>
 <li>The first line of the CSV file <strong>must</strong> have the field headings: <code>language, term</code></li>
-<li>The first line of the CSV file may also have any of these headings: <code>translation, parent, status, tags, pronunciation</code></li>
+<li>The first line of the CSV file may also have any of these headings: <code>translation, parent, status, tags, pronunciation, link_status</code></li>
 <li>Fields can be in any order.</li>
 <li>An error is raised if the file contains other headings.</li>
 </ul>
@@ -195,6 +195,7 @@
 <tr><td>translation</td><td></td><td></td></tr>
 <tr><td>parent</td><td></td><td>The &quot;parent&quot; of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.  If a term has multiple parents, you can enclose the list in quotes, and comma-separate the parents (e.g., the term <code>se sienta</code> could have parents <code>&quot;sentirse, sentarse&quot;</code>.</td></tr>
 <tr><td>status</td><td></td><td>One of 1, 2, 3, 4, 5, W (for Well-Known), or I (for Ignored).  If missing, it's set to 1</td></tr>
+<tr><td>link_status</td><td></td><td>Y or blank.  If Y and this term has a single parent, its status is linked to the parent status</td></tr>
 <tr><td>tags</td><td></td><td>A comma-delimited list of tags to add to the Term</td></tr>
 <tr><td>pronunciation</td><td></td><td></td></tr>
 </tbody></table>
