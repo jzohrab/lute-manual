@@ -8,7 +8,7 @@ From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if
 
 * The CSV file should be properly formatted; i.e., carriage returns in fields are allowed, but the field should be enclosed in quotes.
 * The first line of the CSV file **must** have the field headings: `language, term`
-* The first line of the CSV file may also have any of these headings: `translation, parent, status, tags, pronunciation`
+* The first line of the CSV file may also have any of these headings: `translation, parent, status, tags, pronunciation, link_status`
 * Fields can be in any order.
 * An error is raised if the file contains other headings.
 
@@ -21,6 +21,7 @@ From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if
 | translation | | |
 | parent | | The "parent" of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.  If a term has multiple parents, you can enclose the list in quotes, and comma-separate the parents (e.g., the term `se sienta` could have parents `"sentirse, sentarse"`.|
 | status | | One of 1, 2, 3, 4, 5, W (for Well-Known), or I (for Ignored).  If missing, it's set to 1 |
+| link_status | | Y or blank.  If Y and this term has a single parent, its status is linked to the parent status |
 | tags | | A comma-delimited list of tags to add to the Term |
 | pronunciation | | |
 
