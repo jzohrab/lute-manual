@@ -48,6 +48,7 @@
 - [Languages]()
   - [How can I figure out my language's "word characters"?](./faq/language/defining-language.md)
   - [Can you add language X?](./faq/language/add-a-language.md)
+  - [Why is my dictionary not working?](./faq/language/dict-not-working.md)
 - [Books]()
   - [Where can I find books to import?](./faq/books/finding-stuff.md)
   - [Why won't my epub import correctly?](./faq/books/epub-import.md)
