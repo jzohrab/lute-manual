@@ -1,6 +1,6 @@
 # Can I import data from other systems?
 
-You can import data into Lute via [bulk term import](../usage/bulk-term-import.html), you just have to get your data into .csv file format.
+You can import data into Lute via [bulk term import](../usage/terms/bulk-term-import.html), you just have to get your data into .csv file format.
 
 ## Importing data from LWT
 
@@ -18,7 +18,7 @@ gato	cat	Tengo un {gato}		1	Spanish	20
 
 You can then import that file into something like [Google Sheets](https://docs.google.com/spreadsheets/u/0/), and prepare it for import.
 
-As the [bulk term import](../usage/bulk-term-import.html) page says:
+As the [bulk term import](../usage/terms/bulk-term-import.html) page says:
 
 * The first line of the CSV file must have the field headings: language, term
 * The first line of the CSV file may also have any of these headings: translation, parent, status, tags, pronunciation
