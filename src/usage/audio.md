@@ -18,7 +18,9 @@ If your book has an audio file, a player is included on the reading page:
 
 ![image](https://github.com/jzohrab/lute-manual/assets/1637133/53221a28-def1-4790-99c7-5266e23ff3fe)
 
-You can do the usual things: start and pause the player, fast-forward and rewind, and increase/decrease the playback speed.  The spacebar also starts and pauses the player.  The "sticky player" toggle sticks the player to the bottom of the screen.
+You can do the usual things: start and pause the player (either with the buttons or the space bar), and fast-forward and rewind.  The "sticky player" toggle sticks the player to the bottom of the screen.
+
+You can increase and decrease the playback speed by hovering over the playback speed control and scrolling up or down.  Clicking it resets the playback speed to 1.0, the regular speed.
 
 When you start the player, it plays until you stop it, or until you open the Term form by clicking on a word or defining a new multi-word Term.  Once you've defined a term, click Play to restart the player from where it stopped.
 
