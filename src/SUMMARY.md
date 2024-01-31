@@ -20,6 +20,7 @@
 - [Defining a language](./usage/language-setup.md)
 - [Books]()
   - [Creating books](./usage/books/creating-books.md)
+  - [The stats calculation](./usage/books/stats.md)
 - [Reading]()
   - [Reading](./usage/reading/reading.md)
   - [Key bindings](./usage/keyboard-bindings.md)
@@ -64,7 +65,6 @@
   - [How should I use statuses?](./faq/terms/term-statuses.md)
 - [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
 - [Can I import data from other systems?](./faq/import-from-other-systems.md)
-- [The stats calculation](./faq/stats.md)
 - [Why doesn't Lute have flashcards, or an SRS?](./faq/why-no-flashcards.md)
 - [Why is this free?](./faq/free.md)
 
