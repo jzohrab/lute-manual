@@ -1,9 +1,10 @@
 # Where are my new Term's sentences?
 
-Lute shows sentences for a Term and its siblings when you click the Sentences link on the Term form, but it only includes sentences for pages marked as "read".  Pages are marked as "read" when you click on any of the links at the bottom of the reading page:
+Lute shows sentences for a Term and its siblings when you click the Sentences link on the Term form, but it only includes sentences for pages marked as "read".  Pages are marked as "read" when you click either the links at the bottom of the reading page:
 
-<img width="527" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/4f809a53-a909-4aea-925a-7d21d2b7c142">
+<img width="285" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/7806d2a7-ec24-46c5-ae1f-6e101f486073">
 
+(The green checkmark also changes all unknown terms to well-known.)
 
 Lute only includes sentences from pages marked "read" for a few reasons:
 
