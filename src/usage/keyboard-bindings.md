@@ -9,11 +9,7 @@ Some of these actions refer to the "current word" - that's either the word you'r
 | Key         | Action                                                           |
 |----------------|---------------------------------------------------------------------|
 | `Right`        | Move to next word                                                   |
-| `Shift` + `Right` | Move to next unknown or learning word (skip known and ignored)      |
 | `Left`           | Move to previous word                                               |
-| `Shift` + `Left`  | Move to previous unknown or learning word (skip known and ignored)  |
-| `Home`           | Move to first word  |
-| `End`            | Move to last word   |
 | `Esc`            | Reset marked term(s)                                                |
 
 
