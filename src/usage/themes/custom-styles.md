@@ -93,6 +93,12 @@ The reading page has frames for the content and the form and dictionaries.  Hide
 }
 ```
 
+### Increase the size of the term pop-up text
+
+```
+div.ui-tooltip {  font-size: 150%; }
+```
+
 ### Vertical text for Japanese
 
 ```
