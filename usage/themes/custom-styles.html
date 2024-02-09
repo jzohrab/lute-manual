@@ -179,7 +179,7 @@
                     <main>
                         <h1 id="custom-styles"><a class="header" href="#custom-styles">Custom styles</a></h1>
 <p>You can tailor the existing Lute themes by using your own custom styles in the Settings menu.  These overrides are applied <em>after</em> the theme selected.</p>
-<p>Open Settings, and in the &quot;Custom styles&quot; text box in the settings, enter valid CSS.  For example, this:</p>
+<p>Open Settings, and in the "Custom styles" text box in the settings, enter valid CSS.  For example, this:</p>
 <pre><code>span.textitem { font-size: 16px; }
 span.status1 { background-color: pink; }               /* status2-5 for the rest */
 span.status98 { background-color: lightgrey; }         /* Ignored terms */
@@ -200,9 +200,9 @@ span.status99 { background-color: none; color: red; }  /* Well-known terms */
  span.status99 { background-color: white; }    /* Well known. */
 </code></pre>
 <h3 id="language-specific-styles"><a class="header" href="#language-specific-styles">Language-specific styles</a></h3>
-<p>You might want different colors or font sizes for different languages.  You can get the language ID by clicking on it in the language listing (Settings &gt; Languages), it's at the end of the URL; e.g., <code>http://localhost:5000/language/edit/9</code>, &quot;9&quot; is the ID.</p>
-<pre><code>span.status0[lid=&quot;8&quot;] { background-color: red; }
-span.status0[lid=&quot;4&quot;] { background-color: blue; }
+<p>You might want different colors or font sizes for different languages.  You can get the language ID by clicking on it in the language listing (Settings &gt; Languages), it's at the end of the URL; e.g., <code>http://localhost:5000/language/edit/9</code>, "9" is the ID.</p>
+<pre><code>span.status0[lid="8"] { background-color: red; }
+span.status0[lid="4"] { background-color: blue; }
 </code></pre>
 <h3 id="larger-text-with-more-space-between-each-line"><a class="header" href="#larger-text-with-more-space-between-each-line">Larger text with more space between each line</a></h3>
 <pre><code>div#thetext p { line-height: 2; }
@@ -221,7 +221,7 @@ span.textitem { font-size: 18px; }
 </code></pre>
 <h3 id="paragraph-spacing"><a class="header" href="#paragraph-spacing">Paragraph spacing</a></h3>
 <pre><code>#thetext p:after {
-  content: &quot;\00a0&quot;; /* Adds a non-breaking space */
+  content: "\00a0"; /* Adds a non-breaking space */
   display: block;
   margin-bottom: 10px; /* Adjust the value for the desired space */
 }
@@ -238,18 +238,21 @@ span.textitem { font-size: 18px; }
     height: 4px;
 }
 </code></pre>
+<h3 id="increase-the-size-of-the-term-pop-up-text"><a class="header" href="#increase-the-size-of-the-term-pop-up-text">Increase the size of the term pop-up text</a></h3>
+<pre><code>div.ui-tooltip {  font-size: 150%; }
+</code></pre>
 <h3 id="vertical-text-for-japanese"><a class="header" href="#vertical-text-for-japanese">Vertical text for Japanese</a></h3>
 <pre><code>div#thetext {writing-mode: vertical-rl;}
 </code></pre>
 <h3 id="why-would-you-ever-do-this"><a class="header" href="#why-would-you-ever-do-this">Why would you ever do this?</a></h3>
-<pre><code>body { font-family: &quot;Comic Sans MS&quot;; }
+<pre><code>body { font-family: "Comic Sans MS"; }
 </code></pre>
 <p>Yuck.</p>
 <h2 id="notes"><a class="header" href="#notes">Notes:</a></h2>
 <ul>
 <li>The styles used by Lute out-of-the-box are in <a href="https://github.com/jzohrab/lute-v3/blob/master/lute/static/css/styles.css">the GitHub repo</a>, hack away!</li>
 <li>The data you put in the text box must be valid CSS, as it is picked up verbatim and inserted into the HTML.</li>
-<li>Some of the current css class names are bad (e.g. &quot;status98&quot; means &quot;ignored&quot;, but that's pretty hard to follow).  If those class names get changed in a future release, I'll add a note in the release notes.</li>
+<li>Some of the current css class names are bad (e.g. "status98" means "ignored", but that's pretty hard to follow).  If those class names get changed in a future release, I'll add a note in the release notes.</li>
 <li>Using css is pretty tricky, but it works for now!</li>
 </ul>
 

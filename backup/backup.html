@@ -185,17 +185,17 @@
 <h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
 <p>Backup is configured in the Settings.</p>
 <div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Values</th><th>Notes</th></tr></thead><tbody>
-<tr><td>Backup enabled</td><td>yes or no</td><td>Set to &quot;yes&quot; if you want to run them through the Lute UI or have Lute do daily backups, and &quot;no&quot; if you're handling your own backups with scripts or whatever.</td></tr>
+<tr><td>Backup enabled</td><td>yes or no</td><td>Set to "yes" if you want to run them through the Lute UI or have Lute do daily backups, and "no" if you're handling your own backups with scripts or whatever.</td></tr>
 <tr><td>Backup directory <strong>(Non-Docker users only)</strong></td><td>Full directory path</td><td>This is the <em>existing</em> directory where a gzipped database export, and copy of all of your images, will be sent.  Set this to something that is backed up, such as to a DropBox folder or similar.  This is disabled for Docker users, because the backup directory has to be mounted to a host folder.</td></tr>
 <tr><td>Run backups automatically (daily)</td><td>yes or no</td><td>If <code>yes</code>, Lute will run the backup <em>from the Home page</em> every day.  Note that this is only from the Home page, so if you have a book open for reading for 2 weeks, it won't be backed up. :-)</td></tr>
 <tr><td>Warn if backup hasn't run in a week</td><td>yes or no</td><td>If <code>yes</code>, Lute will print a warning <em>on the Home page</em> if the last backup was run more than one week ago.  Again, this is only from the home page.</td></tr>
-<tr><td>Retain backup count</td><td>Number</td><td>The number of automatic backup files to keep.  Backups are created with date-time stamp added (e.g. <code>lute_backup_2023-04-19_204452.db.gz</code>), and Lute only keeps the specified count of most recent backups.  Note that this number is only used for automatic backups.  For &quot;manual&quot; backups (where you click the link to create a backup from the Home page), you have to delete old files.</td></tr>
+<tr><td>Retain backup count</td><td>Number</td><td>The number of automatic backup files to keep.  Backups are created with date-time stamp added (e.g. <code>lute_backup_2023-04-19_204452.db.gz</code>), and Lute only keeps the specified count of most recent backups.  Note that this number is only used for automatic backups.  For "manual" backups (where you click the link to create a backup from the Home page), you have to delete old files.</td></tr>
 </tbody></table>
 </div>
 <h2 id="manual-and-automatic-backups"><a class="header" href="#manual-and-automatic-backups">Manual and automatic backups</a></h2>
-<p>There are two kinds of backups, &quot;manual&quot; and &quot;automatic&quot;.  Both are placed in the folder you specify in your settings.</p>
+<p>There are two kinds of backups, "manual" and "automatic".  Both are placed in the folder you specify in your settings.</p>
 <ul>
-<li>Manual backups are created when you click &quot;create backup&quot; from the Home page.  All of these are kept.</li>
+<li>Manual backups are created when you click "create backup" from the Home page.  All of these are kept.</li>
 <li>Automatic backups are created every day by Lute, if you enable them, <strong>but only from the home screen</strong> (see below).  Lute only stores a limited number of automatic backups.</li>
 </ul>
 <p>Here's an example on my system:</p>
@@ -211,7 +211,7 @@ manual_lute_backup_2023-04-19_204652.db.gz
 userimages_backup/
 </code></pre>
 <ul>
-<li>I only have 5 &quot;automatic&quot; backups</li>
+<li>I only have 5 "automatic" backups</li>
 <li>I have as many <code>manual_</code> backups as I need/want</li>
 <li>There is only one <code>userimages_backup/</code> folder, ever.</li>
 </ul>

@@ -181,24 +181,24 @@
 <p>(NOTE: the UI and implementation has changed since this was written, but the idea is still the same.  TODO: update this section!)</p>
 <p>Lute supports <a href="./parent-terms.html">Parent Terms</a>, and also supports a bulk mapping of Parent Terms to Terms, using a mapping file that you create and import.</p>
 <p><strong>Why would you want this?</strong>  In my experience reading extensively with Lute, I am usually familiar with words, but it is <em>very</em> nice having the previously-entered information for their Parent Terms.  As I read, I often find myself interrupting myself to just map terms to parent terms.  Of course, this mapping is completely optional, and sometimes I don't do it ... but having this automatically taken care of is pretty nice.</p>
-<p>On the Home page, the link &quot;Parent Term mapping&quot; takes you to a page with links to export a file that you can use to create your mapping file, and to import this mapping file.  You may want to run through this process for every large new text or book that you import, so that you can focus on the <strong>really new stuff</strong> in that text.</p>
+<p>On the Home page, the link "Parent Term mapping" takes you to a page with links to export a file that you can use to create your mapping file, and to import this mapping file.  You may want to run through this process for every large new text or book that you import, so that you can focus on the <strong>really new stuff</strong> in that text.</p>
 <h2 id="what-mapping-does"><a class="header" href="#what-mapping-does">What mapping does</a></h2>
 <p>When the file is imported, Terms and Parents are created and associated as needed, depending on the Terms currently in your Lute database.  For example, given a mapping file:</p>
 <pre><code>dog    dogs
 </code></pre>
 <p>We have the following scenarios:</p>
-<div class="table-wrapper"><table><thead><tr><th>Child term &quot;dogs&quot; exists?</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
-<tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; exists</td><td>&quot;dog&quot; is assigned as the Parent Term for &quot;dogs&quot;</td></tr>
-<tr><td>Yes</td><td>If &quot;dogs&quot; doesn't have a Parent Term, and &quot;dog&quot; doesn't exist</td><td>&quot;dog&quot; is <em>automatically created</em>, and assigned as the Parent Term for &quot;dogs&quot;</td></tr>
-<tr><td>Yes</td><td>If &quot;dogs&quot; already has a Parent Term</td><td>nothing happens</td></tr>
-<tr><td>No</td><td>If &quot;dog&quot; exists</td><td>&quot;dogs&quot; is <em>automatically created</em>, and &quot;dog&quot; is assigned as its Parent Term</td></tr>
-<tr><td>No</td><td>If &quot;dog&quot; does not exist</td><td>nothing happens</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Child term "dogs" exists?</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
+<tr><td>Yes</td><td>If "dogs" doesn't have a Parent Term, and "dog" exists</td><td>"dog" is assigned as the Parent Term for "dogs"</td></tr>
+<tr><td>Yes</td><td>If "dogs" doesn't have a Parent Term, and "dog" doesn't exist</td><td>"dog" is <em>automatically created</em>, and assigned as the Parent Term for "dogs"</td></tr>
+<tr><td>Yes</td><td>If "dogs" already has a Parent Term</td><td>nothing happens</td></tr>
+<tr><td>No</td><td>If "dog" exists</td><td>"dogs" is <em>automatically created</em>, and "dog" is assigned as its Parent Term</td></tr>
+<tr><td>No</td><td>If "dog" does not exist</td><td>nothing happens</td></tr>
 </tbody></table>
 </div>
 <p>If a term is automatically created, you'll see a small asterisk next to it when reading, and a small message will be included in its popup:</p>
 <p><img src="https://user-images.githubusercontent.com/1637133/236732831-94fc2209-4821-4580-8344-cb8615ac4586.png" alt="image" /></p>
 <p><img src="https://user-images.githubusercontent.com/1637133/236732902-3feed1cf-6f18-4463-9882-7142388a23c0.png" alt="image" /></p>
-<p>That message and asterisk will disappear when you click on the term and either click &quot;Save&quot; or refresh the page.  (The action of viewing the form seems to me like the easiest way of &quot;acknowledging&quot; the automatically created term).</p>
+<p>That message and asterisk will disappear when you click on the term and either click "Save" or refresh the page.  (The action of viewing the form seems to me like the easiest way of "acknowledging" the automatically created term).</p>
 <h2 id="the-import-mapping-file"><a class="header" href="#the-import-mapping-file">The import mapping file</a></h2>
 <p>A mapping file is a list of records, of format <code>parent-term &lt;TAB&gt; term</code>.  A sample import file for English would look like this:</p>
 <pre><code>cat      cats
@@ -206,16 +206,16 @@ cat      kitten
 dog      dogs
 </code></pre>
 <h2 id="generating-an-import-file"><a class="header" href="#generating-an-import-file">Generating an import file</a></h2>
-<p>When you click on one of the &quot;export&quot; links from the &quot;Parent Term mapping&quot; page, a file is generated for you (e.g. <code>/data/parents/terms_3.txt</code>).  You can pull this into a spreadsheet and fill in the parent in a new column.</p>
+<p>When you click on one of the "export" links from the "Parent Term mapping" page, a file is generated for you (e.g. <code>/data/parents/terms_3.txt</code>).  You can pull this into a spreadsheet and fill in the parent in a new column.</p>
 <p>Optionally, if you have Python 3.11 installed, and your language is one of the 60+ languages supported by the Stanford Stanza library (see https://stanfordnlp.github.io/stanza/available_models.html), you can use <a href="https://github.com/jzohrab/LuteLemma">LuteLemma</a> to convert this exported file to a mapping file.</p>
-<h2 id="exporting-books-vs-language"><a class="header" href="#exporting-books-vs-language">Exporting &quot;books&quot; vs &quot;language&quot;</a></h2>
-<p>The &quot;map Parent Terms&quot; page has two kinds of exports:</p>
+<h2 id="exporting-books-vs-language"><a class="header" href="#exporting-books-vs-language">Exporting "books" vs "language"</a></h2>
+<p>The "map Parent Terms" page has two kinds of exports:</p>
 <ul>
-<li>&quot;book&quot;: export unknown terms in a book.</li>
-<li>&quot;language&quot;: only exports known terms without parents.</li>
+<li>"book": export unknown terms in a book.</li>
+<li>"language": only exports known terms without parents.</li>
 </ul>
-<p>My current usage recommendation is to only export new &quot;books&quot; to try to map unknown words to existing Terms that you've defined while reading prior books.  This clears up some terms during your reading and hopefully makes reading more productive.</p>
-<p>Full &quot;language&quot; exports, for setting up relationships in existing words, is useful, but it could also be a low-value-yield activity.  It's interesting, but I don't know if it will help you read more better faster.  Perhaps try exporting and see if there are any interesting word parent assignments that you really want.</p>
+<p>My current usage recommendation is to only export new "books" to try to map unknown words to existing Terms that you've defined while reading prior books.  This clears up some terms during your reading and hopefully makes reading more productive.</p>
+<p>Full "language" exports, for setting up relationships in existing words, is useful, but it could also be a low-value-yield activity.  It's interesting, but I don't know if it will help you read more better faster.  Perhaps try exporting and see if there are any interesting word parent assignments that you really want.</p>
 <p>Use these exported files to create your import file.</p>
 <h2 id="why-isnt-this-automatically-built-in-to-lute"><a class="header" href="#why-isnt-this-automatically-built-in-to-lute">Why isn't this automatically built in to Lute?</a></h2>
 <p>Great question.  The process of mapping terms to a root form is non-trivial, and the current implementation in Lute is not seamless (though it works!).  The current implementation was driven by the following technical considerations:</p>

@@ -185,13 +185,13 @@
 <p>Restoring backups are as simple as replacing your Lute database with one of your unzipped backups, and restoring your image folder as well.</p>
 <h2 id="database-restores"><a class="header" href="#database-restores">Database restores</a></h2>
 <blockquote>
-<p>To find the directory where your database is, start Lute and go to About &gt; Version and Software Info.  It's the &quot;Data path&quot; line. (<strong>Docker users:</strong> use the data directory you mounted for the container.)</p>
+<p>To find the directory where your database is, start Lute and go to About &gt; Version and Software Info.  It's the "Data path" line. (<strong>Docker users:</strong> use the data directory you mounted for the container.)</p>
 </blockquote>
 <p>Summary: you replace your database with an unzipped and renamed db backup.  Here's one way to do that:</p>
 <ol>
-<li>Copy a db backup that you want to restore from your backup directory to the &quot;data path&quot; directory.  For example, after this step, I might have <code>lute/data/lute_backup_2023-10-04_022616.db.gz</code>.</li>
+<li>Copy a db backup that you want to restore from your backup directory to the "data path" directory.  For example, after this step, I might have <code>lute/data/lute_backup_2023-10-04_022616.db.gz</code>.</li>
 <li><strong>Stop Lute.</strong></li>
-<li>Browse to that &quot;Data path&quot; directory on your machine, and rename the file <code>lute.db</code> to <code>old_lute.db</code> (the exact name you pick doesn't matter -- this is just in case your restore goes wrong)</li>
+<li>Browse to that "Data path" directory on your machine, and rename the file <code>lute.db</code> to <code>old_lute.db</code> (the exact name you pick doesn't matter -- this is just in case your restore goes wrong)</li>
 <li>Unzip your backup from step 1, and rename it to <code>lute.db</code>.  Your data folder should now contain <code>old_lute.db</code> and <code>lute.db</code></li>
 <li>Start Lute, and refresh the browser.  Lute is now connected to your restored backup db.</li>
 <li>You can either get rid of the <code>old_lute.db</code>, or move it somewhere else if you want to keep it.</li>
@@ -201,7 +201,7 @@
 <p>The images directory is the same as the database directory.</p>
 </blockquote>
 <p>Summary: copy files!</p>
-<p>Your backup images are stored in your backup directory, in <code>userimages_backup</code>.  Copy the contents of that directory to the <code>userimages</code> directory of your &quot;Data path&quot; directory.</p>
+<p>Your backup images are stored in your backup directory, in <code>userimages_backup</code>.  Copy the contents of that directory to the <code>userimages</code> directory of your "Data path" directory.</p>
 <h1 id="test-your-backups"><a class="header" href="#test-your-backups">Test your backups!</a></h1>
 <p>It's a good idea to periodically check your backups to ensure that they're good.</p>
 <h2 id="checking-database-backupa"><a class="header" href="#checking-database-backupa">Checking database backupa</a></h2>
@@ -212,7 +212,7 @@
 <pre><code>sqlite3 lute_backup_2023-10-04_022616.db
 
 SQLite version 3.39.5 2022-10-14 20:58:05
-Enter &quot;.help&quot; for usage hints.
+Enter ".help" for usage hints.
 sqlite&gt; select count(*) from words;     # &lt;-- this is my query
 51839
 </code></pre>

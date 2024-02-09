@@ -193,7 +193,7 @@
 <tr><td>language</td><td>Yes</td><td>Must be the name of one of the languages you have saved in Lute</td></tr>
 <tr><td>term</td><td>Yes</td><td>The new Term</td></tr>
 <tr><td>translation</td><td></td><td></td></tr>
-<tr><td>parent</td><td></td><td>The &quot;parent&quot; of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.  If a term has multiple parents, you can enclose the list in quotes, and comma-separate the parents (e.g., the term <code>se sienta</code> could have parents <code>&quot;sentirse, sentarse&quot;</code>.</td></tr>
+<tr><td>parent</td><td></td><td>The "parent" of this term (e.g., an infinitive form of a verb, etc.).  This will automatically create the parent term if it doesn't exist already, or if it's not created in the same import file.  If a term has multiple parents, you can enclose the list in quotes, and comma-separate the parents (e.g., the term <code>se sienta</code> could have parents <code>"sentirse, sentarse"</code>.</td></tr>
 <tr><td>status</td><td></td><td>One of 1, 2, 3, 4, 5, W (for Well-Known), or I (for Ignored).  If missing, it's set to 1</td></tr>
 <tr><td>link_status</td><td></td><td>Y or blank.  If Y and this term has a single parent, its status is linked to the parent status</td></tr>
 <tr><td>tags</td><td></td><td>A comma-delimited list of tags to add to the Term</td></tr>
@@ -204,19 +204,19 @@
 <h3 id="ex-1---single-record"><a class="header" href="#ex-1---single-record">ex. 1 - single record</a></h3>
 <p>The simplest example.  Note that the tags <code>animal, noun</code> must be enclosed in quotes.</p>
 <pre><code>language, term, translation, parent, status, tags, pronunciation
-Spanish,gato,cat,,W,&quot;animal, noun&quot;,GA-toh
+Spanish,gato,cat,,W,"animal, noun",GA-toh
 </code></pre>
 <h3 id="ex-2---carriage-return-in-field"><a class="header" href="#ex-2---carriage-return-in-field">ex. 2 - carriage return in field</a></h3>
 <pre><code>language,term,translation,parent,status,tags,pronunciation
-Spanish,gato,&quot;A cat.
-A house cat.&quot;,,1,&quot;animal, noun&quot;,GA-toh
+Spanish,gato,"A cat.
+A house cat.",,1,"animal, noun",GA-toh
 </code></pre>
-<p>This would create a term &quot;gato&quot; with the translation &quot;A cat (carriage return) A house cat&quot;.</p>
+<p>This would create a term "gato" with the translation "A cat (carriage return) A house cat".</p>
 <h3 id="ex-3---parent-record"><a class="header" href="#ex-3---parent-record">ex. 3 - parent record</a></h3>
 <pre><code>language,term,translation,parent,status,tags,pronunciation
 Spanish,gatos,cat,gato,W,,
 </code></pre>
-<p>This would create the term &quot;gatos&quot; (status = Well Known), and also the term &quot;gato&quot;, setting &quot;gato&quot; as the parent for &quot;gatos&quot; (the plural form).</p>
+<p>This would create the term "gatos" (status = Well Known), and also the term "gato", setting "gato" as the parent for "gatos" (the plural form).</p>
 <p>Parent records may be useful, for example, if you're learning conjugations of irregular verbs.</p>
 <h3 id="ex-4---translation-only"><a class="header" href="#ex-4---translation-only">ex. 4 - translation only</a></h3>
 <pre><code>language,term,translation
@@ -224,11 +224,11 @@ Spanish,gato,cat
 </code></pre>
 <h3 id="ex-5---multiple-parents"><a class="header" href="#ex-5---multiple-parents">ex. 5 - multiple parents</a></h3>
 <pre><code>language,term,translation
-Spanish,se sienta,&quot;sentirse, sentarse&quot;
+Spanish,se sienta,"sentirse, sentarse"
 </code></pre>
 <h1 id="creating-csv-files"><a class="header" href="#creating-csv-files">Creating CSV files</a></h1>
 <p>The easiest way to create <strong>properly-formatted</strong> CSV files is probably through something like Excel or Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File &gt; Download &gt; Comma Separated Values.</p>
-<p>Using Google Sheets, you might also be able to get some <em>basic</em> translations.  For example, if I have &quot;colima&quot; in cell B2, the formula <code>=GOOGLETRANSLATE(B2,&quot;es&quot;, &quot;en&quot;)</code> in cell B3 would give &quot;hill&quot;.</p>
+<p>Using Google Sheets, you might also be able to get some <em>basic</em> translations.  For example, if I have "colima" in cell B2, the formula <code>=GOOGLETRANSLATE(B2,"es", "en")</code> in cell B3 would give "hill".</p>
 
                     </main>
 

@@ -209,7 +209,7 @@ flask --app lute.app_factory cli language_export Spanish sp_terms.csv
 <ul>
 <li><strong>Unsure how to add to UI.</strong> Lute is primarily for reading, and I've tried to keep the UI clean and focused on that.  Some things are <em>related</em> to Lute but don't necessarily fall within its main purpose.</li>
 <li><strong>Long-running jobs.</strong> Some jobs might take a <em>long</em> time to complete.  While there are ways to have the server communicate back to a browser client (WebSockets), I have no experience with these things.</li>
-<li><strong>&quot;Good enough&quot; is better than perfect.</strong> Shipping something working is better than trying to perfect it.  Sometimes jobs are a hacky but effective way to get things out the door.</li>
+<li><strong>"Good enough" is better than perfect.</strong> Shipping something working is better than trying to perfect it.  Sometimes jobs are a hacky but effective way to get things out the door.</li>
 </ul>
 <h2 id="docker-users"><a class="header" href="#docker-users">Docker users</a></h2>
 <p>You have a few ways to run command-line jobs, if your Lute runs in Docker.  Both are a bit janky, so pick your poison.  My preference would be the first one, just because you don't have to install anything new.</p>
@@ -218,7 +218,7 @@ flask --app lute.app_factory cli language_export Spanish sp_terms.csv
 <pre><code>$ docker ps
 
 CONTAINER ID   IMAGE                           COMMAND            CREATED          STATUS          PORTS                    NAMES
-4a01240e5678   jzohrab/lute3:latest            &quot;/lute/start.sh&quot;   52 seconds ago   Up 52 seconds   0.0.0.0:5000-&gt;5000/tcp   lute_test_docker-lute-1
+4a01240e5678   jzohrab/lute3:latest            "/lute/start.sh"   52 seconds ago   Up 52 seconds   0.0.0.0:5000-&gt;5000/tcp   lute_test_docker-lute-1
 
 # Connect to the running container
 $ docker exec -it lute_test_docker-lute-1 /bin/bash
@@ -243,7 +243,7 @@ README.md	MY_DATA.csv	lute.db		userimages
 </ul>
 <hr />
 <div class="footnote-definition" id="these-calls-are-ugly"><sup class="footnote-definition-label">1</sup>
-<p><em>Note from the dev (me!):</em> I recognize how ugly the &quot;--app lute.app_factory&quot; portion of the command is, but it is not trivial to get rid of.  The commands are built on part of the framework that Lute uses, and there is no easy way to avoid the &quot;--app&quot; flag, as far as I know.  I tried other design options, but they all had drawbacks.  In future, these jobs may be incorporated into Lute's UI.  For now, this is good enough.</p>
+<p><em>Note from the dev (me!):</em> I recognize how ugly the "--app lute.app_factory" portion of the command is, but it is not trivial to get rid of.  The commands are built on part of the framework that Lute uses, and there is no easy way to avoid the "--app" flag, as far as I know.  I tried other design options, but they all had drawbacks.  In future, these jobs may be incorporated into Lute's UI.  For now, this is good enough.</p>
 </div>
 
                     </main>

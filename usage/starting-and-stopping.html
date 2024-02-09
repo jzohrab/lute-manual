@@ -204,7 +204,7 @@ python -m lute.main
 deactivate
 </code></pre>
 <h3 id="custom-configyml"><a class="header" href="#custom-configyml">Custom config.yml</a></h3>
-<p>By default, Lute stores your data in the appropriate &quot;user data&quot; directory, as determined by the <a href="https://pypi.org/project/platformdirs/">PlatformDirs</a> library.</p>
+<p>By default, Lute stores your data in the appropriate "user data" directory, as determined by the <a href="https://pypi.org/project/platformdirs/">PlatformDirs</a> library.</p>
 <p>If you want to change that or a few other basic settings, you can create a custom <code>config.yml</code> file and store it in the same folder where you run <code>lute.main</code>:</p>
 <ul>
 <li>Copy the
@@ -246,7 +246,7 @@ docker compose down
 <h2 id="if-you-installed-from-source"><a class="header" href="#if-you-installed-from-source">If you installed from source</a></h2>
 <pre><code>cd ~/my_lute_source
 source .venv/bin/activate
-inv start   # or &quot;python -m lute.main&quot;
+inv start   # or "python -m lute.main"
 # ... etc.
 # Ctl-C when done.
 deactivate
@@ -261,11 +261,11 @@ deactivate
 
 source .venv/bin/activate
 
-VERSION=&quot;$1&quot;
-if [[ -z &quot;$VERSION&quot; ]]; then
-    echo &quot;Using existing install.&quot;
+VERSION="$1"
+if [[ -z "$VERSION" ]]; then
+    echo "Using existing install."
 else
-    echo &quot;Pulling version $VERSION&quot;
+    echo "Pulling version $VERSION"
     pip install --upgrade lute3==${VERSION}
 fi
 

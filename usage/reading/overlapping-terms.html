@@ -178,18 +178,18 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="overlapping-terms"><a class="header" href="#overlapping-terms">Overlapping terms</a></h1>
-<p>Sometimes Terms you define may &quot;overlap&quot;, so Lute displays those with an extra indicator.</p>
-<p>For example, suppose you're studying Spanish, and you have already defined two Terms: &quot;tengo un gato&quot;, and &quot;un gato bueno y gordo&quot; (with different Statuses, one is new, the other is easy).  If you were reading a book with text &quot;Tengo un gato bueno y gordo.&quot;, Lute displays that like this:</p>
+<p>Sometimes Terms you define may "overlap", so Lute displays those with an extra indicator.</p>
+<p>For example, suppose you're studying Spanish, and you have already defined two Terms: "tengo un gato", and "un gato bueno y gordo" (with different Statuses, one is new, the other is easy).  If you were reading a book with text "Tengo un gato bueno y gordo.", Lute displays that like this:</p>
 <img width="293" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/b6fa96c4-5c28-4f9f-a86a-ef84e651aa39">
-<p>The small &quot;+&quot; sign next to the &quot;bueno y gordo&quot; indicates that the full Term &quot;un gato bueno y gordo&quot; is _partially overlapped by the preceding term.</p>
-<p>If you hover over the &quot;+ bueno y gordo&quot;, you'll see the full term:</p>
+<p>The small "+" sign next to the "bueno y gordo" indicates that the full Term "un gato bueno y gordo" is _partially overlapped by the preceding term.</p>
+<p>If you hover over the "+ bueno y gordo", you'll see the full term:</p>
 <img width="313" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/d91e1330-1be6-4191-ad2a-8333d2760a44">
 <p>and clicking on it will open the Term form with the full term as well:</p>
 <img width="592" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/14307108-3493-4128-ac77-87e1d9ef4f47">
-<p>If you don't like the &quot;+&quot; sign as the overlap indicator, you can customize it using a custom style:</p>
+<p>If you don't like the "+" sign as the overlap indicator, you can customize it using a custom style:</p>
 <pre><code>/* content in data/custom_styles/custom_styles.css */
 span.overlapped:before {
-   content: &quot;\00BA&quot;;
+   content: "\00BA";
    color: green;
 }
 </code></pre>

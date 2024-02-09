@@ -179,7 +179,7 @@
                     <main>
                         <h1 id="why-wont-my-pdf-import-correctly"><a class="header" href="#why-wont-my-pdf-import-correctly">Why won't my pdf import correctly?</a></h1>
 <p>Lute uses the <a href="https://pypi.org/project/PyPDF2/">PyPDF2</a> library for PDF imports.</p>
-<p>PDF imports sometimes add extra unwanted spaces: for example, the word &quot;happiness&quot; in your PDF may be imported as &quot;happi ness&quot;.  For this reason, when you import your PDF, Lute will give you a warning that it may be inaccurate.</p>
+<p>PDF imports sometimes add extra unwanted spaces: for example, the word "happiness" in your PDF may be imported as "happi ness".  For this reason, when you import your PDF, Lute will give you a warning that it may be inaccurate.</p>
 <p>This issue is not a problem with Lute, or even with the PyPDF2 library ... correctly parsing PDFs is actually <em>extremely</em> tough.  Per the authors of PyPDF2:</p>
 <blockquote>
 <p>Getting whitespaces right is notoriously hard. @pubpub-zz is the expert in that topic; I'll leave it to him to decide if we should leave this issue open. The issue is that PDF does not (necessarily) represent the words as words internally. In the worst case, it just gives the absolute position of each character in the document.</p>
