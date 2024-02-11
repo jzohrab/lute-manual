@@ -1,6 +1,8 @@
 # Reading
 
-Lute comes with a Tutorial demo, so you can try it out yourself, but here's a very brief overview of the key features:
+Lute comes with a Tutorial demo (you can find the text [here](./tutorial.md)).  Here's a very brief overview of the key features:
+
+_(Note: This page is slightly out of date, but the ideas are the same)_
 
 When you first open a text, it will look something like this:
 
