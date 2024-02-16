@@ -18,6 +18,9 @@
 
 - [Starting and stopping](./usage/starting-and-stopping.md)
 - [Defining a language](./usage/language-setup.md)
+- [Languages]()
+  - [Defining a language](./usage/languages/defining-languages.md)
+  - [Word characters](./usage/languages/word-characters.md)
 - [Books]()
   - [Creating books](./usage/books/creating-books.md)
   - [The stats calculation](./usage/books/stats.md)
