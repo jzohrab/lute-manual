@@ -17,7 +17,6 @@
 # Usage
 
 - [Starting and stopping](./usage/starting-and-stopping.md)
-- [Defining a language](./usage/language-setup.md)
 - [Languages]()
   - [Defining a language](./usage/languages/defining-languages.md)
   - [Dictionaries](./usage/languages/dictionaries.md)
@@ -55,7 +54,6 @@
   - [Can I make Lute secure?](./faq/adding-basic-auth.md)
   - [Is there an online version of Lute?](./faq/online-lute.md)
 - [Languages]()
-  - [How can I figure out my language's "word characters"?](./faq/language/defining-language.md)
   - [Can you add language X?](./faq/language/add-a-language.md)
   - [Why is my dictionary not working?](./faq/language/dict-not-working.md)
 - [Books]()
