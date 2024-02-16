@@ -20,6 +20,7 @@
 - [Defining a language](./usage/language-setup.md)
 - [Languages]()
   - [Defining a language](./usage/languages/defining-languages.md)
+  - [Dictionaries](./usage/languages/dictionaries.md)
   - [Word characters](./usage/languages/word-characters.md)
 - [Books]()
   - [Creating books](./usage/books/creating-books.md)
