@@ -23,6 +23,7 @@ Some of these actions refer to the "current word" - that's either the word you'r
 | `Shift` + `c`   | Copy the paragraph of the current word to the clipboard |
 | `m`             | Change to the next theme   |
 | `h`             | Toggle highlights   |
+| `f`             | Toggle focus mode   |
 
 
 ## Updating status
