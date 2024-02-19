@@ -1,5 +1,7 @@
 # Dictionaries
 
+> Dictionaries have completely changed since this was written, but the general ideas remain.  This needs updating.
+
 ## Term lookups
 
 "Dictionary 1" and "Dictionary 2" are used for term lookup.
