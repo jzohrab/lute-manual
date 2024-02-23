@@ -53,6 +53,7 @@
   - [Can I store Lute data on a USB key?](./faq/setup/usb.md)
   - [Can I make Lute secure?](./faq/adding-basic-auth.md)
   - [Is there an online version of Lute?](./faq/online-lute.md)
+  - [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
 - [Languages]()
   - [Can you add language X?](./faq/language/add-a-language.md)
   - [Why is my dictionary not working?](./faq/language/dict-not-working.md)
@@ -65,9 +66,9 @@
   - [Why can't I change a Term?](./faq/terms/terms-cannot-be-changed-once-created.md)
   - [Where are my new Term's sentences?](./faq/terms/sentences-only-shown-when-page-is-read.md)
   - [How should I use statuses?](./faq/terms/term-statuses.md)
-- [How can I migrate from Lute v2 to v3?](./faq/v2-to-v3.md)
 - [Can I import data from other systems?](./faq/import-from-other-systems.md)
 - [Why doesn't Lute have flashcards, or an SRS?](./faq/why-no-flashcards.md)
+- [How is development work prioritized?](./faq/prioritizing-dev-work.md)
 - [Why is this free?](./faq/free.md)
 
 # Misc
