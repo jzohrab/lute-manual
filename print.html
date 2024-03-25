@@ -1145,6 +1145,7 @@ Ayer, le dije a ella que comiera la manzana.
 </ul>
 </li>
 <li><a href="usage/terms/bulk-term-import.html#creating-csv-files">Creating CSV files</a></li>
+<li><a href="usage/terms/bulk-term-import.html#importing-new-terms-as-unknown">Importing new terms as "Unknown"</a></li>
 </ul>
 <!-- TOC end -->
 <h2 id="csv-file-format"><a class="header" href="#csv-file-format">CSV File Format</a></h2>
@@ -1196,7 +1197,16 @@ Spanish,se sienta,"sentirse, sentarse"
 <h2 id="creating-csv-files"><a class="header" href="#creating-csv-files">Creating CSV files</a></h2>
 <p>The easiest way to create <strong>properly-formatted</strong> CSV files is probably through something like Excel or Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File &gt; Download &gt; Comma Separated Values.</p>
 <p>Using Google Sheets, you might also be able to get some <em>basic</em> translations.  For example, if I have "colima" in cell B2, the formula <code>=GOOGLETRANSLATE(B2,"es", "en")</code> in cell B3 would give "hill".</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="themes"><a class="header" href="#themes">Themes</a></h1>
+<h2 id="importing-new-terms-as-unknown"><a class="header" href="#importing-new-terms-as-unknown">Importing new terms as "Unknown"</a></h2>
+<p>You can import terms to act as "placeholders" for when you encounter them.  This may be useful for sharing vocabulary lists or prepopulating your term database without impacting your reading stats.</p>
+<p>For example, suppose I had the following import file:</p>
+<pre><code>term,language,translation
+guide,English,blah
+</code></pre>
+<p>I can import this file and specify that I want any new terms to be "Unknown" as follows:</p>
+<img width="80%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/6dcaf764-887b-43f4-875e-f240062e8ae6">
+<p>When I do so, the term still shows up as "unknown" when reading, but it will be pre-populated with the imported data:</p>
+<img width="30%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/aeb5b6e6-e24c-4f64-bcd6-204849fc06ac"><div style="break-before: page; page-break-before: always;"></div><h1 id="themes"><a class="header" href="#themes">Themes</a></h1>
 <p><em>Added in Lute 3.0.2</em></p>
 <p>You can apply one of the predefined themes in the Settings.  Select the theme from the dropdown.</p>
 <h2 id="the-currently-available-themes"><a class="header" href="#the-currently-available-themes">The currently available themes</a></h2>
