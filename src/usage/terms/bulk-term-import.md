@@ -15,6 +15,7 @@ From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if
       + [ex. 4 - translation only](#ex-4---translation-only)
       + [ex. 5 - multiple parents](#ex-5---multiple-parents)
 - [Creating CSV files](#creating-csv-files)
+- [Importing new terms as "Unknown"](#importing-new-terms-as-unknown)
 
 <!-- TOC end -->
 
@@ -91,3 +92,23 @@ Spanish,se sienta,"sentirse, sentarse"
 The easiest way to create **properly-formatted** CSV files is probably through something like Excel or Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File > Download > Comma Separated Values.
 
 Using Google Sheets, you might also be able to get some _basic_ translations.  For example, if I have "colima" in cell B2, the formula `=GOOGLETRANSLATE(B2,"es", "en")` in cell B3 would give "hill".
+
+
+## Importing new terms as "Unknown"
+
+You can import terms to act as "placeholders" for when you encounter them.  This may be useful for sharing vocabulary lists or prepopulating your term database without impacting your reading stats.
+
+For example, suppose I had the following import file:
+
+```
+term,language,translation
+guide,English,blah
+```
+
+I can import this file and specify that I want any new terms to be "Unknown" as follows:
+
+<img width="80%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/6dcaf764-887b-43f4-875e-f240062e8ae6">
+
+When I do so, the term still shows up as "unknown" when reading, but it will be pre-populated with the imported data:
+
+<img width="30%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/aeb5b6e6-e24c-4f64-bcd6-204849fc06ac">
