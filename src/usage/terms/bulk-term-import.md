@@ -4,7 +4,22 @@ If you have existing vocabulary lists, you can bulk import new Terms, or update 
 
 From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if you want to import new Terms, update existing ones, or both.
 
-# CSV File Format
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [CSV File Format](#csv-file-format)
+   * [Field notes](#field-notes)
+   * [Examples](#examples)
+      + [ex. 1 - single record](#ex-1---single-record)
+      + [ex. 2 - carriage return in field](#ex-2---carriage-return-in-field)
+      + [ex. 3 - parent record](#ex-3---parent-record)
+      + [ex. 4 - translation only](#ex-4---translation-only)
+      + [ex. 5 - multiple parents](#ex-5---multiple-parents)
+- [Creating CSV files](#creating-csv-files)
+
+<!-- TOC end -->
+
+
+## CSV File Format
 
 * The CSV file should be properly formatted; i.e., carriage returns in fields are allowed, but the field should be enclosed in quotes.
 * The first line of the CSV file **must** have the field headings: `language, term`
@@ -12,7 +27,7 @@ From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if
 * Fields can be in any order.
 * An error is raised if the file contains other headings.
 
-## Field notes
+### Field notes
 
 | Field | Required | Notes |
 | --- | --- | --- |
@@ -25,9 +40,9 @@ From the menu, click Terms > Import Terms.  Choose the CSV file, and indicate if
 | tags | | A comma-delimited list of tags to add to the Term |
 | pronunciation | | |
 
-## Examples
+### Examples
 
-### ex. 1 - single record
+#### ex. 1 - single record
 
 The simplest example.  Note that the tags `animal, noun` must be enclosed in quotes.
 
@@ -36,7 +51,7 @@ language, term, translation, parent, status, tags, pronunciation
 Spanish,gato,cat,,W,"animal, noun",GA-toh
 ```
 
-### ex. 2 - carriage return in field
+#### ex. 2 - carriage return in field
 
 ```
 language,term,translation,parent,status,tags,pronunciation
@@ -46,7 +61,7 @@ A house cat.",,1,"animal, noun",GA-toh
 
 This would create a term "gato" with the translation "A cat (carriage return) A house cat".
 
-### ex. 3 - parent record
+#### ex. 3 - parent record
 
 ```
 language,term,translation,parent,status,tags,pronunciation
@@ -57,21 +72,21 @@ This would create the term "gatos" (status = Well Known), and also the term "gat
 
 Parent records may be useful, for example, if you're learning conjugations of irregular verbs.
 
-### ex. 4 - translation only
+#### ex. 4 - translation only
 
 ```
 language,term,translation
 Spanish,gato,cat
 ```
 
-### ex. 5 - multiple parents
+#### ex. 5 - multiple parents
 
 ```
 language,term,translation
 Spanish,se sienta,"sentirse, sentarse"
 ```
 
-# Creating CSV files
+## Creating CSV files
 
 The easiest way to create **properly-formatted** CSV files is probably through something like Excel or Google Sheets.  Create a sheet with the correct headings.  You can enter carriage returns into a given cell using something like Shift-Return, or Ctrl-Return ... depending on your system.  Then export that as a CSV using File > Download > Comma Separated Values.
 
