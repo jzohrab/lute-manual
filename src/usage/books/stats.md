@@ -4,7 +4,7 @@ In your Book listing, Lute shows the word count for each book, and a small chart
 
 For example, after reading the first page of the Tutorial and marking various terms as statuses 1 through 5, the listing looks like this (the first row is the Tutorial, the second is the Tutorial follow-up):
 
-<img width="70%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/469d3062-3715-459d-87a1-a5ba9d4d76c6">
+<img width="70%" alt="image" src="../../assets/usage/books/stats_01.png">
 
 This shows that in the next five pages, about 70% of the words are brand new, 15% are well-known or ignored, etc.  This might let you know how much effort you have ahead of you!
 
@@ -12,7 +12,7 @@ This shows that in the next five pages, about 70% of the words are brand new, 15
 
 Note that in the above, the stats on the second row -- the Tutorial follow-up -- are still shown as 100% unknown.  Stats for a book aren't calculated until you open it for reading, because the calculation can be quite slow; however, you can refresh the stats for all active books by clicking the small circular arrows in the header:
 
-<img width="70%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/4b2ad0d3-d1a1-4287-af0a-03eaa22523b3">
+<img width="70%" alt="image" src="../../assets/usage/books/stats_02.png">
 
 ## Sorting
 
