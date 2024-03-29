@@ -2,7 +2,7 @@
 
 You can add multiple dictionaries for Term and Sentence lookups as part of your Language definition.
 
-<img width="100%" alt="Dictionaries" src="https://github.com/jzohrab/lute-manual/assets/1637133/10f66f09-bbb5-412d-abf6-8f0a4abc32d5">
+<img width="100%" alt="Dictionaries" src="../../assets/usage/languages/dicts_01.png">
 
 Term dictionaries are shown as tabs in the term form.
 
@@ -16,7 +16,7 @@ Some sites, like DeepL and Google Translate, don't work when embedded within sit
   
 You can test a dictionary by clicking the small "out arrow" icon next to the dictionary.  For example, here I've tried to set DeepL.com as an embedded dictionary, which they don't allow:
 
-<img width="100%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/48271adc-526f-420d-91f8-b1ff06ea92f7">
+<img width="100%" alt="image" src="../../assets/usage/languages/dicts_02.png">
 
 ## The dictionary URL
 
