@@ -13,7 +13,7 @@ span.status99 { background-color: none; color: red; }  /* Well-known terms */
 
 yields this:
 
-<img width="194" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/8b088df2-35fd-486c-8694-8bd580afe974">
+<img width="194" alt="image" src="../../assets/usage/themes/cust_styles_01.png">
 
 ## Styling examples for your inspiration
 
