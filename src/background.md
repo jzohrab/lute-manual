@@ -55,7 +55,7 @@ As good as Lute is, it might not be for you.  Below are some things that may lea
 
 | Item | Notes |
 | --- | --- |
-| Audio | Lute doesn't have an audio player. | 
+| Single-word audio | Lute has an audio player for books, but you can't click a single word to hear its audio. | 
 | Support "non-consecutive multiword terms" | Some languages, like German and Dutch, have terms that that split apart.  For example, in German, the verb "einladen" can be split into "laden ... ein": "Ich lade dich zu meiner Party ein."  I don't think any tool currently solves this well.  See the notes at on [this GitHub issue](https://github.com/jzohrab/lute/issues/58). |
 | Flashcards/testing | Lute is designed for reading only, there is no testing. |
 | Automated or bulk translation | Lute isn't designed to automatically create bidirectional readers, or to auto-create translations.  You can use Lute's [Term import](https://github.com/jzohrab/lute/wiki/Bulk-Term-Import) feature, along with something like Google Sheets, to imitate that. |
