@@ -14,15 +14,15 @@ A summary of what you're doing:
 
 2. Install Python with admin privileges, tick "Add python 3.8 to PATH" and click on install.
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/52105794-4649-40f9-ad7b-55276f6f50ef)
+![image](../../assets/install/windows/pip/01_installer.png)
 
 3. When the install is done, open CMD with admin privileges and write "python --version" to check it works.  You should see something like the below:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/edb84be8-f4a4-4177-902b-48b52ce253ea)
+![image](../../assets/install/windows/pip/02_check_python_version.png)
 
 4. Still in CMD, type `cd C:\Users`, hit Enter, then type `dir` and hit Enter.  Your screen should look like this:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/3efbbed8-cbf2-458d-9ddc-ae53a2c19457)
+![image](../../assets/install/windows/pip/03_cd_users.png)
 
 This shows all users on your machine.
 
@@ -36,7 +36,7 @@ and then hit Enter.
 
 Use your own user name instead of `axmanalex`, and hit Enter.  Then type `dir` and hit Enter.  Your screen should look like this:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/db212851-729f-44d1-8456-2d4d904430c2)
+![image](../../assets/install/windows/pip/04_dir_user.png)
 
 6. You'll install Lute in one of your personal folders.  axmanalex chose to install it in `Documents`, so he wrote
 
@@ -80,13 +80,13 @@ python -m lute.main
 
 and press Enter.  The screen should look something like this:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/038e2e6d-82b3-4f5b-b334-5bef574bec21)
+![image](../../assets/install/windows/pip/05_lute_main.png)
 
 The server should be running.
 
 Open any browser (Chrome, Firefox, etc), and go to [http://localhost:5000/](http://localhost:5000/).  It should look like this:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/0f9702d1-a3df-461c-baf8-0109af983f9d)
+![image](../../assets/install/windows/pip/05_homescreen.png)
 
 ... and that's it, you're up and running!
 
