@@ -8,19 +8,19 @@ You can apply one of the predefined themes in the Settings.  Select the theme fr
 
 ### Default
 
-<img width="741" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/41a7b950-8cc1-4e74-a7a5-879a47077785">
+<img width="100%" alt="image" src="../../assets/usage/themes/theme_default.png">
 
 ### Apple Books
 
-<img width="807" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/6660139a-5760-48ca-999c-6d00f0a2ee74">
+<img width="100%" alt="image" src="../../assets/usage/themes/theme_applebooks.png">
 
 ### Dark slate
 
-<img width="798" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/1c5349a9-c8a9-436d-a427-32b44a814df2">
+<img width="100%" alt="image" src="../../assets/usage/themes/theme_darkslate.png">
 
 ### Night
 
-<img width="785" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/189e250a-66d3-44d6-8738-38bd52e8fa95">
+<img width="100%" alt="image" src="../../assets/usage/themes/theme_night.png">
 
 ## "Change theme" hotkey - "m"
 
