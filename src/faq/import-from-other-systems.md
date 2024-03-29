@@ -6,7 +6,7 @@ You can import data into Lute via [bulk term import](../usage/terms/bulk-term-im
 
 LWT has an "export" feature:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/46153912-f6af-4857-bfce-2ec47b51d262)
+![image](../assets/faq/import_from_lwt.png)
 
 Use "Export ALL Terms (TSV)" to export a tab-separated value file.  The file may get downloaded as a ".txt" file, in which case, rename it to ".tsv".
 
