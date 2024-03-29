@@ -2,7 +2,7 @@
 
 Lute shows sentences for a Term and its siblings when you click the Sentences link on the Term form, but it only includes sentences for pages marked as "read".  Pages are marked as "read" when you click either the links at the bottom of the reading page:
 
-<img width="285" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/7806d2a7-ec24-46c5-ae1f-6e101f486073">
+<img width="285" alt="image" src="../../assets/faq/terms/sentences_marked_read.png">
 
 (The green checkmark also changes all unknown terms to well-known.)
 
