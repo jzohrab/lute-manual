@@ -107,8 +107,8 @@ guide,English,blah
 
 I can import this file and specify that I want any new terms to be "Unknown" as follows:
 
-<img width="80%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/6dcaf764-887b-43f4-875e-f240062e8ae6">
+<img width="80%" alt="image" src="../../assets/usage/terms/bulk_import_01.png">
 
 When I do so, the term still shows up as "unknown" when reading, but it will be pre-populated with the imported data:
 
-<img width="30%" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/aeb5b6e6-e24c-4f64-bcd6-204849fc06ac">
+<img width="30%" alt="image" src="../../assets/usage/terms/bulk_import_02.png">
