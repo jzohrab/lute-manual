@@ -6,9 +6,7 @@ Lute lets you add an audio file (.mp3, .wav, .ogg) to any book so you can listen
 
 ## Adding audio
 
-You can add audio to a new book during creation, or to an existing book using the "Edit" icon in the book listing.
-
-<img width="1672" alt="image" src="https://github.com/jzohrab/lute-manual/assets/1637133/14609a82-25b9-48f3-8ad7-e8cfbef05b5b">
+You can add audio to a new book during creation, or to an existing book using the "Edit" action in the book listing.
 
 Lute stores a copy of the added audio in your `data` folder, in the same folder where it stores your database and user images.
 
@@ -16,7 +14,7 @@ Lute stores a copy of the added audio in your `data` folder, in the same folder 
 
 If your book has an audio file, a player is included on the reading page:
 
-![image](https://github.com/jzohrab/lute-manual/assets/1637133/53221a28-def1-4790-99c7-5266e23ff3fe)
+![image](../assets/usage/audio_player.png)
 
 You can do the usual things: start and pause the player (either with the buttons or the space bar), and fast-forward and rewind.  The "sticky player" toggle sticks the player to the bottom of the screen.
 
