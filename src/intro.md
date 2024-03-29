@@ -13,7 +13,7 @@ In addition, Lute has features missing from other tools, which I consider absolu
 * Defining "parent terms".  For example, for Spanish, _hablar_ (to speak) is the root form of _habló_ (he spoke).  In Lute, you can set a root form as the Parent Term, and the definition for that root form is available for all child terms.  Also, when you ask Lute for sample sentences using a term, it includes sentences for all related terms as well.
 * Adding word images.  This helps learning, and is more interesting and entertaining than adding reams of text.
 
-![Lute v3 demo](../assets/intro.gif)
+![Lute v3 demo](./assets/intro.gif)
 
 This 5-minute video gives a very brief demonstration and shows how easy it is to install Lute:
 
