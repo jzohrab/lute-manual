@@ -4,14 +4,14 @@ Lute lets you define "Parent Terms", which is helpful for things like verb infin
 
 Here's the popup for a term with a parent term:
 
-![image](https://user-images.githubusercontent.com/1637133/229640544-029d191c-053c-4316-9142-9baca523ab35.png)
+![image](../../assets/usage/terms/parent_01.png)
 
 
 # Setting an existing term as a parent
 
 In the example below, you've already defined the term "have", and you're now creating a new term for "has".  In the "parent term" text box, if you type "ha", Lute then suggests the predefined term "have" as the parent:
 
-![image](https://user-images.githubusercontent.com/1637133/229640120-4e367e18-07b5-4571-83a5-77f90e0c9919.png)
+![image](../../assets/usage/terms/parent_02.png)
 
 # Defining a term and a new parent
 
@@ -19,22 +19,22 @@ In the example below, you've already defined the term "have", and you're now cre
 
 In the example below, you're defining the term "dogs", and creating the parent term "dog" at the same time ("dog" wasn't defined previously):
 
-![image](https://user-images.githubusercontent.com/1637133/229640878-92306b06-5121-42e0-bf3e-924ef3a2df42.png)
+![image](../../assets/usage/terms/parent_03.png)
 
 Here's the popup for the "dogs" term:
 
-![image](https://user-images.githubusercontent.com/1637133/229641026-f71effa1-efc8-468a-9aab-29fffa10b420.png)
+![image](../../assets/usage/terms/parent_04.png)
 
 And for "dog":
 
-![image](https://user-images.githubusercontent.com/1637133/229641104-d9d2fd2a-ff32-4b86-a365-d14884fdc565.png)
+![image](../../assets/usage/terms/parent_05.png)
 
 Note that the new parent term ("dog") gets the exact same information as the new term ("dogs"):
 
 | term | details |
 | --- | --- |
-| dogs | ![image](https://user-images.githubusercontent.com/1637133/229641279-d9a619a2-cc93-4853-a211-adb78abd57d4.png) |
-| dog | ![image](https://user-images.githubusercontent.com/1637133/229641457-426a3d65-efe1-42dd-83d7-eac42689b66c.png) |
+| dogs | ![image](../../assets/usage/terms/parent_06.png) |
+| dog | ![image](../../assets/usage/terms/parent_07.png) |
 
 While this might feel counter-intuitive, I've found that it provides the fastest input and term definition for Lute as I'm reading.  If I need, I can go back to the parent term later and clean things up.
 
@@ -44,11 +44,11 @@ When you click on a Term with parents, the parent tags are clickable, so you can
 
 For example, I've clicked on the term "existing" to show its form:
 
-<img width="600" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/e06db240-0ac1-40d4-9160-d79b909bf95c">
+![image](../../assets/usage/terms/parent_08.png)
 
 If I click on the parent tag "exist", the form moves to that Term:
 
-<img width="754" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/07fb9721-0ae6-4c03-8a5b-bfc5e0d0188a">
+![image](../../assets/usage/terms/parent_09.png)
 
 I can then edit and save that parent term normally.
 
@@ -60,7 +60,7 @@ Sometimes, a word might have multiple parents.  For example, in Czech, "hoře" i
 
 You can bulk assign terms to a *pre-defined* parent from the Terms screen (Home > Terms).  Below shows how it's done:
 
-![image](https://user-images.githubusercontent.com/1637133/229642496-dd836882-4c6b-4f3a-90d2-7e254ef07ae7.png)
+![image](../../assets/usage/terms/parent_10.png)
 
 I had several terms which should be mapped to the *pre-defined* parent term "to have" (the infinitive).
 
@@ -78,4 +78,4 @@ I clicked "has", "had", etc.
 
 In the "Set parent" box, I typed "to" and Lute showed "to have".  When I click "go", those terms will be assigned to the parent:
 
-![image](https://user-images.githubusercontent.com/1637133/229644031-7caf5b7b-001c-42d2-9a38-1d206c15b3d4.png)
+![image](../../assets/usage/terms/parent_11.png)
