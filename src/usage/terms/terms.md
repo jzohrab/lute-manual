@@ -8,7 +8,7 @@ Lute shows all terms you've created, except for ones you've marked as "Ignored".
 
 Sometimes it's useful to filter terms further.  The green plus sign next to "Filters" reveals extra filters you can apply.  For example, the filter below only includes parent terms created in the last 4 days up to "Learn (3)" status:
 
-<img width="520" alt="image" src="https://github.com/jzohrab/lute/assets/1637133/8b13a391-7664-4373-9a45-d318859455bb">
+<img width="520" alt="image" src="../../assets/usage/terms/terms_01.png">
 
 One possible use of filtering might be to filter for terms with Age max = 0, Status max = New after a day's reading, so you can do a quick review of new material.
 
