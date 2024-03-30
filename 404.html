@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>404</title>
+
+  <script>
+    window.onload = function () {
+      const oldstart = "jzohrab.github.io/lute-manual/";
+      const newstart = "luteorg.github.io/lute-manual/";
+      if (window.location.href.includes(oldstart)) {
+        const newurl = window.location.href.replace(oldstart, newstart);
+        document.getElementById("newurl").innerHTML = `Redirecting to ${newurl} ...`;
+        window.location.href = newurl;
+      }
+    }
+  </script>
+</head>
+
+<body id="body" style="text-align: center">
+  Manual has moved to LuteOrg.  <span id="newurl"></span>
+</body>
+
+</html>
