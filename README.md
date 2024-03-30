@@ -1,6 +1,14 @@
-The Lute manual.
+# DEPRECATED
 
-Deployed to https://jzohrab.github.io/lute-manual/ with GitHub actions.
+This repo has been moved to https://github.com/LuteOrg/lute-manual
+
+This repo and its github pages are now only used to http redirect people to https://luteorg.github.io/lute-manual/
+
+# DEPRECATED
+
+This _was_ the original Lute manual, deployed to https://jzohrab.github.io/lute-manual/ with GitHub actions.
+
+---
 
 Written using mdbook (https://rust-lang.github.io/mdBook).
 
